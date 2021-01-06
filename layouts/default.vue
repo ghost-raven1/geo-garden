@@ -6,7 +6,9 @@
         <nuxt />
       </div>
     </div>
-    <Footer />
+    <client-only>
+    <offline-alert/>
+</client-only>
   </div>
 </template>
 
