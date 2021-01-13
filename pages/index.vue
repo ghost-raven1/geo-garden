@@ -20,10 +20,10 @@
         <li uk-filter-control="[data-plants-group='berries']"><a href="#">Ягоды</a></li>
     </ul>
 
-    <ul class="js-filter uk-child-width-1-2 uk-child-width-1-3@m uk-text-center" uk-grid="masonry: true">
+    <ul class="js-filter uk-child-width-1-1 uk-child-width-1-3@m uk-text-center" uk-grid="masonry: true">
         <li data-plants-group="perennials">
             <a href="/fields/perennials/10">
-            <div class="uk-card uk-section-default uk-card-body uk-card-hover uk-inline-clip uk-transition-toggle" tabindex="0">
+            <div class="uk-card uk-card-primary uk-card-body uk-card-hover uk-inline-clip uk-transition-toggle" tabindex="0">
                 <div class="uk-card-media-top">
                     <img class="uk-transition-scale-up uk-transition-opaque" src="~/static/common_map.png" alt="">
                 </div>
@@ -40,7 +40,7 @@
         </li>
         <li data-plants-group="perennials">
             <a href="/fields/perennials/11">
-            <div class="uk-card uk-section-default uk-card-body uk-card-hover uk-inline-clip uk-transition-toggle" tabindex="0">
+            <div class="uk-card uk-card-primary uk-card-body uk-card-hover uk-inline-clip uk-transition-toggle" tabindex="0">
                 <div class="uk-card-media-top">
                     <img class="uk-transition-scale-up uk-transition-opaque" src="~/static/common_map.png" alt="">
                 </div>
@@ -57,7 +57,7 @@
         </li>
         <li data-plants-group="perennials">
             <a href="/fields/perennials/12">
-            <div class="uk-card uk-section-default uk-card-body uk-card-hover uk-inline-clip uk-transition-toggle" tabindex="0">
+            <div class="uk-card uk-card-primary uk-card-body uk-card-hover uk-inline-clip uk-transition-toggle" tabindex="0">
                 <div class="uk-card-media-top">
                     <img class="uk-transition-scale-up uk-transition-opaque" src="~/static/common_map.png" alt="">
                 </div>
@@ -74,7 +74,7 @@
         </li>
         <li data-plants-group="perennials">
             <a href="/fields/perennials/13">
-            <div class="uk-card uk-section-default uk-card-body uk-card-hover uk-inline-clip uk-transition-toggle" tabindex="0">
+            <div class="uk-card uk-card-primary uk-card-body uk-card-hover uk-inline-clip uk-transition-toggle" tabindex="0">
                 <div class="uk-card-media-top">
                     <img class="uk-transition-scale-up uk-transition-opaque" src="~/static/common_map.png" alt="">
                 </div>
@@ -91,7 +91,7 @@
         </li>
         <li data-plants-group="perennials">
             <a href="/fields/perennials/14">
-            <div class="uk-card uk-section-default uk-card-body uk-card-hover uk-inline-clip uk-transition-toggle" tabindex="0">
+            <div class="uk-card uk-card-primary uk-card-body uk-card-hover uk-inline-clip uk-transition-toggle" tabindex="0">
                 <div class="uk-card-media-top">
                     <img class="uk-transition-scale-up uk-transition-opaque" src="~/static/common_map.png" alt="">
                 </div>
@@ -108,7 +108,7 @@
         </li>
         <li data-plants-group="perennials">
             <a href="/fields/perennials/15">
-            <div class="uk-card uk-section-default uk-card-body uk-card-hover uk-inline-clip uk-transition-toggle" tabindex="0">
+            <div class="uk-card uk-card-primary uk-card-body uk-card-hover uk-inline-clip uk-transition-toggle" tabindex="0">
                 <div class="uk-card-media-top">
                     <img class="uk-transition-scale-up uk-transition-opaque" src="~/static/common_map.png" alt="">
                 </div>
@@ -125,7 +125,7 @@
         </li>
         <li data-plants-group="perennials">
             <a href="/fields/perennials/16">
-            <div class="uk-card uk-section-default uk-card-body uk-card-hover uk-inline-clip uk-transition-toggle" tabindex="0">
+            <div class="uk-card uk-card-primary uk-card-body uk-card-hover uk-inline-clip uk-transition-toggle" tabindex="0">
                 <div class="uk-card-media-top">
                     <img class="uk-transition-scale-up uk-transition-opaque" src="~/static/common_map.png" alt="">
                 </div>
@@ -142,7 +142,7 @@
         </li>
         <li data-plants-group="perennials">
             <a href="/fields/perennials/17">
-            <div class="uk-card uk-section-default uk-card-body uk-card-hover uk-inline-clip uk-transition-toggle" tabindex="0">
+            <div class="uk-card uk-card-primary uk-card-body uk-card-hover uk-inline-clip uk-transition-toggle" tabindex="0">
                 <div class="uk-card-media-top">
                     <img class="uk-transition-scale-up uk-transition-opaque" src="~/static/common_map.png" alt="">
                 </div>
@@ -159,7 +159,7 @@
         </li>
         <li data-plants-group="perennials">
             <a href="/fields/perennials/18">
-            <div class="uk-card uk-section-default uk-card-body uk-card-hover uk-inline-clip uk-transition-toggle" tabindex="0">
+            <div class="uk-card uk-card-primary uk-card-body uk-card-hover uk-inline-clip uk-transition-toggle" tabindex="0">
                 <div class="uk-card-media-top">
                     <img class="uk-transition-scale-up uk-transition-opaque" src="~/static/common_map.png" alt="">
                 </div>
@@ -176,7 +176,7 @@
         </li>
         <li data-plants-group="cereals">
             <a href="/fields/cereals/19">
-            <div class="uk-card uk-section-default uk-card-body uk-card-hover uk-inline-clip uk-transition-toggle" tabindex="0">
+            <div class="uk-card uk-card-primary uk-card-body uk-card-hover uk-inline-clip uk-transition-toggle" tabindex="0">
                 <div class="uk-card-media-top">
                     <img class="uk-transition-scale-up uk-transition-opaque" src="~/static/common_map.png" alt="">
                 </div>
@@ -193,7 +193,7 @@
         </li>
         <li data-plants-group="berries">
             <a href="/fields/berries/20">
-            <div class="uk-card uk-section-default uk-card-body uk-card-hover uk-inline-clip uk-transition-toggle" tabindex="0">
+            <div class="uk-card uk-card-primary uk-card-body uk-card-hover uk-inline-clip uk-transition-toggle" tabindex="0">
                 <div class="uk-card-media-top">
                     <img class="uk-transition-scale-up uk-transition-opaque" src="~/static/common_map.png" alt="">
                 </div>
@@ -210,7 +210,7 @@
         </li>
         <li data-plants-group="roots">
             <a href="/fields/roots/33">
-            <div class="uk-card uk-section-default uk-card-body uk-card-hover uk-inline-clip uk-transition-toggle" tabindex="0">
+            <div class="uk-card uk-card-primary uk-card-body uk-card-hover uk-inline-clip uk-transition-toggle" tabindex="0">
                 <div class="uk-card-media-top">
                     <img class="uk-transition-scale-up uk-transition-opaque" src="~/static/common_map.png" alt="">
                 </div>
@@ -227,7 +227,7 @@
         </li>
         <li data-plants-group="free_fields">
             <a href="/fields/free_fields/35">
-            <div class="uk-card uk-card-default uk-card-body uk-card-hover uk-inline-clip uk-transition-toggle" tabindex="0">
+            <div class="uk-card uk-card-primary uk-card-body uk-card-hover uk-inline-clip uk-transition-toggle" tabindex="0">
                 <div class="uk-card-media-top">
                     <img class="uk-transition-scale-up uk-transition-opaque" src="~/static/common_map.png" alt="">
                 </div>
@@ -487,5 +487,8 @@ svg {
 }
 div .filter{
     padding-top: 40px;
+}
+.uk-card-primary{
+    background:rgb(44, 106, 240)
 }
 </style>
