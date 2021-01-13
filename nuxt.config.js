@@ -1,14 +1,17 @@
 export default {
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
-    title: 'geo-garden',
+    title: 'Geo Garden',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' }
+      { hid: 'description', name: 'description', content: 'Персональный геосервис компании "Garden Group"' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+    ],
+    script: [
+      { hid: 'uikit_min_js', src: 'https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.8/js/uikit.min.js', defer: true },
     ]
   },
 
@@ -21,7 +24,7 @@ export default {
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
   plugins: [
     { src: '~/plugins/uikit.js', ssr: false },
-    { src: 'plugins/nuxt-offline-alert.js', ssr: false }
+    { src: '~/plugins/nuxt-offline-alert.js', ssr: false },
   ],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)
@@ -48,6 +51,27 @@ export default {
   content: {},
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
-  build: {
+  build: {},
+
+  pwa: {
+    icon: {
+      source: '~/static/icon.png'
+    },
+    meta: {
+      mobileApp: true,
+      name: 'Geo Garden',
+      author: 'Alex Starodubtsev',
+      description: 'Персональный геосервис компании "Garden Group"',
+      theme_color: '#fff',
+      lang: 'ru',
+    },
+    manifest: {
+      name: 'Geo Garden',
+      lang: 'ru',
+      useWebmanifestExtension: false
+    },
+    workbox: {
+      workboxURL: 'https://cdn.jsdelivr.net/npm/workbox-cdn/workbox/workbox-sw.js',
+    }
   }
 }
