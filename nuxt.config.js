@@ -19,6 +19,7 @@ export default {
   css: [
     "uikit/dist/css/uikit.min.css",
     "uikit/dist/css/uikit.css",
+    "~/assets/css/custom_styles.css"
   ],
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
@@ -67,6 +68,7 @@ export default {
     },
     manifest: {
       name: 'Geo Garden',
+      short_name: 'Geo Garden',
       lang: 'ru',
       useWebmanifestExtension: false
     },

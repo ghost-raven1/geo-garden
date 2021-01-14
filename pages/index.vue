@@ -18,6 +18,9 @@
         <li uk-filter-control="[data-plants-group='roots']"><a href="#">Корнеплоды</a></li>
         <li uk-filter-control="[data-plants-group='cereals']"><a href="#">Злаковые</a></li>
         <li uk-filter-control="[data-plants-group='berries']"><a href="#">Ягоды</a></li>
+        <li uk-filter-control="[data-plants-group='bushes']"><a href="#">Кусты</a></li>
+        <li uk-filter-control="[data-plants-group='trees']"><a href="#">Деревья</a></li>
+        <li uk-filter-control="[data-plants-group='fruits']"><a href="#">Плодовые</a></li>
     </ul>
 
     <ul class="js-filter uk-child-width-1-1 uk-child-width-1-3@m uk-text-center" uk-grid="masonry: true">
@@ -28,7 +31,7 @@
                     <img class="uk-transition-scale-up uk-transition-opaque" src="~/static/common_map.png" alt="">
                 </div>
                 <div class="uk-card-body">
-                    <div class="uk-card-badge uk-label">Избранное</div>
+                    <div class="uk-card-badge uk-label">Многолетники</div>
                     <h3 class="uk-card-title">Поле №10</h3>
                     <p>Описание поля.</p>
                     </div>
@@ -45,7 +48,7 @@
                     <img class="uk-transition-scale-up uk-transition-opaque" src="~/static/common_map.png" alt="">
                 </div>
                 <div class="uk-card-body">
-                    <div class="uk-card-badge uk-label">Избранное</div>
+                    <div class="uk-card-badge uk-label">Многолетники</div>
                     <h3 class="uk-card-title">Поле №11</h3>
                     <p>Описание поля.</p>
                 </div>
@@ -62,7 +65,7 @@
                     <img class="uk-transition-scale-up uk-transition-opaque" src="~/static/common_map.png" alt="">
                 </div>
                 <div class="uk-card-body">
-                    <div class="uk-card-badge uk-label">Избранное</div>
+                    <div class="uk-card-badge uk-label">Многолетники</div>
                     <h3 class="uk-card-title">Поле №12</h3>
                     <p>Описание поля.</p>
                 </div>
@@ -79,7 +82,7 @@
                     <img class="uk-transition-scale-up uk-transition-opaque" src="~/static/common_map.png" alt="">
                 </div>
                 <div class="uk-card-body">
-                    <div class="uk-card-badge uk-label">Избранное</div>
+                    <div class="uk-card-badge uk-label">Многолетники</div>
                     <h3 class="uk-card-title">Поле №13</h3>
                     <p>Описание поля.</p>
                 </div>
@@ -96,7 +99,7 @@
                     <img class="uk-transition-scale-up uk-transition-opaque" src="~/static/common_map.png" alt="">
                 </div>
                 <div class="uk-card-body">
-                    <div class="uk-card-badge uk-label">Избранное</div>
+                    <div class="uk-card-badge uk-label">Многолетники</div>
                     <h3 class="uk-card-title">Поле №14</h3>
                     <p>Описание поля.</p>
                 </div>
@@ -113,7 +116,7 @@
                     <img class="uk-transition-scale-up uk-transition-opaque" src="~/static/common_map.png" alt="">
                 </div>
                 <div class="uk-card-body">
-                    <div class="uk-card-badge uk-label">Избранное</div>
+                    <div class="uk-card-badge uk-label">Многолетники</div>
                     <h3 class="uk-card-title">Поле №15</h3>
                     <p>Описание поля.</p>
                 </div>
@@ -130,7 +133,7 @@
                     <img class="uk-transition-scale-up uk-transition-opaque" src="~/static/common_map.png" alt="">
                 </div>
                 <div class="uk-card-body">
-                    <div class="uk-card-badge uk-label">Избранное</div>
+                    <div class="uk-card-badge uk-label">Многолетники</div>
                     <h3 class="uk-card-title">Поле №16</h3>
                     <p>Описание поля.</p>
                 </div>
@@ -147,7 +150,7 @@
                     <img class="uk-transition-scale-up uk-transition-opaque" src="~/static/common_map.png" alt="">
                 </div>
                 <div class="uk-card-body">
-                    <div class="uk-card-badge uk-label">Избранное</div>
+                    <div class="uk-card-badge uk-label">Многолетники</div>
                     <h3 class="uk-card-title">Поле №17</h3>
                     <p>Описание поля.</p>
                 </div>
@@ -164,9 +167,9 @@
                     <img class="uk-transition-scale-up uk-transition-opaque" src="~/static/common_map.png" alt="">
                 </div>
                 <div class="uk-card-body">
-                    <div class="uk-card-badge uk-label">Избранное</div>
+                    <div class="uk-card-badge uk-label">Многолетники</div>
                     <h3 class="uk-card-title">Поле №18</h3>
-                    <p>Описание поля.</p>
+                    <p>Лилии</p>
                 </div>
                 <div class="uk-card-footer">
                     <a href="/fields/perennials/18" class="uk-button uk-button-text">Подробнее</a>
@@ -181,7 +184,7 @@
                     <img class="uk-transition-scale-up uk-transition-opaque" src="~/static/common_map.png" alt="">
                 </div>
                 <div class="uk-card-body">
-                    <div class="uk-card-badge uk-label">Избранное</div>
+                    <div class="uk-card-badge uk-label">Злаки</div>
                     <h3 class="uk-card-title">Поле №19</h3>
                     <p>Описание поля.</p>
                 </div>
@@ -198,12 +201,216 @@
                     <img class="uk-transition-scale-up uk-transition-opaque" src="~/static/common_map.png" alt="">
                 </div>
                 <div class="uk-card-body">
-                    <div class="uk-card-badge uk-label">Избранное</div>
+                    <div class="uk-card-badge uk-label">Ягоды</div>
                     <h3 class="uk-card-title">Поле №20</h3>
-                    <p>Описание поля.</p>
+                    <p>Клубника</p>
                 </div>
                 <div class="uk-card-footer">
                     <a href="/fields/berries/20" class="uk-button uk-button-text">Подробнее</a>
+                </div>
+            </div>
+            </a>
+        </li>
+        <li data-plants-group="bushes">
+            <a href="/fields/bushes/21">
+            <div class="uk-card uk-card-primary uk-card-body uk-card-hover uk-inline-clip uk-transition-toggle" tabindex="0">
+                <div class="uk-card-media-top">
+                    <img class="uk-transition-scale-up uk-transition-opaque" src="~/static/common_map.png" alt="">
+                </div>
+                <div class="uk-card-body">
+                    <div class="uk-card-badge uk-label">Кустарники</div>
+                    <h3 class="uk-card-title">Поле №21</h3>
+                    <p>Малина</p>
+                </div>
+                <div class="uk-card-footer">
+                    <a href="/fields/bushes/21" class="uk-button uk-button-text">Подробнее</a>
+                </div>
+            </div>
+            </a>
+        </li>
+        <li data-plants-group="bushes">
+            <a href="/fields/bushes/22">
+            <div class="uk-card uk-card-primary uk-card-body uk-card-hover uk-inline-clip uk-transition-toggle" tabindex="0">
+                <div class="uk-card-media-top">
+                    <img class="uk-transition-scale-up uk-transition-opaque" src="~/static/common_map.png" alt="">
+                </div>
+                <div class="uk-card-body">
+                    <div class="uk-card-badge uk-label">Кустарники</div>
+                    <h3 class="uk-card-title">Поле №22</h3>
+                    <p>Спирея</p>
+                </div>
+                <div class="uk-card-footer">
+                    <a href="/fields/bushes/22" class="uk-button uk-button-text">Подробнее</a>
+                </div>
+            </div>
+            </a>
+        </li>
+        <li data-plants-group="bushes">
+            <a href="/fields/bushes/23">
+            <div class="uk-card uk-card-primary uk-card-body uk-card-hover uk-inline-clip uk-transition-toggle" tabindex="0">
+                <div class="uk-card-media-top">
+                    <img class="uk-transition-scale-up uk-transition-opaque" src="~/static/common_map.png" alt="">
+                </div>
+                <div class="uk-card-body">
+                    <div class="uk-card-badge uk-label">Кустарники</div>
+                    <h3 class="uk-card-title">Поле №23</h3>
+                    <p>Спирея</p>
+                </div>
+                <div class="uk-card-footer">
+                    <a href="/fields/bushes/23" class="uk-button uk-button-text">Подробнее</a>
+                </div>
+            </div>
+            </a>
+        </li>
+        <li data-plants-group="bushes">
+            <a href="/fields/bushes/24">
+            <div class="uk-card uk-card-primary uk-card-body uk-card-hover uk-inline-clip uk-transition-toggle" tabindex="0">
+                <div class="uk-card-media-top">
+                    <img class="uk-transition-scale-up uk-transition-opaque" src="~/static/common_map.png" alt="">
+                </div>
+                <div class="uk-card-body">
+                    <div class="uk-card-badge uk-label">Кустарники</div>
+                    <h3 class="uk-card-title">Поле №24</h3>
+                    <p>Смородина</p>
+                </div>
+                <div class="uk-card-footer">
+                    <a href="/fields/bushes/24" class="uk-button uk-button-text">Подробнее</a>
+                </div>
+            </div>
+            </a>
+        </li>
+        <li data-plants-group="bushes">
+            <a href="/fields/bushes/25">
+            <div class="uk-card uk-card-primary uk-card-body uk-card-hover uk-inline-clip uk-transition-toggle" tabindex="0">
+                <div class="uk-card-media-top">
+                    <img class="uk-transition-scale-up uk-transition-opaque" src="~/static/common_map.png" alt="">
+                </div>
+                <div class="uk-card-body">
+                    <div class="uk-card-badge uk-label">Кустарники</div>
+                    <h3 class="uk-card-title">Поле №25</h3>
+                    <p>Кустарники</p>
+                </div>
+                <div class="uk-card-footer">
+                    <a href="/fields/bushes/25" class="uk-button uk-button-text">Подробнее</a>
+                </div>
+            </div>
+            </a>
+        </li>
+        <li data-plants-group="bushes">
+            <a href="/fields/bushes/26">
+            <div class="uk-card uk-card-primary uk-card-body uk-card-hover uk-inline-clip uk-transition-toggle" tabindex="0">
+                <div class="uk-card-media-top">
+                    <img class="uk-transition-scale-up uk-transition-opaque" src="~/static/common_map.png" alt="">
+                </div>
+                <div class="uk-card-body">
+                    <div class="uk-card-badge uk-label">Кустарники</div>
+                    <h3 class="uk-card-title">Поле №26</h3>
+                    <p>Кустарники</p>
+                </div>
+                <div class="uk-card-footer">
+                    <a href="/fields/bushes/26" class="uk-button uk-button-text">Подробнее</a>
+                </div>
+            </div>
+            </a>
+        </li>
+        <li data-plants-group="bushes">
+            <a href="/fields/bush/27">
+            <div class="uk-card uk-card-primary uk-card-body uk-card-hover uk-inline-clip uk-transition-toggle" tabindex="0">
+                <div class="uk-card-media-top">
+                    <img class="uk-transition-scale-up uk-transition-opaque" src="~/static/common_map.png" alt="">
+                </div>
+                <div class="uk-card-body">
+                    <div class="uk-card-badge uk-label">Кустарники</div>
+                    <h3 class="uk-card-title">Поле №27</h3>
+                    <p>Кустарники</p>
+                </div>
+                <div class="uk-card-footer">
+                    <a href="/fields/bush/27" class="uk-button uk-button-text">Подробнее</a>
+                </div>
+            </div>
+            </a>
+        </li>
+        <li data-plants-group="trees">
+            <a href="/fields/trees/28">
+            <div class="uk-card uk-card-primary uk-card-body uk-card-hover uk-inline-clip uk-transition-toggle" tabindex="0">
+                <div class="uk-card-media-top">
+                    <img class="uk-transition-scale-up uk-transition-opaque" src="~/static/common_map.png" alt="">
+                </div>
+                <div class="uk-card-body">
+                    <div class="uk-card-badge uk-label">Деревья</div>
+                    <h3 class="uk-card-title">Поле №28</h3>
+                    <p>Ивы и рябины</p>
+                </div>
+                <div class="uk-card-footer">
+                    <a href="/fields/trees/28" class="uk-button uk-button-text">Подробнее</a>
+                </div>
+            </div>
+            </a>
+        </li>
+        <li data-plants-group="trees">
+            <a href="/fields/trees/29">
+            <div class="uk-card uk-card-primary uk-card-body uk-card-hover uk-inline-clip uk-transition-toggle" tabindex="0">
+                <div class="uk-card-media-top">
+                    <img class="uk-transition-scale-up uk-transition-opaque" src="~/static/common_map.png" alt="">
+                </div>
+                <div class="uk-card-body">
+                    <div class="uk-card-badge uk-label">Деревья</div>
+                    <h3 class="uk-card-title">Поле №29</h3>
+                    <p>Ивы</p>
+                </div>
+                <div class="uk-card-footer">
+                    <a href="/fields/trees/29" class="uk-button uk-button-text">Подробнее</a>
+                </div>
+            </div>
+            </a>
+        </li>
+        <li data-plants-group="trees">
+            <a href="/fields/trees/30">
+            <div class="uk-card uk-card-primary uk-card-body uk-card-hover uk-inline-clip uk-transition-toggle" tabindex="0">
+                <div class="uk-card-media-top">
+                    <img class="uk-transition-scale-up uk-transition-opaque" src="~/static/common_map.png" alt="">
+                </div>
+                <div class="uk-card-body">
+                    <div class="uk-card-badge uk-label">Деревья</div>
+                    <h3 class="uk-card-title">Поле №30</h3>
+                    <p>Тополя</p>
+                </div>
+                <div class="uk-card-footer">
+                    <a href="/fields/trees/30" class="uk-button uk-button-text">Подробнее</a>
+                </div>
+            </div>
+            </a>
+        </li>
+        <li data-plants-group="fruits">
+            <a href="/fields/fruits/31">
+            <div class="uk-card uk-card-primary uk-card-body uk-card-hover uk-inline-clip uk-transition-toggle" tabindex="0">
+                <div class="uk-card-media-top">
+                    <img class="uk-transition-scale-up uk-transition-opaque" src="~/static/common_map.png" alt="">
+                </div>
+                <div class="uk-card-body">
+                    <div class="uk-card-badge uk-label">Плодовые</div>
+                    <h3 class="uk-card-title">Поле №31</h3>
+                    <p>Вишня</p>
+                </div>
+                <div class="uk-card-footer">
+                    <a href="/fields/fruits/31" class="uk-button uk-button-text">Подробнее</a>
+                </div>
+            </div>
+            </a>
+        </li>
+        <li data-plants-group="trees">
+            <a href="/fields/trees/32">
+            <div class="uk-card uk-card-primary uk-card-body uk-card-hover uk-inline-clip uk-transition-toggle" tabindex="0">
+                <div class="uk-card-media-top">
+                    <img class="uk-transition-scale-up uk-transition-opaque" src="~/static/common_map.png" alt="">
+                </div>
+                <div class="uk-card-body">
+                    <div class="uk-card-badge uk-label">Деревья</div>
+                    <h3 class="uk-card-title">Поле №32</h3>
+                    <p>Деревья</p>
+                </div>
+                <div class="uk-card-footer">
+                    <a href="/fields/trees/32" class="uk-button uk-button-text">Подробнее</a>
                 </div>
             </div>
             </a>
@@ -215,12 +422,29 @@
                     <img class="uk-transition-scale-up uk-transition-opaque" src="~/static/common_map.png" alt="">
                 </div>
                 <div class="uk-card-body">
-                    <div class="uk-card-badge uk-label">Избранное</div>
+                    <div class="uk-card-badge uk-label">Корнеплоды</div>
                     <h3 class="uk-card-title">Поле №33</h3>
                     <p>Описание поля.</p>
                 </div>
                 <div class="uk-card-footer">
                     <a href="/fields/roots/33" class="uk-button uk-button-text">Подробнее</a>
+                </div>
+            </div>
+            </a>
+        </li>
+        <li data-plants-group="fruits">
+            <a href="/fields/fruits/34">
+            <div class="uk-card uk-card-primary uk-card-body uk-card-hover uk-inline-clip uk-transition-toggle" tabindex="0">
+                <div class="uk-card-media-top">
+                    <img class="uk-transition-scale-up uk-transition-opaque" src="~/static/common_map.png" alt="">
+                </div>
+                <div class="uk-card-body">
+                    <div class="uk-card-badge uk-label">Плодовые</div>
+                    <h3 class="uk-card-title">Поле №34</h3>
+                    <p>Плодовые</p>
+                </div>
+                <div class="uk-card-footer">
+                    <a href="/fields/fruits/34" class="uk-button uk-button-text">Подробнее</a>
                 </div>
             </div>
             </a>
@@ -232,7 +456,7 @@
                     <img class="uk-transition-scale-up uk-transition-opaque" src="~/static/common_map.png" alt="">
                 </div>
                 <div class="uk-card-body">
-                    <div class="uk-card-badge uk-label">Избранное</div>
+                    <div class="uk-card-badge uk-label">Свободное</div>
                     <h3 class="uk-card-title">Поле №35</h3>
                     <p>Описание поля.</p>
                 </div>
@@ -243,7 +467,21 @@
             </a>
         </li>
         <li data-plants-group="free_fields">
-            <a href="/fields/free_fields/36"><div class="uk-card uk-card-default uk-card-body uk-card-hover uk-inline-clip uk-transition-toggle" tabindex="0">Поле №36</div></a>
+            <a href="/fields/free_fields/36">
+            <div class="uk-card uk-card-primary uk-card-body uk-card-hover uk-inline-clip uk-transition-toggle" tabindex="0">
+                <div class="uk-card-media-top">
+                    <img class="uk-transition-scale-up uk-transition-opaque" src="~/static/common_map.png" alt="">
+                </div>
+                <div class="uk-card-body">
+                    <div class="uk-card-badge uk-label">Свободное</div>
+                    <h3 class="uk-card-title">Поле №36</h3>
+                    <p>Описание поля.</p>
+                </div>
+                <div class="uk-card-footer">
+                    <a href="/fields/free_fields/36" class="uk-button uk-button-text">Подробнее</a>
+                </div>
+            </div>
+            </a>
         </li>
     </ul>
 </div>
@@ -264,7 +502,7 @@
                     </a>
                     <!-- №2 -->
                     <a href="#">
-                        <title>Поле №2</title>
+                        <title>Поле №2 - Газон и Беседка</title>
                         <path class="part" d="m 739.33898,166.42797 8.43644,59.05508 78.61229,-13.42161 -1.91737,-55.22034 z" fill="#bf2523" description-data="№2" />
                     </a>
                     <!-- №3 -->
@@ -358,62 +596,62 @@
                         <path class="part" d="m 479.7267,83.213982 6.51906,51.769068 55.22034,-4.21822 -6.51907,-51.002119 z" fill="#bf2523" description-data="№20" />
                     </a>
                     <!-- №21 -->
-                    <a href="#">
+                    <a href="/fields/bushes/21">
                         <title>Поле №21</title>
                         <path class="part" d="m 494.6822,229.70127 5.75212,29.91102 63.27331,-8.05297 -5.36865,-31.44491 z" fill="#bf2523" description-data="№21" />
                     </a>
                     <!-- №22 -->
-                    <a href="#">
+                    <a href="/fields/bushes/22">
                         <title>Поле №22</title>
                         <path class="part" d="m 503.11864,265.36441 3.0678,27.61017 67.49153,-10.35382 -5.36865,-24.1589 z" fill="#bf2523" description-data="№22" />
                     </a>
                     <!-- №23 -->
-                    <a href="#">
+                    <a href="/fields/bushes/23">
                         <title>Поле №23</title>
                         <path class="part" d="m 508.87076,297.1928 0.76695,14.18856 23.77543,-2.68433 11.12076,31.44492 42.1822,-9.20339 -10.73729,-44.48305 z" fill="#bf2523" description-data="№23" />
                     </a>
                     <!-- №24 -->
-                    <a href="#">
+                    <a href="/fields/bushes/24">
                         <title>Поле №24</title>
                         <path class="part" d="m 547.98517,344.36017 14.18856,35.27966 34.12924,-4.21822 -8.81992,-37.58051 z" fill="#bf2523" description-data="№24" />
                     </a>
                     <!-- №25 -->
-                    <a href="#">
+                    <a href="/fields/bushes/25">
                         <title>Поле №25</title>
                         <path class="part" d="m 614.32627,413.76907 12.27119,58.28813 20.70763,-3.06779 -3.0678,-61.35594 z" fill="#bf2523" description-data="№25" />
                     </a>
                     <!-- №26 -->
-                    <a href="#">
+                    <a href="/fields/bushes/26">
                         <title>Поле №26</title>
                         <path class="part" d="m 655.35805,449.4322 5.75212,21.0911 62.50636,-5.75211 -5.75212,-25.6928 z" fill="#bf2523" description-data="№26" />
                     </a>
                     <!-- №27 -->
-                    <a href="#">
+                    <a href="/fields/bushes/27">
                         <title>Поле №27</title>
                         <path class="part" d="m 730.13559,457.86864 4.98517,29.14407 113.125,-13.80508 -9.97033,-27.61017 z" fill="#bf2523" description-data="№27" />
                     </a>
                     <!-- №28 -->
-                    <a href="#">
+                    <a href="/fields/trees/28">
                         <title>Поле №28</title>
                         <path class="part" d="m 649.60593,362.76695 6.90255,78.99576 60.97245,-7.66949 -12.65466,-77.07839 -28.37712,0.76695 z" fill="#bf2523" description-data="№28" />
                     </a>
                     <!-- №29 -->
-                    <a href="#">
+                    <a href="/fields/trees/29">
                         <title>Поле №29</title>
                         <path class="part" d="m 643.08687,331.32203 4.60169,26.45975 55.22034,-7.66949 -3.0678,-26.07627 z" fill="#bf2523" description-data="№29" />
                     </a>
                     <!-- №30 -->
-                    <a href="#">
+                    <a href="/fields/trees/30">
                         <title>Поле №30</title>
                         <path class="part" d="m 629.66526,295.27542 11.50423,31.06144 56.75424,-5.75211 -4.21822,-16.48941 -14.18856,-16.48941 z" fill="#bf2523" description-data="№30" />
                     </a>
                     <!-- №31 -->
-                    <a href="#">
+                    <a href="/fields/fruits/31">
                         <title>Поле №31</title>
                         <path class="part" d="m 562.5572,384.625 11.50424,26.07627 31.44492,-5.36864 -7.66949,-23.77543 z" fill="#bf2523" description-data="№31" />
                     </a>
                     <!-- №32 -->
-                    <a href="#">
+                    <a href="/fields/trees/32">
                         <title>Поле №32</title>
                         <path class="part" d="m 493.53178,204.00847 2.30085,21.47458 60.58898,-9.20339 -4.98517,-19.94068 z" fill="#bf2523" description-data="№32" />
                     </a>  
@@ -423,7 +661,7 @@
                         <path class="part" d="m 485.86229,139.96822 5.36864,57.52119 59.05509,-6.51907 -8.05297,-55.60382 z" fill="#bf2523" description-data="№33" />
                     </a>
                     <!-- №34 -->
-                    <a href="#">
+                    <a href="/fields/roots/34">
                         <title>Поле №34</title>
                         <path class="part" d="m 578.27966,417.60381 15.72246,57.13772 28.37712,-2.68433 -15.72246,-60.97245 z" fill="#bf2523" description-data="№34" />
                     </a>

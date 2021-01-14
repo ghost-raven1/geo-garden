@@ -20,7 +20,7 @@
 </div>
 <ul class="uk-navbar-nav">
   <li class="uk-active">
-    <router-link tag="a" class="navbar-brand" to="/" exact>Веб сервис "Geo Garden" v0.3</router-link>
+    <router-link tag="a" class="navbar-brand" to="/" exact>Веб сервис "Geo Garden" v0.3.3</router-link>
     </li>
     </ul>
     </div>
