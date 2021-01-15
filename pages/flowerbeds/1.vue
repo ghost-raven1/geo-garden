@@ -3,7 +3,7 @@
     <section>
       <ul uk-accordion>
     <li class="uk-open">
-        <a class="uk-accordion-title" href="#">Малый пруд №3</a>
+        <a class="uk-accordion-title" href="#">Клумба №1</a>
         <div class="uk-accordion-content map_adaptive_container">
             <div uk-filter="target: .field-info-filter">
     <ul class="uk-subnav uk-subnav-pill">

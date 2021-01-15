@@ -13,6 +13,7 @@
             <li><a href="/trades"><span class="uk-margin-small-right"></span> Торговые зоны</a></li>
             <li><a href="/buildings"><span class="uk-margin-small-right"></span> Строения</a></li>
             <li><a href="/ponds"><span class="uk-margin-small-right"></span> Пруды</a></li>
+            <li><a href="/flowerbeds"><span class="uk-margin-small-right"></span> Клумбы</a></li>
             <li class="uk-nav-divider"></li>
             <li><a href="/about"><span class="uk-margin-small-right"></span> О сервисе</a></li>
         </ul>
@@ -20,10 +21,10 @@
 </div>
 <ul class="uk-navbar-nav">
   <li class="uk-active">
-    <router-link tag="a" class="navbar-brand" to="/" exact>Веб сервис "Geo Garden" v0.3.3</router-link>
+    <router-link tag="a" class="navbar-brand" to="/" exact>Веб сервис "Geo Garden" v0.3.4</router-link>
     </li>
     </ul>
-    </div>
+</div>
     </nav>
   </div>
   </client-only>

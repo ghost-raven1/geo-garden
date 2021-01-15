@@ -70,7 +70,7 @@
             <a class="uk-button uk-button-default" href="/fields/perennials/17">подробнее</a>
         </div>
     </li>
-        <li>
+    <li>
         <a class="uk-accordion-title" href="#">Поле №18</a>
         <div class="uk-accordion-content map_adaptive_container">
             <p>Малина</p>
@@ -105,16 +105,7 @@
             </ul>
         </div>
     </li>
-    <li>
-        <a class="uk-accordion-title" href="#">Хвойные</a>
-        <div class="uk-accordion-content map_adaptive_container">
-<div class="uk-alert-primary" uk-alert>
-    <a class="uk-alert-close" uk-close></a>
-    <p>Выберите поле из списка...</p>
-</div>
-            Пока нет полей...
-        </div>
-    </li>
+
     <li>
         <a class="uk-accordion-title" href="#">Кустарники</a>
         <div class="uk-accordion-content map_adaptive_container">
@@ -122,6 +113,55 @@
     <a class="uk-alert-close" uk-close></a>
     <p>Выберите поле из списка...</p>
 </div>
+    <li>
+        <a class="uk-accordion-title" href="#">Поле №21</a>
+        <div class="uk-accordion-content map_adaptive_container">
+            <p>Сюда скоро будет добавлена актуальная информация</p>
+            <a class="uk-button uk-button-default" href="/fields/bushes/21">подробнее</a>
+        </div>
+    </li>
+    <li>
+        <a class="uk-accordion-title" href="#">Поле №22</a>
+        <div class="uk-accordion-content map_adaptive_container">
+            <p>Сюда скоро будет добавлена актуальная информация</p>
+            <a class="uk-button uk-button-default" href="/fields/bushes/22">подробнее</a>
+        </div>
+    </li>
+    <li>
+        <a class="uk-accordion-title" href="#">Поле №23</a>
+        <div class="uk-accordion-content map_adaptive_container">
+            <p>Сюда скоро будет добавлена актуальная информация</p>
+            <a class="uk-button uk-button-default" href="/fields/bushes/23">подробнее</a>
+        </div>
+    </li>
+    <li>
+        <a class="uk-accordion-title" href="#">Поле №24</a>
+        <div class="uk-accordion-content map_adaptive_container">
+            <p>Сюда скоро будет добавлена актуальная информация</p>
+            <a class="uk-button uk-button-default" href="/fields/bushes/24">подробнее</a>
+        </div>
+    </li>
+    <li>
+        <a class="uk-accordion-title" href="#">Поле №25</a>
+        <div class="uk-accordion-content map_adaptive_container">
+            <p>Сюда скоро будет добавлена актуальная информация</p>
+            <a class="uk-button uk-button-default" href="/fields/bushes/25">подробнее</a>
+        </div>
+    </li>
+    <li>
+        <a class="uk-accordion-title" href="#">Поле №26</a>
+        <div class="uk-accordion-content map_adaptive_container">
+            <p>Сюда скоро будет добавлена актуальная информация</p>
+            <a class="uk-button uk-button-default" href="/fields/bushes/26">подробнее</a>
+        </div>
+    </li>
+    <li>
+        <a class="uk-accordion-title" href="#">Поле №27</a>
+        <div class="uk-accordion-content map_adaptive_container">
+            <p>Сюда скоро будет добавлена актуальная информация</p>
+            <a class="uk-button uk-button-default" href="/fields/bushes/27">подробнее</a>
+        </div>
+    </li>
 
         </div>
     </li>
@@ -132,7 +172,41 @@
     <a class="uk-alert-close" uk-close></a>
     <p>Выберите поле из списка...</p>
 </div>
-
+<li>
+        <a class="uk-accordion-title" href="#">Поле №28</a>
+        <div class="uk-accordion-content map_adaptive_container">
+            <p>Сюда скоро будет добавлена актуальная информация</p>
+            <a class="uk-button uk-button-default" href="/fields/trees/28">подробнее</a>
+        </div>
+    </li>
+    <li>
+        <a class="uk-accordion-title" href="#">Поле №29</a>
+        <div class="uk-accordion-content map_adaptive_container">
+            <p>Сюда скоро будет добавлена актуальная информация</p>
+            <a class="uk-button uk-button-default" href="/fields/trees/29">подробнее</a>
+        </div>
+    </li>
+    <li>
+        <a class="uk-accordion-title" href="#">Поле №30</a>
+        <div class="uk-accordion-content map_adaptive_container">
+            <p>Сюда скоро будет добавлена актуальная информация</p>
+            <a class="uk-button uk-button-default" href="/fields/trees/30">подробнее</a>
+        </div>
+    </li>
+    <li>
+        <a class="uk-accordion-title" href="#">Поле №32</a>
+        <div class="uk-accordion-content map_adaptive_container">
+            <p>Сюда скоро будет добавлена актуальная информация</p>
+            <a class="uk-button uk-button-default" href="/fields/trees/32">подробнее</a>
+        </div>
+    </li>
+    <li>
+        <a class="uk-accordion-title" href="#">Поле №34</a>
+        <div class="uk-accordion-content map_adaptive_container">
+            <p>Сюда скоро будет добавлена актуальная информация</p>
+            <a class="uk-button uk-button-default" href="/fields/trees/34">подробнее</a>
+        </div>
+    </li>
         </div>
     </li>
     <li>
@@ -142,6 +216,20 @@
     <a class="uk-alert-close" uk-close></a>
     <p>Выберите поле из списка...</p>
 </div>
+    <li>
+        <a class="uk-accordion-title" href="#">Поле №31</a>
+        <div class="uk-accordion-content map_adaptive_container">
+            <p>Сюда скоро будет добавлена актуальная информация</p>
+            <a class="uk-button uk-button-default" href="/fields/fruits/31">подробнее</a>
+        </div>
+    </li>
+    <li>
+        <a class="uk-accordion-title" href="#">Поле №33</a>
+        <div class="uk-accordion-content map_adaptive_container">
+            <p>Сюда скоро будет добавлена актуальная информация</p>
+            <a class="uk-button uk-button-default" href="/fields/roots/33">подробнее</a>
+        </div>
+    </li>
 
         </div>
     </li>
