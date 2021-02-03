@@ -1,6 +1,6 @@
 {
   "name": "geo-garden",
-  "version": "0.3.5",
+  "version": "0.3.6",
   "private": true,
   "scripts": {
     "dev": "nuxt",
@@ -16,7 +16,7 @@
     "core-js": "^3.6.5",
     "nuxt": "^2.14.6",
     "nuxt-offline-alert": "0.0.7",
-    "uikit": "^3.6.8"
+    "uikit": "^3.6.15"
   },
   "devDependencies": {}
 }

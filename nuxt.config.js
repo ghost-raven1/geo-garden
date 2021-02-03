@@ -1,5 +1,6 @@
 export default {
   // Global page headers (https://go.nuxtjs.dev/config-head)
+  target: 'static',
   head: {
     title: 'Geo Garden',
     meta: [
@@ -8,12 +9,15 @@ export default {
       { hid: 'description', name: 'description', content: 'Персональный геосервис компании "Garden Group"' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      {rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.26/css/uikit.min.css'}
     ],
     script: [
-      { hid: 'uikit_min_js', src: 'https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.8/js/uikit.min.js', defer: false },
+      {src: 'https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.26/js/uikit.min.js', async:"true"}
     ]
   },
+
+  loading: {color: '#3B8070'},
 
   // Global CSS (https://go.nuxtjs.dev/config-css)
   css: [
@@ -24,8 +28,8 @@ export default {
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
   plugins: [
-    { src: '~/plugins/uikit.js', ssr: false },
     { src: '~/plugins/nuxt-offline-alert.js', ssr: false },
+    { src: '~/plugins/uikit.js', ssr: false },
   ],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)
