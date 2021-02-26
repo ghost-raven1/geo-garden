@@ -14,7 +14,7 @@ export default {
       {rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.26/css/uikit.min.css'}
     ],
     script: [
-      {src: 'https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.26/js/uikit.min.js', async:"true"}
+      {src: 'https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.26/js/uikit.min.js', async:"true"},
     ]
   },
 

@@ -2,3 +2,55 @@
     z-index: 990;
     width: 100%;
 }
+
+.uk-navbar-container:not(.uk-navbar-transparent) {
+    background: #e8e9e8;
+}
+
+.container {
+    max-height: 90%;
+    max-width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-left: 5%;
+  }
+  section {
+    width: 100%;
+  }
+  div .map_adaptive_container{
+      height: 100%;
+      max-width: 100%;
+      padding-bottom: 5%;
+      padding-top: 1%;
+  }
+  div .map{
+      position: relative;
+      text-align: center;
+  }
+  svg {
+      position: absolute;
+      top: 0;
+      right: 0;
+  
+      height: 100%;
+      width: 100%;
+  }
+  .part {
+      opacity: .3;
+  }
+  .part:hover {
+      transition: opacity .2s ease;
+      opacity: .7;
+      cursor: pointer;
+  }
+  div .filter{
+      padding-top: 40px;
+  }
+  .uk-card-primary{
+      background:rgb(44, 106, 240)
+  }
+  div .change_log_container {
+    margin-top: 5%;
+}

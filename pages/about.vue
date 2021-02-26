@@ -30,8 +30,4 @@
   align-items: center;
   text-align: center;
 }
-div .change_log_container {
-    margin-top: 5%;
-}
-
 </style>
