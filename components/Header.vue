@@ -23,12 +23,22 @@
 </div>
 <ul class="uk-navbar-nav">
     <a class="uk-button uk-button-default uk-margin-small-right button-menu" type="button" uk-toggle="target: #offcanvas-nav-primary"><span class="uk-margin-small-left uk-margin-small-right">Меню</span></a>
-  <li class="uk-active">
-    <a class="navbar-brand" href="/" exact>Веб сервис "Geo Garden" v0.3.6</a>
+  <li class="uk-active site-name">
+    <a class="navbar-brand" href="/" exact>Веб сервис "Geo Garden" v0.3.9</a>
     </li>
 </ul>
 </div>
-<div class="weather-widget" id="ml_d752456a"><div style="padding:0;margin:0;" id="ml_d752456a_i" v='1.1' a='{"t":"g7bs","lang":"ru","ids":["959"],"a_br_c":"rgba(232,233,232,1)","a_bg":"rgba(232,233,232,1)","a_c":"#000000","a_c_c":"black","p_cr":2,"a_t_mr_lf":10,"a_h":80,"a_ic_sz":20,"a_ic_mr_lf":10,"a_b_w":180}'></div><div id="ml_d752456a_c" style="padding:0;margin:0;padding:7px 5px;"><img src="https://meteolabs.ru/assets/img/logo_z_b.svg" style="width:15px;opacity:0.7;margin-right:5px;position:relative;top:50%;transform:translateY(-6px);vertical-align:top;display:inline-block;"><a href="https://meteolabs.ru/" style=";padding:0;margin:0;color:inherit;text-decoration:none;display:inline-block;box-sizing: border-box;padding:0 5px;font-size:14px;line-height:14px;position:relative;top:50%;transform:translateY(-7px);vertical-align:top;" target="_blank" id="ml_d752456a_u">Погода в Томске</a></div></div><script async src="https://app.meteolabs.ru/js/?id=ml_d752456a"></script>
+<div class="weather-widget" id="ml_d752456a">
+    <div style="padding:0; margin: 0px 0px 0px 100px;" id="ml_d752456a_i" v='1.1' a='{"t":"g7bs","lang":"ru","ids":["959"],"a_br_c":"rgba(232,233,232,1)","a_bg":"rgba(232,233,232,1)","a_c":"#000000","a_c_c":"black","p_cr":2,"a_t_mr_lf":10,"a_h":80,"a_ic_sz":20,"a_ic_mr_lf":10,"a_b_w":180}'>
+</div>
+    <div id="ml_d752456a_c" style="padding:0; margin: 0px 0px 0px 100px;padding:7px 5px;">
+        <img src="https://meteolabs.ru/assets/img/logo_z_b.svg" style="width:15px;opacity:0.7;margin-right:5px;position:relative;top:50%;transform:translateY(-6px);vertical-align:top;display:inline-block;">
+        <a href="https://meteolabs.ru/" style=";padding:0;margin: 0px 0px 0px 100px;color:inherit;text-decoration:none;display:inline-block;box-sizing: border-box;padding:0 5px;font-size:14px;line-height:14px;position:relative;top:50%;transform:translateY(-7px);vertical-align:top;" target="_blank" id="ml_d752456a_u">
+        Погода в Томске
+        </a>
+    </div>
+</div>
+<script async src="https://app.meteolabs.ru/js/?id=ml_d752456a"></script>
   </nav>
 
   <div id="tech-card" uk-modal>
@@ -75,5 +85,10 @@
 }
 .button-menu{
     padding: 16px 25px;
+}
+
+.site-name{
+    flex-shrink: 0;
+    padding-right: 150px;
 }
 </style>
