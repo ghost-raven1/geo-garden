@@ -1,4 +1,8 @@
 <template>
+
+        <li>
+        <a class="uk-accordion-title" href="#">Карта всех объектов питомника "Garden Group"</a>
+        <div class="uk-accordion-content map_adaptive_container">
     <div class="map">
                 <svg viewBox="0 0 1056 724">
                     <!-- №1 -->
@@ -184,4 +188,6 @@
                 </svg>
                 <img src="~/static/common_map.png" alt="">
     </div>
+        </div>
+    </li>
 </template>

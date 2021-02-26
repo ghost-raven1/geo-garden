@@ -22,6 +22,40 @@
     </ul>
 
     <ul class="js-filter uk-child-width-1-1 uk-child-width-1-3@m uk-text-center" uk-grid="masonry: true" uk-scrollspy="cls: uk-animation-fade; target: .uk-card; delay: 25; repeat: true">
+        <li data-zones="flowerbeds">
+            <a href="/fields/flowerbeds/1">
+            <div class="uk-card uk-card-primary uk-card-body uk-card-hover uk-inline-clip uk-transition-toggle" tabindex="0">
+                <div class="uk-card-media-top">
+                    <img class="uk-transition-scale-up uk-transition-opaque" src="~/static/common_map.png" alt="">
+                </div>
+                <div class="uk-card-body">
+                    <div class="uk-card-badge uk-label">Клумба</div>
+                    <h3 class="uk-card-title">Клумба №1</h3>
+                    <p>Описание поля.</p>
+                </div>
+                <div class="uk-card-footer">
+                    <a href="/fields/flowerbeds/1" class="uk-button uk-button-text">Подробнее</a>
+                </div>
+            </div>
+            </a>
+        </li>
+            <li data-zones="flowerbeds">
+            <a href="/fields/flowerbeds/2">
+            <div class="uk-card uk-card-primary uk-card-body uk-card-hover uk-inline-clip uk-transition-toggle" tabindex="0">
+                <div class="uk-card-media-top">
+                    <img class="uk-transition-scale-up uk-transition-opaque" src="~/static/common_map.png" alt="">
+                </div>
+                <div class="uk-card-body">
+                    <div class="uk-card-badge uk-label">Клумба</div>
+                    <h3 class="uk-card-title">Клумба №2</h3>
+                    <p>Описание поля.</p>
+                </div>
+                <div class="uk-card-footer">
+                    <a href="/fields/flowerbeds/2" class="uk-button uk-button-text">Подробнее</a>
+                </div>
+            </div>
+            </a>
+        </li>
         <li data-zones="ponds">
             <a href="/ponds/3">
             <div class="uk-card uk-card-primary uk-card-body uk-card-hover uk-inline-clip uk-transition-toggle" tabindex="0">
@@ -596,40 +630,6 @@
                 </div>
                 <div class="uk-card-footer">
                     <a href="/fields/free_fields/36" class="uk-button uk-button-text">Подробнее</a>
-                </div>
-            </div>
-            </a>
-        </li>
-        <li data-zones="flowerbeds">
-            <a href="/fields/flowerbeds/1">
-            <div class="uk-card uk-card-primary uk-card-body uk-card-hover uk-inline-clip uk-transition-toggle" tabindex="0">
-                <div class="uk-card-media-top">
-                    <img class="uk-transition-scale-up uk-transition-opaque" src="~/static/common_map.png" alt="">
-                </div>
-                <div class="uk-card-body">
-                    <div class="uk-card-badge uk-label">Клумба</div>
-                    <h3 class="uk-card-title">Клумба №1</h3>
-                    <p>Описание поля.</p>
-                </div>
-                <div class="uk-card-footer">
-                    <a href="/fields/flowerbeds/1" class="uk-button uk-button-text">Подробнее</a>
-                </div>
-            </div>
-            </a>
-        </li>
-            <li data-zones="flowerbeds">
-            <a href="/fields/flowerbeds/2">
-            <div class="uk-card uk-card-primary uk-card-body uk-card-hover uk-inline-clip uk-transition-toggle" tabindex="0">
-                <div class="uk-card-media-top">
-                    <img class="uk-transition-scale-up uk-transition-opaque" src="~/static/common_map.png" alt="">
-                </div>
-                <div class="uk-card-body">
-                    <div class="uk-card-badge uk-label">Клумба</div>
-                    <h3 class="uk-card-title">Клумба №2</h3>
-                    <p>Описание поля.</p>
-                </div>
-                <div class="uk-card-footer">
-                    <a href="/fields/flowerbeds/2" class="uk-button uk-button-text">Подробнее</a>
                 </div>
             </div>
             </a>

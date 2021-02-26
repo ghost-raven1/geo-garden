@@ -21,7 +21,9 @@
             </div>
         </li>
         <li class="tag-events">
-            <div class="uk-card uk-card-default uk-card-body">Интерактивная карта</div>
+            <div class="uk-card uk-card-default uk-card-body">
+                <CommonMap2021 />
+            </div>
         </li>
     </ul>
 </div>
@@ -32,11 +34,13 @@
   </div>
 </template>
 
-<script>  
+<script>
+import CommonMap2021 from '~/components/maps/2021/CommonMap2021.vue';
 import Techcard from '~/components/techcard/Tech.vue'
 export default {  
   components: {
       Techcard,
+      CommonMap2021,
   }
 }
 </script>
