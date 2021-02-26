@@ -1,7 +1,5 @@
 export default {
   // Global page headers (https://go.nuxtjs.dev/config-head)
-  target: 'universal',
-  ssr: false,
   head: {
     title: 'Geo Garden',
     meta: [
