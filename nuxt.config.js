@@ -1,6 +1,6 @@
 export default {
   // Global page headers (https://go.nuxtjs.dev/config-head)
-  target: 'static',
+  target: 'universal',
   ssr: false,
   head: {
     title: 'Geo Garden',
@@ -16,10 +16,6 @@ export default {
     script: [
       {src: 'https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.26/js/uikit.min.js', async:"true"},
     ]
-  },
-
-  generate: {
-    fallback: true
   },
 
   loading: {color: '#3B8070'},
