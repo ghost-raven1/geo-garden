@@ -59,7 +59,7 @@ export default {
 
   pwa: {
     icon: {
-      source: '~/static/icon.png'
+      source: '/assets/media/512.png'
     },
     meta: {
       mobileApp: true,
