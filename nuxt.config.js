@@ -8,7 +8,7 @@ export default {
       { hid: 'description', name: 'description', content: 'Персональный геосервис компании "Garden Group"' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'icon', type: 'image/x-icon', href: 'assets/media/favicon.ico' },
       {rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.26/css/uikit.min.css'}
     ],
     script: [
@@ -59,7 +59,7 @@ export default {
 
   pwa: {
     icon: {
-      source: '/assets/media/512.png'
+      source: 'assets/media/ms-icon-310x310.png'
     },
     meta: {
       mobileApp: true,
