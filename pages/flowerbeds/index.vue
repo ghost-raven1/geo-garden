@@ -24,3 +24,11 @@
     </section>
   </div>
 </template>
+
+<script>  
+export default {  
+  components: {
+      middleware: 'auth',
+  }
+}
+</script>

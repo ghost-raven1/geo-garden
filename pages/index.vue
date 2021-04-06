@@ -60,6 +60,7 @@ import FilterFields2021 from '~/components/filters/2021/FilterFields2021.vue';
 import Techcard from '~/components/techcard/Tech-ac.vue'
 export default {  
   components: {
+      middleware: 'auth',
       CommonMap2021,
       FilterFields2021,
       Techcard,

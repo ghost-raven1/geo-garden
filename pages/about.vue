@@ -31,3 +31,11 @@
   text-align: center;
 }
 </style>
+
+<script>
+export default {
+  components: {
+      middleware: 'auth', 
+  }
+}
+</script>

@@ -36,7 +36,8 @@
 <script>  
 import Techcard from '~/components/techcard/Tech.vue';
 import CommonMap2021 from '~/components/maps/2021/CommonMap2021.vue';
-export default {  
+export default {
+middleware: 'auth',  
   components: {
       Techcard,
       CommonMap2021
