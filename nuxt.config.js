@@ -46,7 +46,16 @@ export default {
     '@nuxtjs/pwa',
     // https://go.nuxtjs.dev/content
     '@nuxt/content',
+    '@nuxtjs/apollo',
   ],
+
+  apollo: {
+  clientConfigs: {
+    default: {
+      httpEndpoint: 'https://geo-garden-backend.herokuapp.com/graphql'
+    }
+  }
+},
 
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
   axios: {},
