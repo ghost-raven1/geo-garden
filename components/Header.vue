@@ -18,13 +18,15 @@
             <li><a href="#chat" uk-toggle><span class="uk-margin-small-right"></span> WhatsApp</a></li>
             <li class="uk-nav-divider"></li>
             <li><a href="/about"><span class="uk-margin-small-right"></span> О сервисе</a></li>
+            <li><a href="/help"><span class="uk-margin-small-right"></span> Помощь</a></li>
+            <li><a href="https://geo-garden-backend.herokuapp.com/admin"><span class="uk-margin-small-right"></span> Админпанель</a></li>
         </ul>
     </div>
 </div>
 <ul class="uk-navbar-nav">
     <a class="uk-button uk-button-default uk-margin-small-right button-menu" type="button" uk-toggle="target: #offcanvas-nav-primary"><span class="uk-margin-small-left uk-margin-small-right">Меню</span></a>
   <li class="uk-active site-name">
-    <a class="navbar-brand" href="/" exact>Веб сервис "Geo Garden" v0.4.0</a>
+    <a class="navbar-brand" href="/" exact>Веб сервис "Geo Garden" v0.4.1</a>
     </li>
 </ul>
 </div>
