@@ -13,7 +13,7 @@
     </ul>
     <ul class="field-info-filter uk-child-width-1-1 uk-child-width-1-1@m uk-text-center" uk-grid>
         <li class="tag-common">
-            <div class="uk-card uk-card-default uk-card-body">Информация об объекте</div>
+            <div class="uk-card uk-card-default uk-card-body">Площадь объекта: 109м2</div>
         </li>
         <li class="tag-map">
             <div class="uk-card uk-card-default uk-card-body">
@@ -35,7 +35,8 @@
 <script>  
 import Techcard from '~/components/techcard/Tech.vue';
 import CommonMap2021 from '~/components/maps/2021/CommonMap2021.vue'
-export default {  
+export default {
+    //middleware: 'guest',  
   components: {
       Techcard,
       CommonMap2021,

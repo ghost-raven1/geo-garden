@@ -60,6 +60,7 @@ import { mapMutations } from 'vuex'
 import strapi from '~/utils/Strapi'
 
 export default {
+  auth: 'guest',
   data() {
     return {
       email: '',

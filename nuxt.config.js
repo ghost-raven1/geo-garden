@@ -47,6 +47,7 @@ export default {
     // https://go.nuxtjs.dev/content
     '@nuxt/content',
     '@nuxtjs/apollo',
+    '@nuxtjs/auth-next',
   ],
 
   apollo: {
@@ -56,6 +57,35 @@ export default {
     }
   }
 },
+
+auth: {
+  strategies: {
+    cookie: {
+      cookie: {
+        // (optional) If set we check this cookie exsistence for loggedIn check
+        name: 'auth.redirect',
+        options: {
+          path: '/'
+        }
+      },
+      endpoints: {
+        // (optional) If set, we send a get request to this endpoint before login
+        /*csrf: {
+          url: '/'
+        } */
+      }
+    },
+},
+redirect: {
+  login: '/users/signin',
+  logout: '/',
+  callback: '/users/signin',
+  home: '/'
+},
+},
+  
+
+
 
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
   axios: {},

@@ -6,6 +6,9 @@ export const mutations = {
   setUser(state, user) {
     state.user = user
     Cookies.set('user', user)
+    this.$auth.strategy.token.get()
+    this.$auth.strategy.token.sync()
+
   },
   // Mutation that you need to add
   logout(state) {
