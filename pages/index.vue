@@ -58,9 +58,9 @@
 import CommonMap2021 from '~/components/maps/2021/CommonMap2021-ac.vue';
 import FilterFields2021 from '~/components/filters/2021/FilterFields2021.vue';
 import Techcard from '~/components/techcard/Tech-ac.vue'
-export default {  
+export default {
+    //middleware: 'guest',  
   components: {
-      middleware: 'auth',
       CommonMap2021,
       FilterFields2021,
       Techcard,

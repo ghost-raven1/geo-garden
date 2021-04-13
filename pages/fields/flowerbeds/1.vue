@@ -3,7 +3,7 @@
     <section>
       <ul uk-accordion>
     <li class="uk-open">
-        <a class="uk-accordion-title" href="#">Клумба №2 - Газон и Беседка</a>
+        <a class="uk-accordion-title" href="#">Клумба №1</a>
         <div class="uk-accordion-content map_adaptive_container">
             <div uk-filter="target: .field-info-filter">
     <ul class="uk-subnav uk-subnav-pill">
@@ -13,7 +13,7 @@
     </ul>
     <ul class="field-info-filter uk-child-width-1-1 uk-child-width-1-1@m uk-text-center" uk-grid>
         <li class="tag-common">
-            <div class="uk-card uk-card-default uk-card-body">Информация по полю</div>
+            <div class="uk-card uk-card-default uk-card-body">Площадь поля: 164м2</div>
         </li>
         <li class="tag-map">
             <div class="uk-card uk-card-default uk-card-body"><Techcard /></div>
@@ -34,7 +34,7 @@
 import Techcard from '~/components/techcard/Tech.vue';
 import CommonMap2021 from '~/components/maps/2021/CommonMap2021.vue';
 export default {
-    middleware: 'auth',   
+    //middleware: 'guest',  
   components: {
       Techcard,
       CommonMap2021

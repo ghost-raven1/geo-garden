@@ -16,8 +16,8 @@
 
 <script>
 export default {
-  components: {
-      middleware: 'auth', 
+//middleware: 'guest',
+  components: { 
   }
 }
 </script>

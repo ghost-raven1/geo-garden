@@ -34,8 +34,8 @@
 
 <script>
 export default {
+  //middleware: 'guest', 
   components: {
-      middleware: 'auth', 
   }
 }
 </script>

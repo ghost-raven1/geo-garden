@@ -12,7 +12,7 @@
             <li><a href="/trades"><span class="uk-margin-small-right"></span> Торговые зоны</a></li>
             <li><a href="/buildings"><span class="uk-margin-small-right"></span> Строения</a></li>
             <li><a href="/ponds"><span class="uk-margin-small-right"></span> Пруды</a></li>
-            <li><a href="/flowerbeds"><span class="uk-margin-small-right"></span> Клумбы</a></li>
+            <li><a href="/fields/flowerbeds"><span class="uk-margin-small-right"></span> Клумбы</a></li>
             <li class="uk-nav-divider"></li>
             <li><a href="#tech-card" uk-toggle><span class="uk-margin-small-right"></span> Обновления</a></li>
             <li><a href="#chat" uk-toggle><span class="uk-margin-small-right"></span> WhatsApp</a></li>
@@ -42,9 +42,9 @@
 </div>
 <script async src="https://app.meteolabs.ru/js/?id=ml_d752456a"></script>
   </nav>
-  
+<!-- 
           <ul class="uk-navbar-nav" v-if="username">
-              <li><a href="#" class="uk-link-reset"><img src="http://cdn.onlinewebfonts.com/svg/img_365985.png" class="uk-border-circle" height="40" width="40" alt="">{{ username }}</a></li>
+              <li><a href="#" class="uk-link-reset"><img src="../static/user.png" class="uk-border-circle" height="40" width="40" alt="">{{ username }}</a></li>
               <li><a href="#" @click="logout">Logout</a></li>
           </ul>
 
@@ -52,7 +52,7 @@
               <li><a href="/users/register">Signup</a></li>
               <li><a href="/users/signin">Signin</a></li>
           </ul>
-
+-->
   <div id="tech-card" uk-modal>
     <div class="uk-modal-dialog">
         <button class="uk-modal-close-default" type="button" uk-close></button>
