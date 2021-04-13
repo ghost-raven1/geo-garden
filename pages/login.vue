@@ -3,24 +3,11 @@
  <div class="container">
  <div class="columns">
  <div class="column">
- <h2 class="title has-text-centered">Регистрация в Geo Garden</h2>
+ <h2 class="title has-text-centered">Вход в Geo Garden</h2>
 
- <Notification v-if="success" type="success" :message="success" />
  <Notification v-if="error" type="danger" :message="error" />
 
- <form v-if="!success" method="post" @submit.prevent="register">
- <div class="field">
- <label class="label">Имя пользователя</label>
- <div class="control">
- <input
- v-model="username"
- type="text"
- class="input"
- name="username"
- required
- />
- </div>
- </div>
+ <form method="post" @submit.prevent="login">
  <div class="field">
  <label class="label">Email</label>
  <div class="control">
@@ -29,7 +16,6 @@
  type="email"
  class="input"
  name="email"
- required
  />
  </div>
  </div>
@@ -41,19 +27,23 @@
  type="password"
  class="input"
  name="password"
- required
  />
  </div>
  </div>
  <div class="control">
- <button type="submit" class="button is-dark is-fullwidth">
- Зарегистрироваться
+ <button type="submit" class="button is-dark">
+ Войти
  </button>
  </div>
  </form>
-
- <div class="has-text-centered" style="margin-top: 20px">
- Уже есть аккаунт? <nuxt-link to="/login">Войти</nuxt-link>
+ <div style="margin-top: 20px">
+ <p>
+ Нет аккаунта?
+ <nuxt-link to="/register">Регистрация</nuxt-link>
+ </p>
+ <p>
+ <nuxt-link to="/forgot-password">Забыли пароль?</nuxt-link>
+ </p>
  </div>
  </div>
  </div>
@@ -71,25 +61,22 @@ export default {
  },
  data() {
  return {
- username: "",
  email: "",
  password: "",
- success: null,
  error: null,
  };
  },
  methods: {
- async register() {
+ async login() {
  this.error = null;
  try {
- this.$axios.setToken(false);
- await this.$axios.post("auth/local/register", {
- username: this.username,
- email: this.email,
+ await this.$auth.loginWith("local", {
+ data: {
+ identifier: this.email,
  password: this.password,
+ },
  });
- this.success = `A confirmation link has been sent to your email account. \
- Please click on the link to complete the registration process.`;
+ this.$router.push("/");
  } catch (e) {
  this.error = e.response.data.message[0].messages[0].message;
  }
