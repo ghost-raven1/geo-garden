@@ -42,17 +42,18 @@
 </div>
 <script async src="https://app.meteolabs.ru/js/?id=ml_d752456a"></script>
   </nav>
-<!-- 
-          <ul class="uk-navbar-nav" v-if="username">
-              <li><a href="#" class="uk-link-reset"><img src="../static/user.png" class="uk-border-circle" height="40" width="40" alt="">{{ username }}</a></li>
-              <li><a href="#" @click="logout">Logout</a></li>
-          </ul>
 
-          <ul class="uk-navbar-nav" v-else>
-              <li><a href="/users/register">Signup</a></li>
-              <li><a href="/users/signin">Signin</a></li>
-          </ul>
--->
+          <div v-if="$auth.loggedIn">
+              <img src="../static/user.png" class="uk-border-circle" height="40" width="40" alt="">
+              {{ loggedInUser.username }}
+            <v-btn text>Logout</v-btn>
+          </div>
+
+          <div v-else>
+            <v-btn text to="/register">Signup</v-btn>
+            <v-btn text to="/signin">Signin</v-btn>
+          </div>
+
   <div id="tech-card" uk-modal>
     <div class="uk-modal-dialog">
         <button class="uk-modal-close-default" type="button" uk-close></button>

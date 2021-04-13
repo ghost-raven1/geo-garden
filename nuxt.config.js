@@ -40,14 +40,12 @@ export default {
 
   // Modules (https://go.nuxtjs.dev/config-modules)
   modules: [
-    // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
-    // https://go.nuxtjs.dev/pwa
+    '@nuxtjs/dotenv',
+    '@nuxtjs/auth',
     '@nuxtjs/pwa',
-    // https://go.nuxtjs.dev/content
-    '@nuxt/content',
     '@nuxtjs/apollo',
-    '@nuxtjs/auth-next',
+    '@nuxtjs/vuetify'
   ],
 
   apollo: {
@@ -60,35 +58,34 @@ export default {
 
 auth: {
   strategies: {
-    cookie: {
-      cookie: {
-        // (optional) If set we check this cookie exsistence for loggedIn check
-        name: 'auth.redirect',
-        options: {
-          path: '/'
-        }
-      },
+    local: {
       endpoints: {
-        // (optional) If set, we send a get request to this endpoint before login
-        /*csrf: {
-          url: '/'
-        } */
+        login: {
+          url: 'auth/local',
+          method: 'post',
+          propertyName: 'jwt'
+        },
+        user: {
+          url: 'users/me',
+          method: 'get',
+          propertyName: false
+        },
+        logout: false
       }
-    },
-},
+    }
+  }
+ },
 redirect: {
   login: '/users/signin',
   logout: '/',
   callback: '/users/signin',
   home: '/'
 },
-},
   
-
-
-
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
-  axios: {},
+  axios: {
+    baseURL: process.env.API_AUTH_URL
+   },
 
   // Content module configuration (https://go.nuxtjs.dev/config-content)
   content: {},
