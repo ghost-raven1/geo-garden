@@ -33,7 +33,7 @@
 </div>
 </a>
   <li class="uk-active site-name">
-    <a class="navbar-brand" href="/" exact>Geo Garden v0.4.1</a>
+    <a class="navbar-brand" href="/" exact>Geo Garden v0.4.4</a>
     </li>
     
 </ul>

@@ -41,9 +41,9 @@
  Нет аккаунта?
  <nuxt-link to="/register">Регистрация</nuxt-link>
  </p>
- <p>
+ <!-- <p>
  <nuxt-link to="/forgot-password">Забыли пароль?</nuxt-link>
- </p>
+ </p> -->
  </div>
  </div>
  </div>
