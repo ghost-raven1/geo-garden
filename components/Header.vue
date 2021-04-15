@@ -5,7 +5,7 @@
         <div class="uk-navbar-left">
           <div id="offcanvas-nav-primary" uk-offcanvas="overlay: true">
     <div class="uk-offcanvas-bar uk-flex uk-flex-column">
-        <ul v-if="!isAuthenticated" class="uk-nav uk-nav-primary uk-nav-center uk-margin-auto-vertical">
+        <ul v-if="isAuthenticated" class="uk-nav uk-nav-primary uk-nav-center uk-margin-auto-vertical">
             <li class="uk-active"><a href="/"><span class="uk-margin-small-right"></span> Главная</a></li>
             <li class="uk-nav-divider"></li>
             <li><a href="/fields"><span class="uk-margin-small-right"></span> Все Поля</a></li>
@@ -20,8 +20,13 @@
             <li><a href="/about"><span class="uk-margin-small-right"></span> О сервисе</a></li>
             <li><a href="/help"><span class="uk-margin-small-right"></span> Помощь</a></li>
             <li><a href="https://geo-garden-backend.herokuapp.com/admin"><span class="uk-margin-small-right"></span> Админпанель</a></li>
+            <li><a href="/profile"><span class="uk-margin-small-right">Мой профиль, {{ loggedInUser.username }}</span></a></li>
+            <li><a class="navbar-item" @click="logout">Выйти</a></li>
         </ul>
-
+        <ul v-if="!isAuthenticated" class="uk-nav uk-nav-primary uk-nav-center uk-margin-auto-vertical">
+            <li><nuxt-link class="uk-margin-small-right" to="/register">Регистрация</nuxt-link></li>
+            <li><nuxt-link class="uk-margin-small-right" to="/login">Вход</nuxt-link></li>
+        </ul>
     </div>
 </div>
 <ul class="uk-navbar-nav">
@@ -104,10 +109,12 @@
 </style>
 
 <script>
-import { mapMutations } from 'vuex'
+import { mapMutations } from 'vuex';
+import { mapGetters } from "vuex";
 
 export default {
   computed: {
+    ...mapGetters(["isAuthenticated", "loggedInUser"]),
     username() {
       return this.$store.getters['auth/username']
     }
@@ -116,7 +123,10 @@ export default {
     // Define your needed mutations, here: auth/logout
     ...mapMutations({
       logout: 'auth/logout'
-    })
+    }),
+     async logout() {
+    await this.$auth.logout()
+    }
+ }
   }
-}
 </script>
