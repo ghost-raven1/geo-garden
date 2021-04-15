@@ -1,6 +1,6 @@
 <template>
- <section class="section">
  <div class="container">
+     <section class="container_form">
  <div class="columns">
  <div class="column">
  <h2 class="title has-text-centered">Восстановление пароля</h2>
@@ -28,8 +28,8 @@
  </form>
  </div>
  </div>
+  </section>
  </div>
- </section>
 </template>
 
 <script>

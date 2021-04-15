@@ -1,6 +1,6 @@
 <template>
- <section class="section">
  <div class="container">
+     <section class="container_form">
  <div class="columns">
  <div class="column">
  <h2 class="title has-text-centered">Сбросить пароль</h2>
@@ -38,8 +38,8 @@
  </form>
  </div>
  </div>
- </div>
  </section>
+ </div>
 </template>
 
 <script>

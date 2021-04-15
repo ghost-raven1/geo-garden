@@ -1,7 +1,7 @@
 <template>
- <section class="section">
  <div class="container">
- <div class="columns">
+     <section class="container_form">
+<div class="columns">
  <div class="column">
  <h2 class="title has-text-centered">Вход в Geo Garden</h2>
 
@@ -47,8 +47,10 @@
  </div>
  </div>
  </div>
+     </section>
+ 
  </div>
- </section>
+
 </template>
 
 <script>

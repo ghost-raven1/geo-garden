@@ -1,6 +1,6 @@
 <template>
- <section class="section">
  <div class="container">
+     <section class="container_form">
  <div class="columns">
  <div class="column">
  <h2 class="title has-text-centered">Регистрация в Geo Garden</h2>
@@ -46,7 +46,7 @@
  </div>
  </div>
  <div class="control">
- <button type="submit" class="button is-dark is-fullwidth">
+ <button type="submit" class="button is-dark">
  Зарегистрироваться
  </button>
  </div>
@@ -57,8 +57,8 @@
  </div>
  </div>
  </div>
+  </section>
  </div>
- </section>
 </template>
 
 <script>
