@@ -1,6 +1,6 @@
 <template>
- <section class="section">
  <div class="container">
+      <section class="container_form">
  <h2 class="title">Мой профиль</h2>
  <div class="content">
  <p>
@@ -12,8 +12,8 @@
  {{ loggedInUser.email }}
  </p>
  </div>
+  </section>
  </div>
- </section>
 </template>
 
 <script>
