@@ -19,7 +19,10 @@
             <li to="uk-nav-divider"></li>
             <li><nuxt-link class="uk-margin-small-right" to="/about"><span class="material-icons md-36">info</span> О сервисе</nuxt-link></li>
             <li><nuxt-link class="uk-margin-small-right" to="/help"><span class="material-icons md-36">help_outline</span> Помощь</nuxt-link></li>
+            <li class="uk-nav-divider"></li>
             <li><a class="uk-margin-small-right" href="https://geo-garden-backend.herokuapp.com/admin"><span class="material-icons md-36">dashboard</span> Админпанель</a></li>
+            <li><a class="uk-margin-small-right" href="http://garden-group.pro/internet-magazine"><span class="material-icons md-36">nature_people</span> Магазин</a></li>
+            <li><a class="uk-margin-small-right" href="http://garden-group.pro/tomsk"><span class="material-icons md-36">nature_people</span> Garden Group</a></li>
             <li class="uk-nav-divider"></li>
             <li><nuxt-link class="uk-margin-small-right" to="/profile"><span class="material-icons md-36">account_circle</span> Мой профиль</nuxt-link></li>
             <li><a class="uk-margin-small-right" @click="logout"> Выйти</a></li>
