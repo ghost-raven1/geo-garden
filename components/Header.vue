@@ -5,23 +5,32 @@
         <div class="uk-navbar-left">
           <div id="offcanvas-nav-primary" uk-offcanvas="overlay: true">
     <div class="uk-offcanvas-bar uk-flex uk-flex-column">
-        <ul v-if="!isAuthenticated" class="uk-nav uk-nav-primary uk-nav-center uk-margin-auto-vertical">
-            <li class="uk-active"><a href="/"><span class="uk-margin-small-right"></span> Главная</a></li>
+        <ul v-if="isAuthenticated" class="uk-nav uk-nav-primary uk-nav-center uk-margin-auto-vertical">
+            <li class="uk-active"><nuxt-link class="uk-margin-small-right" to="/"> Главная</nuxt-link></li>
             <li class="uk-nav-divider"></li>
-            <li><a href="/fields"><span class="uk-margin-small-right"></span> Все Поля</a></li>
-            <li><a href="/trades"><span class="uk-margin-small-right"></span> Торговые зоны</a></li>
-            <li><a href="/buildings"><span class="uk-margin-small-right"></span> Строения</a></li>
-            <li><a href="/ponds"><span class="uk-margin-small-right"></span> Пруды</a></li>
-            <li><a href="/fields/flowerbeds"><span class="uk-margin-small-right"></span> Клумбы</a></li>
+            <li><nuxt-link class="uk-margin-small-right" to="/fields"><span class="material-icons md-36">place</span> Все Поля</nuxt-link></li>
+            <li><nuxt-link class="uk-margin-small-right" to="/trades"><span class="material-icons md-36">place</span> Торговые зоны</nuxt-link></li>
+            <li><nuxt-link class="uk-margin-small-right" to="/buildings"><span class="material-icons md-36">place</span> Строения</nuxt-link></li>
+            <li><nuxt-link class="uk-margin-small-right" to="/ponds"><span class="material-icons md-36">place</span> Пруды</nuxt-link></li>
+            <li><nuxt-link class="uk-margin-small-right" to="/fields/flowerbeds"><span class="material-icons md-36">place</span> Клумбы</nuxt-link></li>
             <li class="uk-nav-divider"></li>
-            <li><a href="#tech-card" uk-toggle><span class="uk-margin-small-right"></span> Обновления</a></li>
-            <li><a href="#chat" uk-toggle><span class="uk-margin-small-right"></span> WhatsApp</a></li>
+            <li><a class="uk-margin-small-right" href="#tech-card" uk-toggle><span class="material-icons md-36">event</span> Обновления</a></li>
+            <li><a class="uk-margin-small-right" href="#chat" uk-toggle><span class="material-icons md-36">group_add</span> WhatsApp</a></li>
+            <li to="uk-nav-divider"></li>
+            <li><nuxt-link class="uk-margin-small-right" to="/about"><span class="material-icons md-36">info</span> О сервисе</nuxt-link></li>
+            <li><nuxt-link class="uk-margin-small-right" to="/help"><span class="material-icons md-36">help_outline</span> Помощь</nuxt-link></li>
             <li class="uk-nav-divider"></li>
-            <li><a href="/about"><span class="uk-margin-small-right"></span> О сервисе</a></li>
-            <li><a href="/help"><span class="uk-margin-small-right"></span> Помощь</a></li>
-            <li><a href="https://geo-garden-backend.herokuapp.com/admin"><span class="uk-margin-small-right"></span> Админпанель</a></li>
+            <li><a class="uk-margin-small-right" href="https://geo-garden-backend.herokuapp.com/admin"><span class="material-icons md-36">dashboard</span> Админпанель</a></li>
+            <li><a class="uk-margin-small-right" href="http://garden-group.pro/internet-magazine"><span class="material-icons md-36">nature_people</span> Магазин</a></li>
+            <li><a class="uk-margin-small-right" href="http://garden-group.pro/tomsk"><span class="material-icons md-36">nature_people</span> Garden Group</a></li>
+            <li class="uk-nav-divider"></li>
+            <li><nuxt-link class="uk-margin-small-right" to="/profile"><span class="material-icons md-36">account_circle</span> Мой профиль</nuxt-link></li>
+            <li><a class="uk-margin-small-right" @click="logout"> Выйти</a></li>
         </ul>
-
+        <ul v-if="!isAuthenticated" class="uk-nav uk-nav-primary uk-nav-center uk-margin-auto-vertical">
+            <li><nuxt-link class="uk-margin-small-right" to="/register"><span class="material-icons md-36">flash_on</span> Регистрация</nuxt-link></li>
+            <li><nuxt-link class="uk-margin-small-right" to="/login"><span class="material-icons md-36">email</span> Вход</nuxt-link></li>
+        </ul>
     </div>
 </div>
 <ul class="uk-navbar-nav">
@@ -33,7 +42,7 @@
 </div>
 </a>
   <li class="uk-active site-name">
-    <a class="navbar-brand" href="/" exact>Geo Garden v0.4.4</a>
+    <a class="navbar-brand" href="/" exact>Geo Garden v0.4.6</a>
     </li>
     
 </ul>
@@ -104,10 +113,12 @@
 </style>
 
 <script>
-import { mapMutations } from 'vuex'
+import { mapMutations } from 'vuex';
+import { mapGetters } from "vuex";
 
 export default {
   computed: {
+    ...mapGetters(["isAuthenticated", "loggedInUser"]),
     username() {
       return this.$store.getters['auth/username']
     }
@@ -116,7 +127,10 @@ export default {
     // Define your needed mutations, here: auth/logout
     ...mapMutations({
       logout: 'auth/logout'
-    })
+    }),
+     async logout() {
+    await this.$auth.logout()
+    }
+ }
   }
-}
 </script>

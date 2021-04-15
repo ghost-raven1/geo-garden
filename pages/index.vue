@@ -3,6 +3,7 @@
     <section>
 
     <div class="uk-accordion-content map_adaptive_container">
+        <h2>Добро пожаловать, {{ loggedInUser.username }}!</h2>
 <h2 class="uk-heading-small uk-heading-line uk-text-center"><span>Интерактивные карты</span></h2>
     <div class="uk-alert-primary" uk-alert>
         <a class="uk-alert-close" uk-close></a>
@@ -55,6 +56,7 @@
 </template>
 
 <script>  
+import { mapGetters } from "vuex";
 import CommonMap2021 from '~/components/maps/2021/CommonMap2021-ac.vue';
 import FilterFields2021 from '~/components/filters/2021/FilterFields2021.vue';
 import Techcard from '~/components/techcard/Tech-ac.vue'
@@ -64,6 +66,9 @@ export default {
       CommonMap2021,
       FilterFields2021,
       Techcard,
+  },
+  computed: {
+      ...mapGetters(["isAuthenticated", "loggedInUser"]),
   }
 }
 </script>

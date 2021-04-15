@@ -58,7 +58,8 @@ export default {
     "@nuxtjs/bulma",
     "@nuxtjs/auth",
     "@nuxtjs/pwa",
-    "@nuxtjs/apollo"
+    "@nuxtjs/apollo",
+    "nuxt-material-design-icons"
   ],
 
   apollo: {
