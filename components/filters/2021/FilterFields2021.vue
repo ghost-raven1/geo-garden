@@ -23,7 +23,7 @@
 
     <ul class="js-filter uk-child-width-1-1 uk-child-width-1-3@m uk-text-center" uk-grid="masonry: true" uk-scrollspy="cls: uk-animation-fade; target: .uk-card; delay: 25; repeat: true">
         <li data-zones="flowerbeds">
-            <a href="/fields/flowerbeds/1">
+            <nuxt-link to="/fields/flowerbeds/1">
             <div class="uk-card uk-card-primary uk-card-body uk-card-hover uk-inline-clip uk-transition-toggle" tabindex="0">
                 <div class="uk-card-media-top">
                     <img class="uk-transition-scale-up uk-transition-opaque" src="~/static/common_map.png" alt="">
@@ -34,10 +34,10 @@
                     <p>Площадь поля: 164м2</p>
                 </div>
                 <div class="uk-card-footer">
-                    <a href="/fields/flowerbeds/1" class="uk-button uk-button-text">Подробнее</a>
+                    <nuxt-link to="/fields/flowerbeds/1" class="uk-button uk-button-text">Подробнее</nuxt-link>
                 </div>
             </div>
-            </a>
+            </nuxt-link>
         </li>
             <li data-zones="flowerbeds">
             <a href="/fields/flowerbeds/2">
@@ -51,7 +51,7 @@
                     <p>Площадь поля: 512м2</p>
                 </div>
                 <div class="uk-card-footer">
-                    <a href="/fields/flowerbeds/2" class="uk-button uk-button-text">Подробнее</a>
+                    <nuxt-link to="/fields/flowerbeds/2" class="uk-button uk-button-text">Подробнее</nuxt-link>
                 </div>
             </div>
             </a>
@@ -68,7 +68,7 @@
                     <p>Площадь поля: 6.7м2</p>
                     </div>
                         <div class="uk-card-footer">
-                            <a href="/ponds/3" class="uk-button uk-button-text">Подробнее</a>
+                            <nuxt-link to="/ponds/3" class="uk-button uk-button-text">Подробнее</nuxt-link>
                         </div>
                 </div>
             </a>
@@ -85,7 +85,7 @@
                     <p>Площадь поля: 142м2</p>
                     </div>
                         <div class="uk-card-footer">
-                            <a href="/ponds/4" class="uk-button uk-button-text">Подробнее</a>
+                            <nuxt-link to="/ponds/4" class="uk-button uk-button-text">Подробнее</nuxt-link>
                         </div>
                 </div>
             </a>
@@ -102,7 +102,7 @@
                     <p>Площадь поля: 48м2</p>
                     </div>
                         <div class="uk-card-footer">
-                            <a href="/buildings/5" class="uk-button uk-button-text">Подробнее</a>
+                            <nuxt-link to="/buildings/5" class="uk-button uk-button-text">Подробнее</nuxt-link>
                         </div>
                 </div>
             </a>
@@ -119,7 +119,7 @@
                     <p>Площадь поля: 109м2</p>
                     </div>
                         <div class="uk-card-footer">
-                            <a href="/buildings/6" class="uk-button uk-button-text">Подробнее</a>
+                            <nuxt-link to="/buildings/6" class="uk-button uk-button-text">Подробнее</nuxt-link>
                         </div>
                 </div>
             </a>
@@ -136,7 +136,7 @@
                     <p>Площадь поля: 37м2</p>
                     </div>
                         <div class="uk-card-footer">
-                            <a href="/buildings/7" class="uk-button uk-button-text">Подробнее</a>
+                            <nuxt-link to="/buildings/7" class="uk-button uk-button-text">Подробнее</nuxt-link>
                         </div>
                 </div>
             </a>
@@ -153,7 +153,7 @@
                     <p>Площадь поля: 245м2</p>
                     </div>
                         <div class="uk-card-footer">
-                            <a href="/trades/8" class="uk-button uk-button-text">Подробнее</a>
+                            <nuxt-link to="/trades/8" class="uk-button uk-button-text">Подробнее</nuxt-link>
                         </div>
                 </div>
             </a>
@@ -170,7 +170,7 @@
                     <p>Площадь поля: 247м2</p>
                     </div>
                         <div class="uk-card-footer">
-                            <a href="/trades/9" class="uk-button uk-button-text">Подробнее</a>
+                            <nuxt-link to="/trades/9" class="uk-button uk-button-text">Подробнее</nuxt-link>
                         </div>
                 </div>
             </a>
@@ -187,7 +187,7 @@
                     <p>Площадь поля: 101м2</p>
                     </div>
                         <div class="uk-card-footer">
-                            <a href="/fields/perennials/10" class="uk-button uk-button-text">Подробнее</a>
+                            <nuxt-link to="/fields/perennials/10" class="uk-button uk-button-text">Подробнее</nuxt-link>
                         </div>
                 </div>
             </a>
@@ -204,7 +204,7 @@
                     <p>Площадь поля: 484м2</p>
                 </div>
                 <div class="uk-card-footer">
-                    <a href="/fields/perennials/11" class="uk-button uk-button-text">Подробнее</a>
+                    <nuxt-link to="/fields/perennials/11" class="uk-button uk-button-text">Подробнее</nuxt-link>
                 </div>
             </div>
             </a>
@@ -221,7 +221,7 @@
                     <p>Площадь поля: 1254м2</p>
                 </div>
                 <div class="uk-card-footer">
-                    <a href="/fields/perennials/12" class="uk-button uk-button-text">Подробнее</a>
+                    <nuxt-link to="/fields/perennials/12" class="uk-button uk-button-text">Подробнее</nuxt-link>
                 </div>
             </div>
             </a>
@@ -238,7 +238,7 @@
                     <p>Площадь поля: 444м2</p>
                 </div>
                 <div class="uk-card-footer">
-                    <a href="/fields/perennials/13" class="uk-button uk-button-text">Подробнее</a>
+                    <nuxt-link to="/fields/perennials/13" class="uk-button uk-button-text">Подробнее</nuxt-link>
                 </div>
             </div>
             </a>
@@ -255,7 +255,7 @@
                     <p>Площадь поля: 487м2</p>
                 </div>
                 <div class="uk-card-footer">
-                    <a href="/fields/perennials/14" class="uk-button uk-button-text">Подробнее</a>
+                    <nuxt-link to="/fields/perennials/14" class="uk-button uk-button-text">Подробнее</nuxt-link>
                 </div>
             </div>
             </a>
@@ -272,7 +272,7 @@
                     <p>Площадь поля: 886м2</p>
                 </div>
                 <div class="uk-card-footer">
-                    <a href="/fields/perennials/15" class="uk-button uk-button-text">Подробнее</a>
+                    <nuxt-link to="/fields/perennials/15" class="uk-button uk-button-text">Подробнее</nuxt-link>
                 </div>
             </div>
             </a>
@@ -289,7 +289,7 @@
                     <p>Площадь поля: 627м2</p>
                 </div>
                 <div class="uk-card-footer">
-                    <a href="/fields/perennials/16" class="uk-button uk-button-text">Подробнее</a>
+                    <nuxt-link to="/fields/perennials/16" class="uk-button uk-button-text">Подробнее</nuxt-link>
                 </div>
             </div>
             </a>
@@ -306,7 +306,7 @@
                     <p>Площадь поля: 161м2</p>
                 </div>
                 <div class="uk-card-footer">
-                    <a href="/fields/perennials/17" class="uk-button uk-button-text">Подробнее</a>
+                    <nuxt-link to="/fields/perennials/17" class="uk-button uk-button-text">Подробнее</nuxt-link>
                 </div>
             </div>
             </a>
@@ -323,7 +323,7 @@
                     <p>Площадь поля: 149м2</p>
                 </div>
                 <div class="uk-card-footer">
-                    <a href="/fields/perennials/18" class="uk-button uk-button-text">Подробнее</a>
+                    <nuxt-link to="/fields/perennials/18" class="uk-button uk-button-text">Подробнее</nuxt-link>
                 </div>
             </div>
             </a>
@@ -340,7 +340,7 @@
                     <p>Площадь поля: 126м2</p>
                 </div>
                 <div class="uk-card-footer">
-                    <a href="/fields/cereals/19" class="uk-button uk-button-text">Подробнее</a>
+                    <nuxt-link to="/fields/cereals/19" class="uk-button uk-button-text">Подробнее</nuxt-link>
                 </div>
             </div>
             </a>
@@ -357,7 +357,7 @@
                     <p>Площадь поля: 309м2</p>
                 </div>
                 <div class="uk-card-footer">
-                    <a href="/fields/berries/20" class="uk-button uk-button-text">Подробнее</a>
+                    <nuxt-link to="/fields/berries/20" class="uk-button uk-button-text">Подробнее</nuxt-link>
                 </div>
             </div>
             </a>
@@ -374,7 +374,7 @@
                     <p>Площадь поля: 217м2</p>
                 </div>
                 <div class="uk-card-footer">
-                    <a href="/fields/bushes/21" class="uk-button uk-button-text">Подробнее</a>
+                    <nuxt-link to="/fields/bushes/21" class="uk-button uk-button-text">Подробнее</nuxt-link>
                 </div>
             </div>
             </a>
@@ -391,7 +391,7 @@
                     <p>Площадь поля: 184м2</p>
                 </div>
                 <div class="uk-card-footer">
-                    <a href="/fields/bushes/22" class="uk-button uk-button-text">Подробнее</a>
+                    <nuxt-link to="/fields/bushes/22" class="uk-button uk-button-text">Подробнее</nuxt-link>
                 </div>
             </div>
             </a>
@@ -408,7 +408,7 @@
                     <p>Площадь поля: 256м2</p>
                 </div>
                 <div class="uk-card-footer">
-                    <a href="/fields/bushes/23" class="uk-button uk-button-text">Подробнее</a>
+                    <nuxt-link to="/fields/bushes/23" class="uk-button uk-button-text">Подробнее</nuxt-link>
                 </div>
             </div>
             </a>
@@ -425,7 +425,7 @@
                     <p>Площадь поля: 151м2</p>
                 </div>
                 <div class="uk-card-footer">
-                    <a href="/fields/bushes/24" class="uk-button uk-button-text">Подробнее</a>
+                    <nuxt-link to="/fields/bushes/24" class="uk-button uk-button-text">Подробнее</nuxt-link>
                 </div>
             </div>
             </a>
@@ -442,7 +442,7 @@
                     <p>Площадь поля: 161м2</p>
                 </div>
                 <div class="uk-card-footer">
-                    <a href="/fields/bushes/25" class="uk-button uk-button-text">Подробнее</a>
+                    <nuxt-link to="/fields/bushes/25" class="uk-button uk-button-text">Подробнее</nuxt-link>
                 </div>
             </div>
             </a>
@@ -459,7 +459,7 @@
                     <p>Площадь поля: 152м2</p>
                 </div>
                 <div class="uk-card-footer">
-                    <a href="/fields/bushes/26" class="uk-button uk-button-text">Подробнее</a>
+                    <nuxt-link to="/fields/bushes/26" class="uk-button uk-button-text">Подробнее</nuxt-link>
                 </div>
             </div>
             </a>
@@ -476,7 +476,7 @@
                     <p>Площадь поля: 337м2</p>
                 </div>
                 <div class="uk-card-footer">
-                    <a href="/fields/bush/27" class="uk-button uk-button-text">Подробнее</a>
+                    <nuxt-link to="/fields/bush/27" class="uk-button uk-button-text">Подробнее</nuxt-link>
                 </div>
             </div>
             </a>
@@ -493,7 +493,7 @@
                     <p>Площадь поля: 487м2</p>
                 </div>
                 <div class="uk-card-footer">
-                    <a href="/fields/trees/28" class="uk-button uk-button-text">Подробнее</a>
+                    <nuxt-link to="/fields/trees/28" class="uk-button uk-button-text">Подробнее</nuxt-link>
                 </div>
             </div>
             </a>
@@ -510,7 +510,7 @@
                     <p>Площадь поля: 146м2</p>
                 </div>
                 <div class="uk-card-footer">
-                    <a href="/fields/trees/29" class="uk-button uk-button-text">Подробнее</a>
+                    <nuxt-link to="/fields/trees/29" class="uk-button uk-button-text">Подробнее</nuxt-link>
                 </div>
             </div>
             </a>
@@ -527,7 +527,7 @@
                     <p>Площадь поля: 195м2</p>
                 </div>
                 <div class="uk-card-footer">
-                    <a href="/fields/trees/30" class="uk-button uk-button-text">Подробнее</a>
+                    <nuxt-link to="/fields/trees/30" class="uk-button uk-button-text">Подробнее</nuxt-link>
                 </div>
             </div>
             </a>
@@ -544,7 +544,7 @@
                     <p>Площадь поля: 93м2</p>
                 </div>
                 <div class="uk-card-footer">
-                    <a href="/fields/fruits/31" class="uk-button uk-button-text">Подробнее</a>
+                    <nuxt-link to="/fields/fruits/31" class="uk-button uk-button-text">Подробнее</nuxt-link>
                 </div>
             </div>
             </a>
@@ -561,7 +561,7 @@
                     <p>Площадь поля: 132м2</p>
                 </div>
                 <div class="uk-card-footer">
-                    <a href="/fields/trees/32" class="uk-button uk-button-text">Подробнее</a>
+                    <nuxt-link to="/fields/trees/32" class="uk-button uk-button-text">Подробнее</nuxt-link>
                 </div>
             </div>
             </a>
@@ -578,7 +578,7 @@
                     <p>Площадь поля: 360м2</p>
                 </div>
                 <div class="uk-card-footer">
-                    <a href="/fields/roots/33" class="uk-button uk-button-text">Подробнее</a>
+                    <nuxt-link to="/fields/roots/33" class="uk-button uk-button-text">Подробнее</nuxt-link>
                 </div>
             </div>
             </a>
@@ -595,7 +595,7 @@
                     <p>Площадь поля: 182м2</p>
                 </div>
                 <div class="uk-card-footer">
-                    <a href="/fields/fruits/34" class="uk-button uk-button-text">Подробнее</a>
+                    <nuxt-link to="/fields/fruits/34" class="uk-button uk-button-text">Подробнее</nuxt-link>
                 </div>
             </div>
             </a>
@@ -612,7 +612,7 @@
                     <p>Площадь поля: 770м2</p>
                 </div>
                 <div class="uk-card-footer">
-                    <a href="/fields/free_fields/35" class="uk-button uk-button-text">Подробнее</a>
+                    <nuxt-link to="/fields/free_fields/35" class="uk-button uk-button-text">Подробнее</nuxt-link>
                 </div>
             </div>
             </a>
@@ -629,7 +629,7 @@
                     <p>Площадь поля: 4569м2</p>
                 </div>
                 <div class="uk-card-footer">
-                    <a href="/fields/free_fields/36" class="uk-button uk-button-text">Подробнее</a>
+                    <nuxt-link to="/fields/free_fields/36" class="uk-button uk-button-text">Подробнее</nuxt-link>
                 </div>
             </div>
             </a>
