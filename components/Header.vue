@@ -5,7 +5,7 @@
         <div class="uk-navbar-left">
           <div id="offcanvas-nav-primary" uk-offcanvas="overlay: true">
     <div class="uk-offcanvas-bar uk-flex uk-flex-column">
-        <ul class="uk-nav uk-nav-primary uk-nav-center uk-margin-auto-vertical">
+        <ul v-if="!isAuthenticated" class="uk-nav uk-nav-primary uk-nav-center uk-margin-auto-vertical">
             <li class="uk-active"><a href="/"><span class="uk-margin-small-right"></span> Главная</a></li>
             <li class="uk-nav-divider"></li>
             <li><a href="/fields"><span class="uk-margin-small-right"></span> Все Поля</a></li>
@@ -21,13 +21,21 @@
             <li><a href="/help"><span class="uk-margin-small-right"></span> Помощь</a></li>
             <li><a href="https://geo-garden-backend.herokuapp.com/admin"><span class="uk-margin-small-right"></span> Админпанель</a></li>
         </ul>
+
     </div>
 </div>
 <ul class="uk-navbar-nav">
-    <a class="uk-button uk-button-default uk-margin-small-right button-menu" type="button" uk-toggle="target: #offcanvas-nav-primary"><span class="uk-margin-small-left uk-margin-small-right">Меню</span></a>
+    <a class="uk-button uk-button-default" type="button" uk-toggle="target: #offcanvas-nav-primary"> 
+    <div class="container_burger" onclick="burgerMenu(this)">
+    <div class="b1"></div>
+    <div class="b2"></div>
+    <div class="b3"></div>
+</div>
+</a>
   <li class="uk-active site-name">
-    <a class="navbar-brand" href="/" exact>Веб сервис "Geo Garden" v0.4.1</a>
+    <a class="navbar-brand" href="/" exact>Geo Garden v0.4.4</a>
     </li>
+    
 </ul>
 </div>
 <div class="weather-widget" id="ml_d752456a">
@@ -42,17 +50,7 @@
 </div>
 <script async src="https://app.meteolabs.ru/js/?id=ml_d752456a"></script>
   </nav>
-<!-- 
-          <ul class="uk-navbar-nav" v-if="username">
-              <li><a href="#" class="uk-link-reset"><img src="../static/user.png" class="uk-border-circle" height="40" width="40" alt="">{{ username }}</a></li>
-              <li><a href="#" @click="logout">Logout</a></li>
-          </ul>
 
-          <ul class="uk-navbar-nav" v-else>
-              <li><a href="/users/register">Signup</a></li>
-              <li><a href="/users/signin">Signin</a></li>
-          </ul>
--->
   <div id="tech-card" uk-modal>
     <div class="uk-modal-dialog">
         <button class="uk-modal-close-default" type="button" uk-close></button>
@@ -110,7 +108,6 @@ import { mapMutations } from 'vuex'
 
 export default {
   computed: {
-    // Set your username thanks to your getter
     username() {
       return this.$store.getters['auth/username']
     }
