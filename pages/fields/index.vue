@@ -432,27 +432,15 @@
 </template>
 
 <script>
-import fieldsQuery from '~/apollo/queries/field/fields';
 
 export default {
   components: {},
   middleware: 'auth',
-  apollo: {
-    fields: {
-      prefetch: true,
-      query: fieldsQuery,
-    },
-  },
   data() {
     return {
-      fields: [],
       query: '',
     };
   },
-  computed: {
-    filteredList_fields() {
-      return this.fields.filter((field) => field.name.toLowerCase().includes(this.query.toLowerCase()));
-    },
-  },
+  computed: {},
 };
 </script>

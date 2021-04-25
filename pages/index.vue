@@ -52,17 +52,21 @@
                       Название растения: {{ plant.name }}
                     </h3>
                     <p>Описание поля: {{ plant.desc }}</p>
-                    Поле:
-                    <nuxt-link to="/">
-                      {{ fields.name }}
-                    </nuxt-link>
-                    </p>
-                    <p>Тип поля: </p><p v-for="field in fields">
-                      {{ field.type }}
-                    </p>
-                    <p>Описание поля: </p><p>{{ fields.description }}</p>
-                    <p>Площадь поля: </p><p>{{ fields.area }} м2</p>
-                    <p />
+                    <div
+                      v-for="field in filteredList_plants"
+                      :key="field._id"
+                    >
+                      <p>
+                        Поле:
+                        <nuxt-link to="/">
+                          {{ field.number }} {{ field.link }}
+                        </nuxt-link>
+                      </p>
+                      <p>Тип поля: </p><div>{{ field.type }}</div>
+                      <p>Описание поля: </p><div>{{ field.description }}</div>
+                      <p>Площадь поля: </p><div>{{ field.area }} м2</div>
+                      <p />
+                    </div>
                   </div>
                 </div>
               </div>
@@ -189,9 +193,9 @@ export default {
   data() {
     return {
       plants: [],
-      fieldsList: {},
-      fields: {},
       query: '',
+      fields: {
+      },
     };
   },
   computed: {

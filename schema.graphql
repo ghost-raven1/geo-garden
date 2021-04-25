@@ -5,7 +5,7 @@ schema {
   mutation: Mutation
 }
 
-union Morph = About | ComponentAboutAboutItem | ComponentHelpHelpItem | ComponentMapMapItem | Field | FieldAggregator | FieldAggregatorAvg | FieldAggregatorMax | FieldAggregatorMin | FieldAggregatorSum | FieldConnection | FieldConnectionArea | FieldConnectionCreatedAt | FieldConnectionDescription | FieldConnectionField_info | FieldConnectionField_number | FieldConnectionField_type | FieldConnectionId | FieldConnectionImage | FieldConnectionLink | FieldConnectionName | FieldConnectionPublished_at | FieldConnectionUpdatedAt | FieldConnection_id | FieldGroupBy | Help | MapGardenNursery | MapGardenNurseryAggregator | MapGardenNurseryConnection | MapGardenNurseryConnectionCreatedAt | MapGardenNurseryConnectionField_bg | MapGardenNurseryConnectionId | MapGardenNurseryConnectionPublished_at | MapGardenNurseryConnectionShort_description | MapGardenNurseryConnectionUpdatedAt | MapGardenNurseryConnection_id | MapGardenNurseryGroupBy | Plant | PlantAggregator | PlantConnection | PlantConnectionCreatedAt | PlantConnectionDesc | PlantConnectionId | PlantConnectionImg | PlantConnectionName | PlantConnectionPublished_at | PlantConnectionType | PlantConnectionUpdatedAt | PlantConnection_id | PlantGroupBy | UploadFile | UploadFileAggregator | UploadFileAggregatorAvg | UploadFileAggregatorMax | UploadFileAggregatorMin | UploadFileAggregatorSum | UploadFileConnection | UploadFileConnectionAlternativeText | UploadFileConnectionCaption | UploadFileConnectionCreatedAt | UploadFileConnectionExt | UploadFileConnectionFormats | UploadFileConnectionHash | UploadFileConnectionHeight | UploadFileConnectionId | UploadFileConnectionMime | UploadFileConnectionName | UploadFileConnectionPreviewUrl | UploadFileConnectionProvider | UploadFileConnectionProvider_metadata | UploadFileConnectionSize | UploadFileConnectionUpdatedAt | UploadFileConnectionUrl | UploadFileConnectionWidth | UploadFileConnection_id | UploadFileGroupBy | UserPermissionsPasswordPayload | UsersPermissionsLoginPayload | UsersPermissionsMe | UsersPermissionsMeRole | UsersPermissionsPermission | UsersPermissionsRole | UsersPermissionsRoleAggregator | UsersPermissionsRoleConnection | UsersPermissionsRoleConnectionDescription | UsersPermissionsRoleConnectionId | UsersPermissionsRoleConnectionName | UsersPermissionsRoleConnectionType | UsersPermissionsRoleConnection_id | UsersPermissionsRoleGroupBy | UsersPermissionsUser | UsersPermissionsUserAggregator | UsersPermissionsUserConnection | UsersPermissionsUserConnectionBlocked | UsersPermissionsUserConnectionConfirmed | UsersPermissionsUserConnectionCreatedAt | UsersPermissionsUserConnectionEmail | UsersPermissionsUserConnectionId | UsersPermissionsUserConnectionProvider | UsersPermissionsUserConnectionRole | UsersPermissionsUserConnectionUpdatedAt | UsersPermissionsUserConnectionUsername | UsersPermissionsUserConnection_id | UsersPermissionsUserGroupBy | Year | YearAggregator | YearAggregatorAvg | YearAggregatorMax | YearAggregatorMin | YearAggregatorSum | YearConnection | YearConnectionCreatedAt | YearConnectionId | YearConnectionPublished_at | YearConnectionUpdatedAt | YearConnectionYear | YearConnection_id | YearGroupBy | createFieldPayload | createMapGardenNurseryPayload | createPlantPayload | createRolePayload | createUserPayload | createYearPayload | deleteAboutPayload | deleteFieldPayload | deleteFilePayload | deleteHelpPayload | deleteMapGardenNurseryPayload | deletePlantPayload | deleteRolePayload | deleteUserPayload | deleteYearPayload | updateAboutPayload | updateFieldPayload | updateHelpPayload | updateMapGardenNurseryPayload | updatePlantPayload | updateRolePayload | updateUserPayload | updateYearPayload
+union Morph = About | ComponentAboutAboutItem | ComponentHelpHelpItem | ComponentMapMapItem | Field | FieldAggregator | FieldAggregatorAvg | FieldAggregatorMax | FieldAggregatorMin | FieldAggregatorSum | FieldConnection | FieldConnectionArea | FieldConnectionCreatedAt | FieldConnectionDescription | FieldConnectionId | FieldConnectionImage | FieldConnectionInfo | FieldConnectionLink | FieldConnectionName | FieldConnectionNumber | FieldConnectionPublished_at | FieldConnectionType | FieldConnectionUpdatedAt | FieldConnection_id | FieldGroupBy | Help | MapGardenNursery | MapGardenNurseryAggregator | MapGardenNurseryConnection | MapGardenNurseryConnectionCreatedAt | MapGardenNurseryConnectionField_bg | MapGardenNurseryConnectionId | MapGardenNurseryConnectionPublished_at | MapGardenNurseryConnectionShort_description | MapGardenNurseryConnectionUpdatedAt | MapGardenNurseryConnection_id | MapGardenNurseryGroupBy | Plant | PlantAggregator | PlantConnection | PlantConnectionCreatedAt | PlantConnectionDesc | PlantConnectionId | PlantConnectionImg | PlantConnectionName | PlantConnectionPublished_at | PlantConnectionType | PlantConnectionUpdatedAt | PlantConnection_id | PlantGroupBy | UploadFile | UploadFileAggregator | UploadFileAggregatorAvg | UploadFileAggregatorMax | UploadFileAggregatorMin | UploadFileAggregatorSum | UploadFileConnection | UploadFileConnectionAlternativeText | UploadFileConnectionCaption | UploadFileConnectionCreatedAt | UploadFileConnectionExt | UploadFileConnectionFormats | UploadFileConnectionHash | UploadFileConnectionHeight | UploadFileConnectionId | UploadFileConnectionMime | UploadFileConnectionName | UploadFileConnectionPreviewUrl | UploadFileConnectionProvider | UploadFileConnectionProvider_metadata | UploadFileConnectionSize | UploadFileConnectionUpdatedAt | UploadFileConnectionUrl | UploadFileConnectionWidth | UploadFileConnection_id | UploadFileGroupBy | UserPermissionsPasswordPayload | UsersPermissionsLoginPayload | UsersPermissionsMe | UsersPermissionsMeRole | UsersPermissionsPermission | UsersPermissionsRole | UsersPermissionsRoleAggregator | UsersPermissionsRoleConnection | UsersPermissionsRoleConnectionDescription | UsersPermissionsRoleConnectionId | UsersPermissionsRoleConnectionName | UsersPermissionsRoleConnectionType | UsersPermissionsRoleConnection_id | UsersPermissionsRoleGroupBy | UsersPermissionsUser | UsersPermissionsUserAggregator | UsersPermissionsUserConnection | UsersPermissionsUserConnectionBlocked | UsersPermissionsUserConnectionConfirmed | UsersPermissionsUserConnectionCreatedAt | UsersPermissionsUserConnectionEmail | UsersPermissionsUserConnectionId | UsersPermissionsUserConnectionProvider | UsersPermissionsUserConnectionRole | UsersPermissionsUserConnectionUpdatedAt | UsersPermissionsUserConnectionUsername | UsersPermissionsUserConnection_id | UsersPermissionsUserGroupBy | Year | YearAggregator | YearAggregatorAvg | YearAggregatorMax | YearAggregatorMin | YearAggregatorSum | YearConnection | YearConnectionCreatedAt | YearConnectionId | YearConnectionPublished_at | YearConnectionUpdatedAt | YearConnectionYear | YearConnection_id | YearGroupBy | createFieldPayload | createMapGardenNurseryPayload | createPlantPayload | createRolePayload | createUserPayload | createYearPayload | deleteAboutPayload | deleteFieldPayload | deleteFilePayload | deleteHelpPayload | deleteMapGardenNurseryPayload | deletePlantPayload | deleteRolePayload | deleteUserPayload | deleteYearPayload | updateAboutPayload | updateFieldPayload | updateHelpPayload | updateMapGardenNurseryPayload | updatePlantPayload | updateRolePayload | updateUserPayload | updateYearPayload
 
 type About {
   About_item: [ComponentAboutAboutItem]
@@ -52,15 +52,15 @@ type Field {
   area: Float
   createdAt: DateTime!
   description: String
-  field_info: String
-  field_number: String
-  field_type: String
   id: ID!
   image: UploadFile
+  info: String
   link: String
   name: String
+  number: String
   plants(limit: Int, sort: String, start: Int, where: JSON): [Plant]
   published_at: DateTime
+  type: String
   updatedAt: DateTime!
   years(limit: Int, sort: String, start: Int, where: JSON): [Year]
 }
@@ -111,21 +111,6 @@ type FieldConnectionDescription {
   key: String
 }
 
-type FieldConnectionField_info {
-  connection: FieldConnection
-  key: String
-}
-
-type FieldConnectionField_number {
-  connection: FieldConnection
-  key: String
-}
-
-type FieldConnectionField_type {
-  connection: FieldConnection
-  key: String
-}
-
 type FieldConnectionId {
   connection: FieldConnection
   key: ID
@@ -134,6 +119,11 @@ type FieldConnectionId {
 type FieldConnectionImage {
   connection: FieldConnection
   key: ID
+}
+
+type FieldConnectionInfo {
+  connection: FieldConnection
+  key: String
 }
 
 type FieldConnectionLink {
@@ -146,9 +136,19 @@ type FieldConnectionName {
   key: String
 }
 
+type FieldConnectionNumber {
+  connection: FieldConnection
+  key: String
+}
+
 type FieldConnectionPublished_at {
   connection: FieldConnection
   key: DateTime
+}
+
+type FieldConnectionType {
+  connection: FieldConnection
+  key: String
 }
 
 type FieldConnectionUpdatedAt {
@@ -166,14 +166,14 @@ type FieldGroupBy {
   area: [FieldConnectionArea]
   createdAt: [FieldConnectionCreatedAt]
   description: [FieldConnectionDescription]
-  field_info: [FieldConnectionField_info]
-  field_number: [FieldConnectionField_number]
-  field_type: [FieldConnectionField_type]
   id: [FieldConnectionId]
   image: [FieldConnectionImage]
+  info: [FieldConnectionInfo]
   link: [FieldConnectionLink]
   name: [FieldConnectionName]
+  number: [FieldConnectionNumber]
   published_at: [FieldConnectionPublished_at]
+  type: [FieldConnectionType]
   updatedAt: [FieldConnectionUpdatedAt]
 }
 
@@ -960,14 +960,14 @@ input FieldInput {
   area: Float
   created_by: ID
   description: String
-  field_info: String
-  field_number: String
-  field_type: String
   image: ID
+  info: String
   link: String
   name: String
+  number: String
   plants: [ID]
   published_at: DateTime
+  type: String
   updated_by: ID
   years: [ID]
 }
@@ -1160,14 +1160,14 @@ input editFieldInput {
   area: Float
   created_by: ID
   description: String
-  field_info: String
-  field_number: String
-  field_type: String
   image: ID
+  info: String
   link: String
   name: String
+  number: String
   plants: [ID]
   published_at: DateTime
+  type: String
   updated_by: ID
   years: [ID]
 }
