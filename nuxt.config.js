@@ -65,8 +65,8 @@ export default {
   apollo: {
     clientConfigs: {
       default: {
-        // httpEndpoint: "https://geo-garden-backend.herokuapp.com/graphql"
-        httpEndpoint: 'http://localhost:1337/graphql',
+        httpEndpoint: 'https://geo-garden-backend.herokuapp.com/graphql',
+        // httpEndpoint: 'http://localhost:1337/graphql',
       },
     },
   },
