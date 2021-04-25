@@ -1,48 +1,48 @@
 export default {
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
-    title: "Geo Garden",
+    title: 'Geo Garden',
     meta: [
-      { charset: "utf-8" },
-      { name: "viewport", content: "width=device-width, initial-scale=1" },
+      { charset: 'utf-8' },
+      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       {
-        hid: "description",
-        name: "description",
-        content: 'Персональный геосервис компании "Garden Group"'
-      }
+        hid: 'description',
+        name: 'description',
+        content: 'Персональный геосервис компании "Garden Group"',
+      },
     ],
     link: [
-      { rel: "icon", type: "image/x-icon", href: "assets/media/favicon.ico" },
+      { rel: 'icon', type: 'image/x-icon', href: 'assets/media/favicon.ico' },
       {
-        rel: "stylesheet",
+        rel: 'stylesheet',
         href:
-          "https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.26/css/uikit.min.css"
-      }
+          'https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.26/css/uikit.min.css',
+      },
     ],
     script: [
       {
         src:
-          "https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.26/js/uikit.min.js",
-        async: "true"
-      }
-    ]
+          'https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.26/js/uikit.min.js',
+        async: 'true',
+      },
+    ],
   },
 
-  loading: { color: "#3B8070" },
+  loading: { color: '#3B8070' },
 
   // Global CSS (https://go.nuxtjs.dev/config-css)
   css: [
-    "uikit/dist/css/uikit.min.css",
-    "uikit/dist/css/uikit.css",
-    "~/assets/css/custom_styles.css"
+    'uikit/dist/css/uikit.min.css',
+    'uikit/dist/css/uikit.css',
+    '~/assets/css/custom_styles.css',
   ],
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
   plugins: [
-    { src: "~/plugins/nuxt-offline-alert.js", ssr: false },
-    { src: "~/plugins/uikit.js", ssr: false },
-    { src: "~plugins/axios", ssr: false },
-    { src: "~plugins/burger", ssr: false }
+    { src: '~/plugins/nuxt-offline-alert.js', ssr: false },
+    { src: '~/plugins/uikit.js', ssr: false },
+    { src: '~plugins/axios', ssr: false },
+    { src: '~plugins/burger', ssr: false },
   ],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)
@@ -53,21 +53,22 @@ export default {
 
   // Modules (https://go.nuxtjs.dev/config-modules)
   modules: [
-    "@nuxtjs/axios",
-    "@nuxtjs/dotenv",
-    "@nuxtjs/bulma",
-    "@nuxtjs/auth",
-    "@nuxtjs/pwa",
-    "@nuxtjs/apollo",
-    "nuxt-material-design-icons"
+    '@nuxtjs/axios',
+    '@nuxtjs/dotenv',
+    '@nuxtjs/bulma',
+    '@nuxtjs/auth',
+    '@nuxtjs/pwa',
+    '@nuxtjs/apollo',
+    'nuxt-material-design-icons',
   ],
 
   apollo: {
     clientConfigs: {
       default: {
-        httpEndpoint: "https://geo-garden-backend.herokuapp.com/graphql"
-      }
-    }
+        // httpEndpoint: "https://geo-garden-backend.herokuapp.com/graphql"
+        httpEndpoint: 'http://localhost:1337/graphql',
+      },
+    },
   },
 
   auth: {
@@ -75,30 +76,30 @@ export default {
       local: {
         endpoints: {
           login: {
-            url: "auth/local",
-            method: "post",
-            propertyName: "jwt"
+            url: 'auth/local',
+            method: 'post',
+            propertyName: 'jwt',
           },
           user: {
-            url: "users/me",
-            method: "get",
-            propertyName: false
+            url: 'users/me',
+            method: 'get',
+            propertyName: false,
           },
-          logout: false
-        }
-      }
-    }
+          logout: false,
+        },
+      },
+    },
   },
   redirect: {
-    login: "/users/signin",
-    logout: "/",
-    callback: "/users/signin",
-    home: "/"
+    login: '/users/signin',
+    logout: '/',
+    callback: '/users/signin',
+    home: '/',
   },
 
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
   axios: {
-    baseURL: process.env.API_AUTH_URL
+    baseURL: process.env.API_AUTH_URL,
   },
 
   // Content module configuration (https://go.nuxtjs.dev/config-content)
@@ -109,25 +110,25 @@ export default {
 
   pwa: {
     icon: {
-      source: "assets/media/ms-icon-310x310.png"
+      source: 'assets/media/ms-icon-310x310.png',
     },
     meta: {
       mobileApp: true,
-      name: "Geo Garden",
-      author: "Alex Starodubtsev",
+      name: 'Geo Garden',
+      author: 'Alex Starodubtsev',
       description: 'Персональный геосервис компании "Garden Group"',
-      theme_color: "#fff",
-      lang: "ru"
+      theme_color: '#fff',
+      lang: 'ru',
     },
     manifest: {
-      name: "Geo Garden",
-      short_name: "Geo Garden",
-      lang: "ru",
-      useWebmanifestExtension: false
+      name: 'Geo Garden',
+      short_name: 'Geo Garden',
+      lang: 'ru',
+      useWebmanifestExtension: false,
     },
     workbox: {
       workboxURL:
-        "https://cdn.jsdelivr.net/npm/workbox-cdn/workbox/workbox-sw.js"
-    }
-  }
+        'https://cdn.jsdelivr.net/npm/workbox-cdn/workbox/workbox-sw.js',
+    },
+  },
 };

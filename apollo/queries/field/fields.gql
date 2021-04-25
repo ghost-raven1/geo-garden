@@ -1,0 +1,19 @@
+query Fields {
+  fields{
+    _id
+    name
+    area
+    link
+    field_type
+  }
+  plants {
+    _id
+    name
+    type
+    desc
+    updatedAt
+    img {
+      url
+    }
+  }
+}

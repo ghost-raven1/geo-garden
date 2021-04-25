@@ -1,4 +1,4 @@
-<template>  
+<template>
   <div>
     <Header />
     <div class="uk-section uk-section-default">
@@ -8,18 +8,19 @@
       </div>
     </div>
     <client-only>
-    <offline-alert/>
-</client-only>
+      <offline-alert />
+    </client-only>
   </div>
 </template>
 
-<script>  
-import Header from '~/components/Header.vue'
-import Alert from '~/components/Alert.vue' 
-export default {  
+<script>
+import Header from '~/components/Header.vue';
+import Alert from '~/components/Alert.vue';
+
+export default {
   components: {
     Header,
-    Alert
-  }
-}
+    Alert,
+  },
+};
 </script>

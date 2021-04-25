@@ -87,3 +87,7 @@
     max-width: 50%;
     min-width: 50%;
 }
+
+.uk-search-large .uk-search-input {
+    font-size: 2rem;
+}

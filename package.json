@@ -7,7 +7,10 @@
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",
-    "heroku-postbuild": "npm run build"
+    "heroku-postbuild": "npm run build",
+      "lint": "npm run lint:js",
+      "lintfix": "eslint --fix --ext .js,.vue --ignore-path .gitignore .",
+      "lint:js": "eslint --ext .js,.vue --ignore-path .gitignore ."
   },
   "dependencies": {
     "@nuxtjs/apollo": "^4.0.1-rc.5",
@@ -24,5 +27,13 @@
     "strapi-sdk-javascript": "^0.3.3",
     "uikit": "^3.6.15"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "@nuxt/types": "^2.14.12",
+    "eslint": "^7.25.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-import-resolver-nuxt": "^1.0.1",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-nuxt": "^2.0.0",
+    "eslint-plugin-vue": "^7.9.0"
+  }
 }
