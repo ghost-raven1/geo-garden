@@ -8,7 +8,6 @@
         <form class="uk-search uk-search-large uk-align-center uk-margin">
           <span uk-search-icon />
           <input
-            v-model="query"
             class="uk-search-input"
             type="search"
             placeholder="Поиск..."
@@ -18,416 +17,54 @@
 
       <div class="uk-accordion-content map_adaptive_container">
         <div
-          v-for="field in filteredList_fields"
+          v-for="field in fields"
           :key="field"
           class="uk-card uk-card-default uk-card-body uk-child-width-expand@ uk-text-center uk-margin"
           uk-grid
         >
           <div>
             <div class="uk-cover-container">
-              <!-- <div class="uk-card-badge uk-label">
-                      {{ plant.plant_type }}
-                    </div>
-                    <img :src="plant.plant_image.url" alt="" uk-cover />
-                    <canvas width="100%" height="400"></canvas>
-                  </div> -->
-              <div>
-                <div class="uk-card-body">
-                  <!-- <h3 class="uk-card-title">
-                        Название растения: {{ plant.name }}
-                      </h3> -->
-                  <!-- <p>Описание поля: {{ plant.plant_description }}</p>  -->
-                  <p>
-                    Поле:
-                    <nuxt-link
-                      :to="field.link"
-                    >
-                      {{ field.name }}
-                    </nuxt-link>
-                  </p>
-                  <p>Тип поля: {{ field.field_type }}</p>
-                  <p>Описание поля: {{ field.description }}</p>
-                  <p>Площадь поля: {{ field.area }} м2</p>
-                </div>
+              <div class="uk-card-badge uk-label">
+                {{ field.type }}
+              </div>
+              <!-- <img :src="plant.plant_image.url" alt="" uk-cover /> -->
+              <canvas
+                width="100%"
+                height="400"
+              />
+            </div>
+            <div>
+              <div class="uk-card-body">
+                <h3 class="uk-card-title">
+                  Название поля: {{ field.name }}
+                </h3>
+                <p>Тип поля: {{ field.type }}</p>
+                <p>
+                  Поле:
+                  <nuxt-link to="/">
+                    {{ field.name }}
+                  </nuxt-link>
+                </p>
+                <p>Растения на поле: {{ field.crops.name }}</p>
+                <p>Площадь поля: {{ field.area }} м2</p>
               </div>
             </div>
           </div>
+        </div>
 
-          <div
-            v-if="filteredList_fields.length == 0"
-            class="uk-container uk-container-center uk-text-center"
+        <div
+          v-if="fields.length == 0"
+          class="uk-container uk-container-center uk-text-center"
+        >
+          <img
+            src="https://assets-ouch.icons8.com/preview/19/52de2377-696e-4194-8c63-0a81aef60b4f.png"
+            height="800"
+            width="800"
           >
-            <img
-              src="https://assets-ouch.icons8.com/preview/19/52de2377-696e-4194-8c63-0a81aef60b4f.png"
-              height="800"
-              width="800"
-            >
-            <p>Поля не найдены</p>
-          </div>
+          <p>Поля не найдены</p>
         </div>
       </div>
     </div>
-
-    <!-- <section>
-      <div class="uk-alert-primary" uk-alert>
-        <a class="uk-alert-close" uk-close></a>
-        <p>Выберите группу растений из списка...</p>
-      </div>
-      <ul uk-accordion>
-        <li>
-          <a class="uk-accordion-title" href="#">Многолетники</a>
-          <div class="uk-accordion-content map_adaptive_container">
-            <div class="uk-alert-primary" uk-alert>
-              <a class="uk-alert-close" uk-close></a>
-              <p>Выберите поле из списка...</p>
-            </div>
-            <ul uk-accordion>
-              <li>
-                <a class="uk-accordion-title" href="#">Поле №10</a>
-                <div class="uk-accordion-content map_adaptive_container">
-                  <p>Площадь поля: 101м2</p>
-                  <a
-                    class="uk-button uk-button-default"
-                    href="/fields/perennials/10"
-                    >подробнее</a
-                  >
-                </div>
-              </li>
-              <li>
-                <a class="uk-accordion-title" href="#">Поле №11</a>
-                <div class="uk-accordion-content map_adaptive_container">
-                  <p>Площадь поля: 484м2</p>
-                  <a
-                    class="uk-button uk-button-default"
-                    href="/fields/perennials/11"
-                    >подробнее</a
-                  >
-                </div>
-              </li>
-              <li>
-                <a class="uk-accordion-title" href="#">Поле №12</a>
-                <div class="uk-accordion-content map_adaptive_container">
-                  <p>Площадь поля: 1254м2</p>
-                  <a
-                    class="uk-button uk-button-default"
-                    href="/fields/perennials/12"
-                    >подробнее</a
-                  >
-                </div>
-              </li>
-              <li>
-                <a class="uk-accordion-title" href="#">Поле №13</a>
-                <div class="uk-accordion-content map_adaptive_container">
-                  <p>Площадь поля: 444м2</p>
-                  <a
-                    class="uk-button uk-button-default"
-                    href="/fields/perennials/13"
-                    >подробнее</a
-                  >
-                </div>
-              </li>
-              <li>
-                <a class="uk-accordion-title" href="#">Поле №14</a>
-                <div class="uk-accordion-content map_adaptive_container">
-                  <p>Площадь поля: 487м2</p>
-                  <a
-                    class="uk-button uk-button-default"
-                    href="/fields/perennials/14"
-                    >подробнее</a
-                  >
-                </div>
-              </li>
-              <li>
-                <a class="uk-accordion-title" href="#">Поле №15</a>
-                <div class="uk-accordion-content map_adaptive_container">
-                  <p>Площадь поля: 886м2</p>
-                  <a
-                    class="uk-button uk-button-default"
-                    href="/fields/perennials/15"
-                    >подробнее</a
-                  >
-                </div>
-              </li>
-              <li>
-                <a class="uk-accordion-title" href="#">Поле №16</a>
-                <div class="uk-accordion-content map_adaptive_container">
-                  <p>Площадь поля: 627м2</p>
-                  <a
-                    class="uk-button uk-button-default"
-                    href="/fields/perennials/16"
-                    >подробнее</a
-                  >
-                </div>
-              </li>
-              <li>
-                <a class="uk-accordion-title" href="#">Поле №17</a>
-                <div class="uk-accordion-content map_adaptive_container">
-                  <p>Площадь поля: 161м2</p>
-                  <a
-                    class="uk-button uk-button-default"
-                    href="/fields/perennials/17"
-                    >подробнее</a
-                  >
-                </div>
-              </li>
-              <li>
-                <a class="uk-accordion-title" href="#">Поле №18</a>
-                <div class="uk-accordion-content map_adaptive_container">
-                  <p>Площадь поля: 149м2</p>
-                  <a
-                    class="uk-button uk-button-default"
-                    href="/fields/perennials/18"
-                    >подробнее</a
-                  >
-                </div>
-              </li>
-            </ul>
-          </div>
-        </li>
-        <li>
-          <a class="uk-accordion-title" href="#">Cвободные поля</a>
-          <div class="uk-accordion-content map_adaptive_container">
-            <div class="uk-alert-primary" uk-alert>
-              <a class="uk-alert-close" uk-close></a>
-              <p>Выберите поле из списка...</p>
-            </div>
-            <ul uk-accordion>
-              <li>
-                <a class="uk-accordion-title" href="#">Поле №35</a>
-                <div class="uk-accordion-content map_adaptive_container">
-                  <p>Площадь поля: 770м2</p>
-                  <a
-                    class="uk-button uk-button-default"
-                    href="/fields/free_fields/35"
-                    >подробнее</a
-                  >
-                </div>
-              </li>
-              <li>
-                <a class="uk-accordion-title" href="#">Поле №36</a>
-                <div class="uk-accordion-content map_adaptive_container">
-                  <p>Площадь поля: 4569м2</p>
-                  <a
-                    class="uk-button uk-button-default"
-                    href="/fields/free_fields/36"
-                    >подробнее</a
-                  >
-                </div>
-              </li>
-            </ul>
-          </div>
-        </li>
-
-        <li>
-          <a class="uk-accordion-title" href="#">Кустарники</a>
-          <div class="uk-accordion-content map_adaptive_container">
-            <div class="uk-alert-primary" uk-alert>
-              <a class="uk-alert-close" uk-close></a>
-              <p>Выберите поле из списка...</p>
-            </div>
-            <li>
-              <a class="uk-accordion-title" href="#">Поле №21</a>
-              <div class="uk-accordion-content map_adaptive_container">
-                <p>Площадь поля: 217м2</p>
-                <a class="uk-button uk-button-default" href="/fields/bushes/21"
-                  >подробнее</a
-                >
-              </div>
-            </li>
-            <li>
-              <a class="uk-accordion-title" href="#">Поле №22</a>
-              <div class="uk-accordion-content map_adaptive_container">
-                <p>Площадь поля: 184м2</p>
-                <a class="uk-button uk-button-default" href="/fields/bushes/22"
-                  >подробнее</a
-                >
-              </div>
-            </li>
-            <li>
-              <a class="uk-accordion-title" href="#">Поле №23</a>
-              <div class="uk-accordion-content map_adaptive_container">
-                <p>Площадь поля: 256м2</p>
-                <a class="uk-button uk-button-default" href="/fields/bushes/23"
-                  >подробнее</a
-                >
-              </div>
-            </li>
-            <li>
-              <a class="uk-accordion-title" href="#">Поле №24</a>
-              <div class="uk-accordion-content map_adaptive_container">
-                <p>Площадь поля: 151м2</p>
-                <a class="uk-button uk-button-default" href="/fields/bushes/24"
-                  >подробнее</a
-                >
-              </div>
-            </li>
-            <li>
-              <a class="uk-accordion-title" href="#">Поле №25</a>
-              <div class="uk-accordion-content map_adaptive_container">
-                <p>Площадь поля: 161м2</p>
-                <a class="uk-button uk-button-default" href="/fields/bushes/25"
-                  >подробнее</a
-                >
-              </div>
-            </li>
-            <li>
-              <a class="uk-accordion-title" href="#">Поле №26</a>
-              <div class="uk-accordion-content map_adaptive_container">
-                <p>Площадь поля: 152м2</p>
-                <a class="uk-button uk-button-default" href="/fields/bushes/26"
-                  >подробнее</a
-                >
-              </div>
-            </li>
-            <li>
-              <a class="uk-accordion-title" href="#">Поле №27</a>
-              <div class="uk-accordion-content map_adaptive_container">
-                <p>Площадь поля: 337м2</p>
-                <a class="uk-button uk-button-default" href="/fields/bushes/27"
-                  >подробнее</a
-                >
-              </div>
-            </li>
-          </div>
-        </li>
-        <li>
-          <a class="uk-accordion-title" href="#">Деревья</a>
-          <div class="uk-accordion-content map_adaptive_container">
-            <div class="uk-alert-primary" uk-alert>
-              <a class="uk-alert-close" uk-close></a>
-              <p>Выберите поле из списка...</p>
-            </div>
-            <li>
-              <a class="uk-accordion-title" href="#">Поле №28</a>
-              <div class="uk-accordion-content map_adaptive_container">
-                <p>Площадь поля: 487м2</p>
-                <a class="uk-button uk-button-default" href="/fields/trees/28"
-                  >подробнее</a
-                >
-              </div>
-            </li>
-            <li>
-              <a class="uk-accordion-title" href="#">Поле №29</a>
-              <div class="uk-accordion-content map_adaptive_container">
-                <p>Площадь поля: 146м2</p>
-                <a class="uk-button uk-button-default" href="/fields/trees/29"
-                  >подробнее</a
-                >
-              </div>
-            </li>
-            <li>
-              <a class="uk-accordion-title" href="#">Поле №30</a>
-              <div class="uk-accordion-content map_adaptive_container">
-                <p>Площадь поля: 195м2</p>
-                <a class="uk-button uk-button-default" href="/fields/trees/30"
-                  >подробнее</a
-                >
-              </div>
-            </li>
-            <li>
-              <a class="uk-accordion-title" href="#">Поле №32</a>
-              <div class="uk-accordion-content map_adaptive_container">
-                <p>Площадь поля: 132м2</p>
-                <a class="uk-button uk-button-default" href="/fields/trees/32"
-                  >подробнее</a
-                >
-              </div>
-            </li>
-            <li>
-              <a class="uk-accordion-title" href="#">Поле №34</a>
-              <div class="uk-accordion-content map_adaptive_container">
-                <p>Площадь поля: 182м2</p>
-                <a class="uk-button uk-button-default" href="/fields/trees/34"
-                  >подробнее</a
-                >
-              </div>
-            </li>
-          </div>
-        </li>
-        <li>
-          <a class="uk-accordion-title" href="#">Плодовые</a>
-          <div class="uk-accordion-content map_adaptive_container">
-            <div class="uk-alert-primary" uk-alert>
-              <a class="uk-alert-close" uk-close></a>
-              <p>Выберите поле из списка...</p>
-            </div>
-            <li>
-              <a class="uk-accordion-title" href="#">Поле №31</a>
-              <div class="uk-accordion-content map_adaptive_container">
-                <p>Площадь поля: 93м2</p>
-                <a class="uk-button uk-button-default" href="/fields/fruits/31"
-                  >подробнее</a
-                >
-              </div>
-            </li>
-          </div>
-        </li>
-        <li>
-          <a class="uk-accordion-title" href="#">Корнеплоды</a>
-          <div class="uk-accordion-content map_adaptive_container">
-            <div class="uk-alert-primary" uk-alert>
-              <a class="uk-alert-close" uk-close></a>
-              <p>Выберите поле из списка...</p>
-            </div>
-            <ul uk-accordion>
-              <li>
-                <a class="uk-accordion-title" href="#">Поле №33</a>
-                <div class="uk-accordion-content map_adaptive_container">
-                  <p>Площадь поля: 360м2</p>
-                  <a class="uk-button uk-button-default" href="/fields/roots/33"
-                    >подробнее</a
-                  >
-                </div>
-              </li>
-            </ul>
-          </div>
-        </li>
-        <li>
-          <a class="uk-accordion-title" href="#">Злаковые</a>
-          <div class="uk-accordion-content map_adaptive_container">
-            <div class="uk-alert-primary" uk-alert>
-              <a class="uk-alert-close" uk-close></a>
-              <p>Выберите поле из списка...</p>
-            </div>
-            <ul uk-accordion>
-              <li>
-                <a class="uk-accordion-title" href="#">Поле №19</a>
-                <div class="uk-accordion-content map_adaptive_container">
-                  <p>Площадь поля: 126м2</p>
-                  <a
-                    class="uk-button uk-button-default"
-                    href="/fields/cereals/19"
-                    >подробнее</a
-                  >
-                </div>
-              </li>
-            </ul>
-          </div>
-        </li>
-        <li>
-          <a class="uk-accordion-title" href="#">Ягоды</a>
-          <div class="uk-accordion-content map_adaptive_container">
-            <div class="uk-alert-primary" uk-alert>
-              <a class="uk-alert-close" uk-close></a>
-              <p>Выберите поле из списка...</p>
-            </div>
-            <ul uk-accordion>
-              <li>
-                <a class="uk-accordion-title" href="#">Поле №20</a>
-                <div class="uk-accordion-content map_adaptive_container">
-                  <p>Площадь поля: 309м2</p>
-                  <a
-                    class="uk-button uk-button-default"
-                    href="/fields/berries/20"
-                    >подробнее</a
-                  >
-                </div>
-              </li>
-            </ul>
-          </div>
-        </li>
-      </ul>
-    </section>-->
   </div>
 </template>
 
@@ -435,12 +72,305 @@
 
 export default {
   components: {},
-  middleware: 'auth',
   data() {
     return {
-      query: '',
+      fields: [
+        {
+          id: '1',
+          number: '1',
+          type: 'Клумбы',
+          name: 'Клумба на въезде',
+          area: '164',
+          crops: [],
+        },
+        {
+          id: '2',
+          number: '2',
+          type: 'Клумбы',
+          name: 'Газон и беседка',
+          area: '512',
+          crops: [
+            {
+              name: 'Сосна',
+            },
+          ],
+        },
+        {
+          id: '3',
+          number: '3',
+          type: 'Пруды',
+          name: 'Малый пруд',
+          area: '6.7',
+          crops: [],
+        },
+        {
+          id: '4',
+          number: '4',
+          type: 'Пруды',
+          name: 'Большой пруд',
+          area: '142',
+          crops: [],
+        },
+        {
+          id: '5',
+          number: '5',
+          type: 'Строения',
+          name: 'Бытовка',
+          area: '48',
+          crops: [],
+        },
+        {
+          id: '6',
+          number: '6',
+          type: 'Строения',
+          name: 'Свинарник',
+          area: '109',
+          crops: [],
+        },
+        {
+          id: '7',
+          number: '7',
+          type: 'Строения',
+          name: 'Теплица',
+          area: '37',
+          crops: [],
+        },
+        {
+          id: '8',
+          number: '8',
+          type: 'Зоны продажи',
+          name: 'Зона продажи',
+          area: '245',
+          crops: [],
+        },
+        {
+          id: '9',
+          number: '9',
+          type: 'Зоны продажи',
+          name: 'Продажа камней',
+          area: '247',
+          crops: [],
+        },
+        {
+          id: '10',
+          number: '10',
+          type: 'Поля',
+          name: 'Поле',
+          area: '101',
+          crops: [],
+        },
+        {
+          id: '11',
+          number: '11',
+          type: 'Поля',
+          name: 'Поле',
+          area: '484',
+          crops: [],
+        },
+        {
+          id: '12',
+          number: '12',
+          type: 'Поля',
+          name: 'Поле',
+          area: '1254',
+          crops: [],
+        },
+        {
+          id: '13',
+          number: '13',
+          type: 'Поля',
+          name: 'Поле',
+          area: '444',
+          crops: [],
+        },
+        {
+          id: '14',
+          number: '14',
+          type: 'Поля',
+          name: 'Поле',
+          area: '487',
+          crops: [],
+        },
+        {
+          id: '15',
+          number: '15',
+          type: 'Поля',
+          name: 'Поле',
+          area: '886',
+          crops: [],
+        },
+        {
+          id: '16',
+          number: '16',
+          type: 'Поля',
+          name: 'Поле',
+          area: '627',
+          crops: [],
+        },
+        {
+          id: '17',
+          number: '17',
+          type: 'Поля',
+          name: 'Поле',
+          area: '161',
+          crops: [],
+        },
+        {
+          id: '18',
+          number: '18',
+          type: 'Поля',
+          name: 'Поле',
+          area: '149',
+          crops: [],
+        },
+        {
+          id: '19',
+          number: '19',
+          type: 'Поля',
+          name: 'Поле',
+          area: '126',
+          crops: [],
+        },
+        {
+          id: '20',
+          number: '20',
+          type: 'Поля',
+          name: 'Поле',
+          area: '309',
+          crops: [],
+        },
+        {
+          id: '21',
+          number: '21',
+          type: 'Поля',
+          name: 'Поле',
+          area: '217',
+          crops: [],
+        },
+        {
+          id: '22',
+          number: '22',
+          type: 'Поля',
+          name: 'Поле',
+          area: '184',
+          crops: [],
+        },
+        {
+          id: '23',
+          number: '23',
+          type: 'Поля',
+          name: 'Поле',
+          area: '256',
+          crops: [],
+        },
+        {
+          id: '24',
+          number: '24',
+          type: 'Поля',
+          name: 'Поле',
+          area: '151',
+          crops: [],
+        },
+        {
+          id: '25',
+          number: '25',
+          type: 'Поля',
+          name: 'Поле',
+          area: '161',
+          crops: [],
+        },
+        {
+          id: '26',
+          number: '26',
+          type: 'Поля',
+          name: 'Поле',
+          area: '152',
+          crops: [],
+        },
+        {
+          id: '27',
+          number: '27',
+          type: 'Поля',
+          name: 'Поле',
+          area: '337',
+          crops: [],
+        },
+        {
+          id: '28',
+          number: '28',
+          type: 'Поля',
+          name: 'Поле',
+          area: '487',
+          crops: [],
+        },
+        {
+          id: '29',
+          number: '29',
+          type: 'Поля',
+          name: 'Поле',
+          area: '146',
+          crops: [],
+        },
+        {
+          id: '30',
+          number: '30',
+          type: 'Поля',
+          name: 'Поле',
+          area: '195',
+          crops: [],
+        },
+        {
+          id: '31',
+          number: '31',
+          type: 'Поля',
+          name: 'Поле',
+          area: '93',
+          crops: [],
+        },
+        {
+          id: '32',
+          number: '32',
+          type: 'Поля',
+          name: 'Поле',
+          area: '132',
+          crops: [],
+        },
+        {
+          id: '33',
+          number: '33',
+          type: 'Поля',
+          name: 'Поле',
+          area: '360',
+          crops: [],
+        },
+        {
+          id: '34',
+          number: '34',
+          type: 'Поля',
+          name: 'Поле',
+          area: '182',
+          crops: [],
+        },
+        {
+          id: '35',
+          number: '35',
+          type: 'Поля',
+          name: 'Свободное поле',
+          area: '770',
+          crops: [],
+        },
+        {
+          id: '36',
+          number: '36',
+          type: 'Поля',
+          name: 'Свободное поле',
+          area: '4569',
+          crops: [],
+        },
+      ],
     };
   },
+  // TODO: Написать скрипт фильтрации
   computed: {},
 };
 </script>

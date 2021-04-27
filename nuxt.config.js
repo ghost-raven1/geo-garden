@@ -58,18 +58,8 @@ export default {
     '@nuxtjs/bulma',
     '@nuxtjs/auth',
     '@nuxtjs/pwa',
-    '@nuxtjs/apollo',
     'nuxt-material-design-icons',
   ],
-
-  apollo: {
-    clientConfigs: {
-      default: {
-        httpEndpoint: 'https://geo-garden-backend.herokuapp.com/graphql',
-        // httpEndpoint: 'http://localhost:1337/graphql',
-      },
-    },
-  },
 
   auth: {
     strategies: {

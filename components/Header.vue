@@ -13,7 +13,6 @@
           >
             <div class="uk-offcanvas-bar uk-flex uk-flex-column">
               <ul
-                v-if="isAuthenticated"
                 class="uk-nav uk-nav-primary uk-nav-center uk-margin-auto-vertical"
               >
                 <li class="uk-active">
@@ -132,7 +131,7 @@
                   > Выйти</a>
                 </li>
               </ul>
-              <ul
+            <!-- <ul
                 v-if="!isAuthenticated"
                 class="uk-nav uk-nav-primary uk-nav-center uk-margin-auto-vertical"
               >
@@ -152,7 +151,7 @@
                     <span class="material-icons md-36">email</span> Вход
                   </nuxt-link>
                 </li>
-              </ul>
+              </ul> -->
             </div>
           </div>
           <ul class="uk-navbar-nav">

@@ -175,20 +175,12 @@ import { mapGetters } from 'vuex';
 import CommonMap2021 from '~/components/maps/2021/CommonMap2021-ac.vue';
 import FilterFields2021 from '~/components/filters/2021/FilterFields2021.vue';
 import Techcard from '~/components/techcard/Tech-ac.vue';
-import plantsQuery from '~/apollo/queries/plant/plants.gql';
 
 export default {
   components: {
     CommonMap2021,
     FilterFields2021,
     Techcard,
-  },
-  middleware: 'auth',
-  apollo: {
-    plants: {
-      prefetch: true,
-      query: plantsQuery,
-    },
   },
   data() {
     return {
@@ -201,6 +193,7 @@ export default {
   computed: {
     ...mapGetters(['isAuthenticated', 'loggedInUser']),
     filteredList_plants() {
+      // TODO: Переписать скрипт фильтрации
       return this.plants.filter((plant) => plant.name.toLowerCase().includes(this.query.toLowerCase()));
     },
   },
