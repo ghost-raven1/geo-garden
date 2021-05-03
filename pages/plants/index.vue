@@ -37,7 +37,7 @@
               >
                 <span class="badge badge_green">{{ field.name }}</span>
               </span>
-              <span>{{ plant.amount }} шт.</span>
+              <span>{{ plant.amount }} шт. {{ plant.price }} руб.</span>
               <!-- TODO: Проверить работоспособность -->
               <div
                 v-if="filteredList_plants.length == 0"
