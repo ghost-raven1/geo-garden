@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <div class="uk-accordion-content map_adaptive_container">
-      <h2>Добро пожаловать, {{ loggedInUser.username }}!</h2>
+      <h2>Добро пожаловать!</h2>
 
       <!-- Интерактивные карты -->
       <h2 class="">
@@ -28,14 +28,7 @@
           <li class="tag-2021">
             <div class="uk-card uk-card-default uk-card-body">
               <ul uk-accordion="collapsible: true">
-                <div class="adaptive_container">
-                  <script
-                    type="text/javascript"
-                    charset="utf-8"
-                    async
-                    src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Aae9dee25d884301e3f64fb47cd3b6321ca975b30ca190fcfe228916e37a80517&amp;width=100%&amp;height=500&amp;lang=ru_RU&amp;scroll=true;apikey=e7c1c5fc-21d7-49a3-93ec-069e3e1c8d44"
-                  />
-                </div>
+                <Map />
               </ul>
             </div>
           </li>
@@ -63,7 +56,7 @@
                 <div class="">
                   <img
                     class="card-plant__image"
-                    src="http://chihuashki.ru/sites/default/files/images/u6/podsolnuh.jpg"
+                    src="~/assets/media/plants.jpg"
                     alt="Поиск растений"
                   >
                 </div>
@@ -85,7 +78,7 @@
                 <div class="">
                   <img
                     class="card-plant__image"
-                    src="https://www.touchofart.eu/photos/Katarzyna_Gorowska/big/Pole_rzepakowe_kgo8.jpg"
+                    src="~/assets/media/fields.jpg"
                     alt="Поиск полей"
                   >
                 </div>
@@ -139,6 +132,7 @@
 
 <script>
 import { mapGetters } from 'vuex';
+import Map from '~/components/maps/2021/Map.vue';
 import Techcard from '~/components/techcard/Tech-ac.vue';
 import Tabel from '~/components/tabel/Tabel.vue';
 
@@ -146,6 +140,7 @@ export default {
   components: {
     Tabel,
     Techcard,
+    Map,
   },
   data() {
     return {
