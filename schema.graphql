@@ -5,7 +5,7 @@ schema {
   mutation: Mutation
 }
 
-union Morph = About | ComponentAboutAboutItem | ComponentHelpHelpItem | ComponentMapMapItem | Field | FieldAggregator | FieldAggregatorAvg | FieldAggregatorMax | FieldAggregatorMin | FieldAggregatorSum | FieldConnection | FieldConnectionArea | FieldConnectionCreatedAt | FieldConnectionId | FieldConnectionImage | FieldConnectionName | FieldConnectionPublished_at | FieldConnectionType | FieldConnectionUpdatedAt | FieldConnection_id | FieldGroupBy | Help | Plant | PlantAggregator | PlantAggregatorAvg | PlantAggregatorMax | PlantAggregatorMin | PlantAggregatorSum | PlantConnection | PlantConnectionAmount | PlantConnectionAvailable | PlantConnectionCreatedAt | PlantConnectionId | PlantConnectionImage | PlantConnectionName | PlantConnectionPublished_at | PlantConnectionType | PlantConnectionUpdatedAt | PlantConnection_id | PlantGroupBy | UploadFile | UploadFileAggregator | UploadFileAggregatorAvg | UploadFileAggregatorMax | UploadFileAggregatorMin | UploadFileAggregatorSum | UploadFileConnection | UploadFileConnectionAlternativeText | UploadFileConnectionCaption | UploadFileConnectionCreatedAt | UploadFileConnectionExt | UploadFileConnectionFormats | UploadFileConnectionHash | UploadFileConnectionHeight | UploadFileConnectionId | UploadFileConnectionMime | UploadFileConnectionName | UploadFileConnectionPreviewUrl | UploadFileConnectionProvider | UploadFileConnectionProvider_metadata | UploadFileConnectionSize | UploadFileConnectionUpdatedAt | UploadFileConnectionUrl | UploadFileConnectionWidth | UploadFileConnection_id | UploadFileGroupBy | UserPermissionsPasswordPayload | UsersPermissionsLoginPayload | UsersPermissionsMe | UsersPermissionsMeRole | UsersPermissionsPermission | UsersPermissionsRole | UsersPermissionsRoleAggregator | UsersPermissionsRoleConnection | UsersPermissionsRoleConnectionDescription | UsersPermissionsRoleConnectionId | UsersPermissionsRoleConnectionName | UsersPermissionsRoleConnectionType | UsersPermissionsRoleConnection_id | UsersPermissionsRoleGroupBy | UsersPermissionsUser | UsersPermissionsUserAggregator | UsersPermissionsUserConnection | UsersPermissionsUserConnectionBlocked | UsersPermissionsUserConnectionConfirmed | UsersPermissionsUserConnectionCreatedAt | UsersPermissionsUserConnectionEmail | UsersPermissionsUserConnectionId | UsersPermissionsUserConnectionProvider | UsersPermissionsUserConnectionRole | UsersPermissionsUserConnectionUpdatedAt | UsersPermissionsUserConnectionUsername | UsersPermissionsUserConnection_id | UsersPermissionsUserGroupBy | createFieldPayload | createPlantPayload | createRolePayload | createUserPayload | deleteAboutPayload | deleteFieldPayload | deleteFilePayload | deleteHelpPayload | deletePlantPayload | deleteRolePayload | deleteUserPayload | updateAboutPayload | updateFieldPayload | updateHelpPayload | updatePlantPayload | updateRolePayload | updateUserPayload
+union Morph = About | ComponentAboutAboutItem | ComponentHelpHelpItem | ComponentMapMapItem | Field | FieldAggregator | FieldAggregatorAvg | FieldAggregatorMax | FieldAggregatorMin | FieldAggregatorSum | FieldConnection | FieldConnectionArea | FieldConnectionCreatedAt | FieldConnectionId | FieldConnectionImage | FieldConnectionName | FieldConnectionPublished_at | FieldConnectionType | FieldConnectionUpdatedAt | FieldConnection_id | FieldGroupBy | Help | Plant | PlantAggregator | PlantAggregatorAvg | PlantAggregatorMax | PlantAggregatorMin | PlantAggregatorSum | PlantConnection | PlantConnectionAmount | PlantConnectionAvailable | PlantConnectionCreatedAt | PlantConnectionId | PlantConnectionImage | PlantConnectionName | PlantConnectionPrice | PlantConnectionPublished_at | PlantConnectionType | PlantConnectionUpdatedAt | PlantConnection_id | PlantGroupBy | UploadFile | UploadFileAggregator | UploadFileAggregatorAvg | UploadFileAggregatorMax | UploadFileAggregatorMin | UploadFileAggregatorSum | UploadFileConnection | UploadFileConnectionAlternativeText | UploadFileConnectionCaption | UploadFileConnectionCreatedAt | UploadFileConnectionExt | UploadFileConnectionFormats | UploadFileConnectionHash | UploadFileConnectionHeight | UploadFileConnectionId | UploadFileConnectionMime | UploadFileConnectionName | UploadFileConnectionPreviewUrl | UploadFileConnectionProvider | UploadFileConnectionProvider_metadata | UploadFileConnectionSize | UploadFileConnectionUpdatedAt | UploadFileConnectionUrl | UploadFileConnectionWidth | UploadFileConnection_id | UploadFileGroupBy | UserPermissionsPasswordPayload | UsersPermissionsLoginPayload | UsersPermissionsMe | UsersPermissionsMeRole | UsersPermissionsPermission | UsersPermissionsRole | UsersPermissionsRoleAggregator | UsersPermissionsRoleConnection | UsersPermissionsRoleConnectionDescription | UsersPermissionsRoleConnectionId | UsersPermissionsRoleConnectionName | UsersPermissionsRoleConnectionType | UsersPermissionsRoleConnection_id | UsersPermissionsRoleGroupBy | UsersPermissionsUser | UsersPermissionsUserAggregator | UsersPermissionsUserConnection | UsersPermissionsUserConnectionBlocked | UsersPermissionsUserConnectionConfirmed | UsersPermissionsUserConnectionCreatedAt | UsersPermissionsUserConnectionEmail | UsersPermissionsUserConnectionId | UsersPermissionsUserConnectionProvider | UsersPermissionsUserConnectionRole | UsersPermissionsUserConnectionUpdatedAt | UsersPermissionsUserConnectionUsername | UsersPermissionsUserConnection_id | UsersPermissionsUserGroupBy | createFieldPayload | createPlantPayload | createRolePayload | createUserPayload | deleteAboutPayload | deleteFieldPayload | deleteFilePayload | deleteHelpPayload | deletePlantPayload | deleteRolePayload | deleteUserPayload | updateAboutPayload | updateFieldPayload | updateHelpPayload | updatePlantPayload | updateRolePayload | updateUserPayload
 
 type About {
   About_item: [ComponentAboutAboutItem]
@@ -202,6 +202,7 @@ type Plant {
   id: ID!
   image: UploadFile
   name: String
+  price: Float
   published_at: DateTime
   type: String
   updatedAt: DateTime!
@@ -218,18 +219,22 @@ type PlantAggregator {
 
 type PlantAggregatorAvg {
   amount: Float
+  price: Float
 }
 
 type PlantAggregatorMax {
   amount: Float
+  price: Float
 }
 
 type PlantAggregatorMin {
   amount: Float
+  price: Float
 }
 
 type PlantAggregatorSum {
   amount: Float
+  price: Float
 }
 
 type PlantConnection {
@@ -268,6 +273,11 @@ type PlantConnectionName {
   key: String
 }
 
+type PlantConnectionPrice {
+  connection: PlantConnection
+  key: Float
+}
+
 type PlantConnectionPublished_at {
   connection: PlantConnection
   key: DateTime
@@ -296,6 +306,7 @@ type PlantGroupBy {
   id: [PlantConnectionId]
   image: [PlantConnectionImage]
   name: [PlantConnectionName]
+  price: [PlantConnectionPrice]
   published_at: [PlantConnectionPublished_at]
   type: [PlantConnectionType]
   updatedAt: [PlantConnectionUpdatedAt]
@@ -825,6 +836,7 @@ input PlantInput {
   fields: [ID]
   image: ID
   name: String
+  price: Float
   published_at: DateTime
   type: String
   updated_by: ID
@@ -976,6 +988,7 @@ input editPlantInput {
   fields: [ID]
   image: ID
   name: String
+  price: Float
   published_at: DateTime
   type: String
   updated_by: ID

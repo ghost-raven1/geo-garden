@@ -4,6 +4,7 @@ query Plants {
     name
     type
     amount
+    price
     image {
       url
     }
