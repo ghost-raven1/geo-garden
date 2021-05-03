@@ -7,40 +7,41 @@
           v-model="query"
           class="uk-search-input"
           type="search"
-          placeholder="Поиск полей по названию..."
+          placeholder="Поиск растения..."
         >
       </form>
     </div>
     <div class="adaptive_container">
       <div uk-grid>
-        <!-- Карточка поля -->
+        <!-- Карточка растения -->
         <div
-          v-for="(field, i) in filteredList_fields"
+          v-for="(plant, i) in filteredList_plants"
           :key="i"
           class="card-plant"
         >
           <div class="">
             <img
               class="card-plant__image"
-              :src="field.image.url"
-              :alt="field.name"
+              :src="plant.image.url"
+              :alt="plant.name"
             >
           </div>
           <div class="">
             <h3 class="">
-              {{ field.name }} {{ field.type }}
+              {{ plant.name }} {{ plant.type }}
             </h3>
             <div>
               <span
-                v-for="(field, i) in field.plants"
+                v-for="(field, i) in plant.fields"
                 :key="i"
               >
                 <span class="badge badge_green">{{ field.name }}</span>
               </span>
-              <span>Площадь: {{ field.area }} м2.</span>
+              <span>{{ plant.amount }} шт.</span>
               <!-- TODO: Проверить работоспособность -->
               <div
-                v-if="filteredList_fields.length == 0"
+                v-if="filteredList_plants.length == 0"
+                class="adaptive_container"
               >
                 <img
                   src="https://assets-ouch.icons8.com/preview/19/52de2377-696e-4194-8c63-0a81aef60b4f.png"
@@ -52,34 +53,33 @@
             </div>
           </div>
         </div>
-        <!-- Конец карточки поля -->
+        <!-- Конец карточки растений -->
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import fieldsQuery from '~/apollo/queries/field/fields.gql';
+import plantsQuery from '~/apollo/queries/plant/plants.gql';
 
 export default {
   name: 'index.vue',
-  components: {},
   data() {
     return {
+      plants: [],
       query: '',
-      fields: [],
     };
   },
   apollo: {
-    fields: {
+    plants: {
       prefetch: true,
-      query: fieldsQuery,
+      query: plantsQuery,
     },
   },
   computed: {
-    filteredList_fields() {
+    filteredList_plants() {
       // TODO: Переписать скрипт фильтрации
-      return this.fields.filter((field) => field.name.toLowerCase().includes(this.query.toLowerCase()));
+      return this.plants.filter((plant) => plant.name.toLowerCase().includes(this.query.toLowerCase()));
     },
   },
 };

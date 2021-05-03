@@ -8,9 +8,9 @@
     "start": "nuxt start",
     "generate": "nuxt generate",
     "heroku-postbuild": "npm run build",
-      "lint": "npm run lint:js",
-      "lintfix": "eslint --fix --ext .js,.vue --ignore-path .gitignore .",
-      "lint:js": "eslint --ext .js,.vue --ignore-path .gitignore ."
+    "lint": "npm run lint:js",
+    "lintfix": "eslint --fix --ext .js,.vue --ignore-path .gitignore .",
+    "lint:js": "eslint --ext .js,.vue --ignore-path .gitignore ."
   },
   "dependencies": {
     "@nuxtjs/apollo": "^4.0.1-rc.5",
@@ -34,6 +34,9 @@
     "eslint-import-resolver-nuxt": "^1.0.1",
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-nuxt": "^2.0.0",
-    "eslint-plugin-vue": "^7.9.0"
+    "eslint-plugin-vue": "^7.9.0",
+    "fibers": "^5.0.0",
+    "sass": "^1.32.12",
+    "sass-loader": "^10.1.1"
   }
 }

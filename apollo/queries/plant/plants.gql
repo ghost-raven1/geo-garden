@@ -1,0 +1,15 @@
+query Plants {
+  plants {
+    id
+    name
+    type
+    amount
+    image {
+      url
+    }
+    fields {
+      name
+      type
+    }
+  }
+}

@@ -32,6 +32,7 @@ export default {
 
   // Global CSS (https://go.nuxtjs.dev/config-css)
   css: [
+    '@/assets/scss/main.scss',
     'uikit/dist/css/uikit.min.css',
     'uikit/dist/css/uikit.css',
     '~/assets/css/custom_styles.css',
@@ -49,18 +50,26 @@ export default {
   components: true,
 
   // Modules for dev and build (recommended) (https://go.nuxtjs.dev/config-modules)
-  buildModules: [],
+  buildModules: [
+    '@nuxtjs/dotenv',
+  ],
 
   // Modules (https://go.nuxtjs.dev/config-modules)
   modules: [
+    '@nuxtjs/apollo',
     '@nuxtjs/axios',
-    '@nuxtjs/dotenv',
     '@nuxtjs/bulma',
     '@nuxtjs/auth',
     '@nuxtjs/pwa',
     'nuxt-material-design-icons',
   ],
-
+  apollo: {
+    clientConfigs: {
+      default: {
+        httpEndpoint: 'http://localhost:1337/graphql',
+      },
+    },
+  },
   auth: {
     strategies: {
       local: {

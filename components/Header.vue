@@ -29,39 +29,15 @@
                     class="uk-margin-small-right"
                     to="/fields"
                   >
-                    <span class="material-icons md-36">place</span> Все Поля
+                    <span class="material-icons md-36">place</span> Поля
                   </nuxt-link>
                 </li>
                 <li>
                   <nuxt-link
                     class="uk-margin-small-right"
-                    to="/trades"
+                    to="/plants"
                   >
-                    <span class="material-icons md-36">place</span> Торговые зоны
-                  </nuxt-link>
-                </li>
-                <li>
-                  <nuxt-link
-                    class="uk-margin-small-right"
-                    to="/buildings"
-                  >
-                    <span class="material-icons md-36">place</span> Строения
-                  </nuxt-link>
-                </li>
-                <li>
-                  <nuxt-link
-                    class="uk-margin-small-right"
-                    to="/ponds"
-                  >
-                    <span class="material-icons md-36">place</span> Пруды
-                  </nuxt-link>
-                </li>
-                <li>
-                  <nuxt-link
-                    class="uk-margin-small-right"
-                    to="/fields/flowerbeds"
-                  >
-                    <span class="material-icons md-36">place</span> Клумбы
+                    <span class="material-icons md-36">place</span> Растения
                   </nuxt-link>
                 </li>
                 <li class="uk-nav-divider" />
@@ -100,12 +76,6 @@
                 <li>
                   <a
                     class="uk-margin-small-right"
-                    href="https://geo-garden-backend.herokuapp.com/admin"
-                  ><span class="material-icons md-36">dashboard</span> Админпанель</a>
-                </li>
-                <li>
-                  <a
-                    class="uk-margin-small-right"
                     href="http://garden-group.pro/internet-magazine"
                   ><span class="material-icons md-36">nature_people</span> Магазин</a>
                 </li>
@@ -116,20 +86,6 @@
                   ><span class="material-icons md-36">nature_people</span> Garden Group</a>
                 </li>
                 <li class="uk-nav-divider" />
-                <li>
-                  <nuxt-link
-                    class="uk-margin-small-right"
-                    to="/profile"
-                  >
-                    <span class="material-icons md-36">account_circle</span> Мой профиль
-                  </nuxt-link>
-                </li>
-                <li>
-                  <a
-                    class="uk-margin-small-right"
-                    @click="logout"
-                  > Выйти</a>
-                </li>
               </ul>
             <!-- <ul
                 v-if="!isAuthenticated"
@@ -280,9 +236,6 @@
 <style>
 .weather-widget {
     display: grid;
-}
-.button-menu{
-    padding: 16px 25px;
 }
 
 .site-name{

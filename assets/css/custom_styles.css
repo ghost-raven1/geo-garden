@@ -29,6 +29,11 @@
       padding-bottom: 5%;
       padding-top: 1%;
   }
+  div .adaptive_container{
+      height: 100%;
+      max-width: 100%;
+      padding-top: 1%;
+  }
   div .map{
       position: relative;
       text-align: center;
@@ -37,7 +42,7 @@
       position: absolute;
       top: 0;
       right: 0;
-  
+
       height: 100%;
       width: 100%;
   }
