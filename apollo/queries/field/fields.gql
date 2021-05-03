@@ -1,0 +1,15 @@
+query Fields {
+  fields {
+    id
+    name
+    type
+    area
+    image {
+      url
+    }
+    plants {
+      name
+      type
+    }
+  }
+}

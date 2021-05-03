@@ -1,0 +1,10 @@
+@import './variables.scss';
+@import './badges.scss';
+@import './cards.scss';
+
+.main {
+  max-width: 1180px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}

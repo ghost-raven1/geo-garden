@@ -1,3 +1,3 @@
 function burgerMenu(icon) {
-  icon.classList.toggle("change");
+  icon.classList.toggle('change');
 }
