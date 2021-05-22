@@ -94,7 +94,8 @@
         <!-- Фильтр по полям -->
       </div>
       <!-- Техническая карта -->
-      <div class="adaptive_container">
+
+     <!-- <div class="adaptive_container">
         <h2 class="uk-heading-small uk-heading-line uk-text-center">
           <span>Техническая карта</span>
         </h2>
@@ -109,7 +110,8 @@
           <p>Выберите мероприятие...</p>
         </div>
         <Techcard />
-      </div>
+      </div> -->
+
       <div class="adaptive_container">
         <h2 class="uk-heading-small uk-heading-line uk-text-center">
           <span>Табель полевых работ</span>
@@ -126,6 +128,22 @@
         </div>
         <Tabel />
       </div>
+            <div class="adaptive_container">
+        <h2 class="uk-heading-small uk-heading-line uk-text-center">
+          <span>План работ</span>
+        </h2>
+        <div
+          class="uk-alert-primary"
+          uk-alert
+        >
+          <a
+            class="uk-alert-close"
+            uk-close
+          />
+          <p>Выберите мероприятие...</p>
+        </div>
+        <Workplan />
+      </div>
     </div>
   </div>
 </template>
@@ -135,12 +153,14 @@ import { mapGetters } from 'vuex';
 import Map from '~/components/maps/2021/Map.vue';
 import Techcard from '~/components/techcard/Tech-ac.vue';
 import Tabel from '~/components/tabel/Tabel.vue';
+import Workplan from '~/components/workplan/workplan.vue';
 
 export default {
   components: {
     Tabel,
     Techcard,
     Map,
+    Workplan
   },
   data() {
     return {
