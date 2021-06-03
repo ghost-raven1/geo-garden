@@ -1,0 +1,12 @@
+query Tool($id: ID!) {
+  tool(id: $id) {
+    id
+    name
+    type
+    description
+    image {
+      url
+    }
+    amount
+  }
+}
