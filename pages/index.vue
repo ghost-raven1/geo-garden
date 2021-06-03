@@ -89,13 +89,55 @@
                 </div>
               </div>
             </nuxt-link>
+            <nuxt-link
+              type="button"
+              to="/seedbeds"
+            >
+              <div
+                class="card-plant"
+              >
+                <div class="">
+                  <img
+                    class="card-plant__image"
+                    src="~/assets/media/seedbeds.png"
+                    alt="Поиск грядок"
+                  >
+                </div>
+                <div class="">
+                  <h3 class="">
+                    Грядки
+                  </h3>
+                </div>
+              </div>
+            </nuxt-link>
+            <nuxt-link
+              type="button"
+              to="/tools"
+            >
+              <div
+                class="card-plant"
+              >
+                <div class="">
+                  <img
+                    class="card-plant__image"
+                    src="~/assets/media/tools.jpg"
+                    alt="Поиск инструментов"
+                  >
+                </div>
+                <div class="">
+                  <h3 class="">
+                    Инструменты
+                  </h3>
+                </div>
+              </div>
+            </nuxt-link>
           </div>
         </div>
         <!-- Фильтр по полям -->
       </div>
       <!-- Техническая карта -->
 
-     <!-- <div class="adaptive_container">
+      <!-- <div class="adaptive_container">
         <h2 class="uk-heading-small uk-heading-line uk-text-center">
           <span>Техническая карта</span>
         </h2>
@@ -128,7 +170,7 @@
         </div>
         <Tabel />
       </div>
-            <div class="adaptive_container">
+      <div class="adaptive_container">
         <h2 class="uk-heading-small uk-heading-line uk-text-center">
           <span>План работ</span>
         </h2>
@@ -160,7 +202,7 @@ export default {
     Tabel,
     Techcard,
     Map,
-    Workplan
+    Workplan,
   },
   data() {
     return {

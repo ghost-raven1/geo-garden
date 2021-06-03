@@ -8,14 +8,15 @@
 }
 
 .container {
-    max-height: 90%;
-    max-width: 90%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding-left: 5%;
-  }
+  height: 100%;
+  width: 100%;
+  max-width: 1180px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-left: 5%;
+}
 
 .container_form {
     max-width: 50%;

@@ -5,7 +5,7 @@ schema {
   mutation: Mutation
 }
 
-union Morph = About | ComponentAboutAboutItem | ComponentHelpHelpItem | ComponentMapMapItem | Field | FieldAggregator | FieldAggregatorAvg | FieldAggregatorMax | FieldAggregatorMin | FieldAggregatorSum | FieldConnection | FieldConnectionArea | FieldConnectionCreatedAt | FieldConnectionId | FieldConnectionImage | FieldConnectionName | FieldConnectionPublished_at | FieldConnectionType | FieldConnectionUpdatedAt | FieldConnection_id | FieldGroupBy | Help | Plant | PlantAggregator | PlantAggregatorAvg | PlantAggregatorMax | PlantAggregatorMin | PlantAggregatorSum | PlantConnection | PlantConnectionAmount | PlantConnectionAvailable | PlantConnectionCreatedAt | PlantConnectionId | PlantConnectionImage | PlantConnectionName | PlantConnectionPrice | PlantConnectionPublished_at | PlantConnectionType | PlantConnectionUpdatedAt | PlantConnection_id | PlantGroupBy | UploadFile | UploadFileAggregator | UploadFileAggregatorAvg | UploadFileAggregatorMax | UploadFileAggregatorMin | UploadFileAggregatorSum | UploadFileConnection | UploadFileConnectionAlternativeText | UploadFileConnectionCaption | UploadFileConnectionCreatedAt | UploadFileConnectionExt | UploadFileConnectionFormats | UploadFileConnectionHash | UploadFileConnectionHeight | UploadFileConnectionId | UploadFileConnectionMime | UploadFileConnectionName | UploadFileConnectionPreviewUrl | UploadFileConnectionProvider | UploadFileConnectionProvider_metadata | UploadFileConnectionSize | UploadFileConnectionUpdatedAt | UploadFileConnectionUrl | UploadFileConnectionWidth | UploadFileConnection_id | UploadFileGroupBy | UserPermissionsPasswordPayload | UsersPermissionsLoginPayload | UsersPermissionsMe | UsersPermissionsMeRole | UsersPermissionsPermission | UsersPermissionsRole | UsersPermissionsRoleAggregator | UsersPermissionsRoleConnection | UsersPermissionsRoleConnectionDescription | UsersPermissionsRoleConnectionId | UsersPermissionsRoleConnectionName | UsersPermissionsRoleConnectionType | UsersPermissionsRoleConnection_id | UsersPermissionsRoleGroupBy | UsersPermissionsUser | UsersPermissionsUserAggregator | UsersPermissionsUserConnection | UsersPermissionsUserConnectionBlocked | UsersPermissionsUserConnectionConfirmed | UsersPermissionsUserConnectionCreatedAt | UsersPermissionsUserConnectionEmail | UsersPermissionsUserConnectionId | UsersPermissionsUserConnectionProvider | UsersPermissionsUserConnectionRole | UsersPermissionsUserConnectionUpdatedAt | UsersPermissionsUserConnectionUsername | UsersPermissionsUserConnection_id | UsersPermissionsUserGroupBy | createFieldPayload | createPlantPayload | createRolePayload | createUserPayload | deleteAboutPayload | deleteFieldPayload | deleteFilePayload | deleteHelpPayload | deletePlantPayload | deleteRolePayload | deleteUserPayload | updateAboutPayload | updateFieldPayload | updateHelpPayload | updatePlantPayload | updateRolePayload | updateUserPayload
+union Morph = About | Cancellation | CancellationAggregator | CancellationConnection | CancellationConnectionCause | CancellationConnectionCreatedAt | CancellationConnectionDate | CancellationConnectionId | CancellationConnectionImage | CancellationConnectionName | CancellationConnectionPublished_at | CancellationConnectionUpdatedAt | CancellationConnection_id | CancellationGroupBy | ComponentAboutAboutItem | ComponentHelpHelpItem | ComponentMapMapItem | Field | FieldAggregator | FieldAggregatorAvg | FieldAggregatorMax | FieldAggregatorMin | FieldAggregatorSum | FieldConnection | FieldConnectionArea | FieldConnectionCreatedAt | FieldConnectionId | FieldConnectionImage | FieldConnectionName | FieldConnectionPublished_at | FieldConnectionStatus | FieldConnectionType | FieldConnectionUpdatedAt | FieldConnection_id | FieldGroupBy | Help | Hotbed | HotbedAggregator | HotbedAggregatorAvg | HotbedAggregatorMax | HotbedAggregatorMin | HotbedAggregatorSum | HotbedConnection | HotbedConnectionCreatedAt | HotbedConnectionHeigth | HotbedConnectionId | HotbedConnectionName | HotbedConnectionNumber | HotbedConnectionPublished_at | HotbedConnectionUpdatedAt | HotbedConnectionWidth | HotbedConnection_id | HotbedGroupBy | Plant | PlantAggregator | PlantAggregatorAvg | PlantAggregatorMax | PlantAggregatorMin | PlantAggregatorSum | PlantConnection | PlantConnectionAmount | PlantConnectionAvailable | PlantConnectionCreatedAt | PlantConnectionId | PlantConnectionImage | PlantConnectionName | PlantConnectionNew | PlantConnectionPrice | PlantConnectionPublished_at | PlantConnectionType | PlantConnectionUpdatedAt | PlantConnection_id | PlantGroupBy | Seedbed | SeedbedAggregator | SeedbedAggregatorAvg | SeedbedAggregatorMax | SeedbedAggregatorMin | SeedbedAggregatorSum | SeedbedConnection | SeedbedConnectionCreatedAt | SeedbedConnectionDescription | SeedbedConnectionField | SeedbedConnectionHeight | SeedbedConnectionId | SeedbedConnectionImage | SeedbedConnectionName | SeedbedConnectionNumber | SeedbedConnectionPublished_at | SeedbedConnectionType | SeedbedConnectionUpdatedAt | SeedbedConnectionWidth | SeedbedConnection_id | SeedbedGroupBy | Tool | ToolAggregator | ToolAggregatorAvg | ToolAggregatorMax | ToolAggregatorMin | ToolAggregatorSum | ToolConnection | ToolConnectionAmount | ToolConnectionCreatedAt | ToolConnectionDescription | ToolConnectionId | ToolConnectionImage | ToolConnectionName | ToolConnectionPublished_at | ToolConnectionType | ToolConnectionUpdatedAt | ToolConnection_id | ToolGroupBy | Tractor | TractorAggregator | TractorAggregatorAvg | TractorAggregatorMax | TractorAggregatorMin | TractorAggregatorSum | TractorConnection | TractorConnectionAmount | TractorConnectionCreatedAt | TractorConnectionDescription | TractorConnectionHorsepowers | TractorConnectionId | TractorConnectionImage | TractorConnectionName | TractorConnectionPublished_at | TractorConnectionUpdatedAt | TractorConnection_id | TractorGroupBy | UploadFile | UploadFileAggregator | UploadFileAggregatorAvg | UploadFileAggregatorMax | UploadFileAggregatorMin | UploadFileAggregatorSum | UploadFileConnection | UploadFileConnectionAlternativeText | UploadFileConnectionCaption | UploadFileConnectionCreatedAt | UploadFileConnectionExt | UploadFileConnectionFormats | UploadFileConnectionHash | UploadFileConnectionHeight | UploadFileConnectionId | UploadFileConnectionMime | UploadFileConnectionName | UploadFileConnectionPreviewUrl | UploadFileConnectionProvider | UploadFileConnectionProvider_metadata | UploadFileConnectionSize | UploadFileConnectionUpdatedAt | UploadFileConnectionUrl | UploadFileConnectionWidth | UploadFileConnection_id | UploadFileGroupBy | UserPermissionsPasswordPayload | UsersPermissionsLoginPayload | UsersPermissionsMe | UsersPermissionsMeRole | UsersPermissionsPermission | UsersPermissionsRole | UsersPermissionsRoleAggregator | UsersPermissionsRoleConnection | UsersPermissionsRoleConnectionDescription | UsersPermissionsRoleConnectionId | UsersPermissionsRoleConnectionName | UsersPermissionsRoleConnectionType | UsersPermissionsRoleConnection_id | UsersPermissionsRoleGroupBy | UsersPermissionsUser | UsersPermissionsUserAggregator | UsersPermissionsUserConnection | UsersPermissionsUserConnectionBlocked | UsersPermissionsUserConnectionConfirmed | UsersPermissionsUserConnectionCreatedAt | UsersPermissionsUserConnectionEmail | UsersPermissionsUserConnectionId | UsersPermissionsUserConnectionProvider | UsersPermissionsUserConnectionRole | UsersPermissionsUserConnectionUpdatedAt | UsersPermissionsUserConnectionUsername | UsersPermissionsUserConnection_id | UsersPermissionsUserGroupBy | Winter | WinterAggregator | WinterConnection | WinterConnectionCreatedAt | WinterConnectionDate | WinterConnectionDescription | WinterConnectionId | WinterConnectionPublished_at | WinterConnectionUpdatedAt | WinterConnection_id | WinterGroupBy | createCancellationPayload | createFieldPayload | createHotbedPayload | createPlantPayload | createRolePayload | createSeedbedPayload | createToolPayload | createTractorPayload | createUserPayload | createWinterPayload | deleteAboutPayload | deleteCancellationPayload | deleteFieldPayload | deleteFilePayload | deleteHelpPayload | deleteHotbedPayload | deletePlantPayload | deleteRolePayload | deleteSeedbedPayload | deleteToolPayload | deleteTractorPayload | deleteUserPayload | deleteWinterPayload | updateAboutPayload | updateCancellationPayload | updateFieldPayload | updateHelpPayload | updateHotbedPayload | updatePlantPayload | updateRolePayload | updateSeedbedPayload | updateToolPayload | updateTractorPayload | updateUserPayload | updateWinterPayload
 
 type About {
   About_item: [ComponentAboutAboutItem]
@@ -23,6 +23,87 @@ type AdminUser {
   id: ID!
   lastname: String!
   username: String
+}
+
+type Cancellation {
+  _id: ID!
+  cause: String
+  createdAt: DateTime!
+  date: DateTime
+  id: ID!
+  image: UploadFile
+  name: String
+  plants(limit: Int, sort: String, start: Int, where: JSON): [Plant]
+  published_at: DateTime
+  updatedAt: DateTime!
+}
+
+type CancellationAggregator {
+  count: Int
+  totalCount: Int
+}
+
+type CancellationConnection {
+  aggregate: CancellationAggregator
+  groupBy: CancellationGroupBy
+  values: [Cancellation]
+}
+
+type CancellationConnectionCause {
+  connection: CancellationConnection
+  key: String
+}
+
+type CancellationConnectionCreatedAt {
+  connection: CancellationConnection
+  key: DateTime
+}
+
+type CancellationConnectionDate {
+  connection: CancellationConnection
+  key: DateTime
+}
+
+type CancellationConnectionId {
+  connection: CancellationConnection
+  key: ID
+}
+
+type CancellationConnectionImage {
+  connection: CancellationConnection
+  key: ID
+}
+
+type CancellationConnectionName {
+  connection: CancellationConnection
+  key: String
+}
+
+type CancellationConnectionPublished_at {
+  connection: CancellationConnection
+  key: DateTime
+}
+
+type CancellationConnectionUpdatedAt {
+  connection: CancellationConnection
+  key: DateTime
+}
+
+type CancellationConnection_id {
+  connection: CancellationConnection
+  key: ID
+}
+
+type CancellationGroupBy {
+  _id: [CancellationConnection_id]
+  cause: [CancellationConnectionCause]
+  createdAt: [CancellationConnectionCreatedAt]
+  date: [CancellationConnectionDate]
+  id: [CancellationConnectionId]
+  image: [CancellationConnectionImage]
+  name: [CancellationConnectionName]
+  published_at: [CancellationConnectionPublished_at]
+  updatedAt: [CancellationConnectionUpdatedAt]
 }
 
 type ComponentAboutAboutItem {
@@ -54,8 +135,9 @@ type Field {
   id: ID!
   image: UploadFile
   name: String
-  plants(limit: Int, sort: String, start: Int, where: JSON): [Plant]
   published_at: DateTime
+  seedbeds(limit: Int, sort: String, start: Int, where: JSON): [Seedbed]
+  status: ENUM_FIELD_STATUS
   type: String
   updatedAt: DateTime!
 }
@@ -121,6 +203,11 @@ type FieldConnectionPublished_at {
   key: DateTime
 }
 
+type FieldConnectionStatus {
+  connection: FieldConnection
+  key: String
+}
+
 type FieldConnectionType {
   connection: FieldConnection
   key: String
@@ -144,6 +231,7 @@ type FieldGroupBy {
   image: [FieldConnectionImage]
   name: [FieldConnectionName]
   published_at: [FieldConnectionPublished_at]
+  status: [FieldConnectionStatus]
   type: [FieldConnectionType]
   updatedAt: [FieldConnectionUpdatedAt]
 }
@@ -158,23 +246,144 @@ type Help {
   updatedAt: DateTime!
 }
 
+type Hotbed {
+  _id: ID!
+  createdAt: DateTime!
+  heigth: Float
+  id: ID!
+  name: String
+  number: Int
+  plants(limit: Int, sort: String, start: Int, where: JSON): [Plant]
+  published_at: DateTime
+  updatedAt: DateTime!
+  width: Float
+}
+
+type HotbedAggregator {
+  avg: HotbedAggregatorAvg
+  count: Int
+  max: HotbedAggregatorMax
+  min: HotbedAggregatorMin
+  sum: HotbedAggregatorSum
+  totalCount: Int
+}
+
+type HotbedAggregatorAvg {
+  heigth: Float
+  number: Float
+  width: Float
+}
+
+type HotbedAggregatorMax {
+  heigth: Float
+  number: Float
+  width: Float
+}
+
+type HotbedAggregatorMin {
+  heigth: Float
+  number: Float
+  width: Float
+}
+
+type HotbedAggregatorSum {
+  heigth: Float
+  number: Float
+  width: Float
+}
+
+type HotbedConnection {
+  aggregate: HotbedAggregator
+  groupBy: HotbedGroupBy
+  values: [Hotbed]
+}
+
+type HotbedConnectionCreatedAt {
+  connection: HotbedConnection
+  key: DateTime
+}
+
+type HotbedConnectionHeigth {
+  connection: HotbedConnection
+  key: Float
+}
+
+type HotbedConnectionId {
+  connection: HotbedConnection
+  key: ID
+}
+
+type HotbedConnectionName {
+  connection: HotbedConnection
+  key: String
+}
+
+type HotbedConnectionNumber {
+  connection: HotbedConnection
+  key: Int
+}
+
+type HotbedConnectionPublished_at {
+  connection: HotbedConnection
+  key: DateTime
+}
+
+type HotbedConnectionUpdatedAt {
+  connection: HotbedConnection
+  key: DateTime
+}
+
+type HotbedConnectionWidth {
+  connection: HotbedConnection
+  key: Float
+}
+
+type HotbedConnection_id {
+  connection: HotbedConnection
+  key: ID
+}
+
+type HotbedGroupBy {
+  _id: [HotbedConnection_id]
+  createdAt: [HotbedConnectionCreatedAt]
+  heigth: [HotbedConnectionHeigth]
+  id: [HotbedConnectionId]
+  name: [HotbedConnectionName]
+  number: [HotbedConnectionNumber]
+  published_at: [HotbedConnectionPublished_at]
+  updatedAt: [HotbedConnectionUpdatedAt]
+  width: [HotbedConnectionWidth]
+}
+
 type Mutation {
+  createCancellation(input: createCancellationInput): createCancellationPayload
   createField(input: createFieldInput): createFieldPayload
+  createHotbed(input: createHotbedInput): createHotbedPayload
   createPlant(input: createPlantInput): createPlantPayload
   "Create a new role"
   createRole(input: createRoleInput): createRolePayload
+  createSeedbed(input: createSeedbedInput): createSeedbedPayload
+  createTool(input: createToolInput): createToolPayload
+  createTractor(input: createTractorInput): createTractorPayload
   "Create a new user"
   createUser(input: createUserInput): createUserPayload
+  createWinter(input: createWinterInput): createWinterPayload
   deleteAbout: deleteAboutPayload
+  deleteCancellation(input: deleteCancellationInput): deleteCancellationPayload
   deleteField(input: deleteFieldInput): deleteFieldPayload
   "Delete one file"
   deleteFile(input: deleteFileInput): deleteFilePayload
   deleteHelp: deleteHelpPayload
+  deleteHotbed(input: deleteHotbedInput): deleteHotbedPayload
   deletePlant(input: deletePlantInput): deletePlantPayload
   "Delete an existing role"
   deleteRole(input: deleteRoleInput): deleteRolePayload
+  deleteSeedbed(input: deleteSeedbedInput): deleteSeedbedPayload
+  deleteTool(input: deleteToolInput): deleteToolPayload
+  deleteTractor(input: deleteTractorInput): deleteTractorPayload
   "Delete an existing user"
   deleteUser(input: deleteUserInput): deleteUserPayload
+  deleteWinter(input: deleteWinterInput): deleteWinterPayload
   emailConfirmation(confirmation: String!): UsersPermissionsLoginPayload
   forgotPassword(email: String!): UserPermissionsPasswordPayload
   login(input: UsersPermissionsLoginInput!): UsersPermissionsLoginPayload!
@@ -182,14 +391,20 @@ type Mutation {
   register(input: UsersPermissionsRegisterInput!): UsersPermissionsLoginPayload!
   resetPassword(code: String!, password: String!, passwordConfirmation: String!): UsersPermissionsLoginPayload
   updateAbout(input: updateAboutInput): updateAboutPayload
+  updateCancellation(input: updateCancellationInput): updateCancellationPayload
   updateField(input: updateFieldInput): updateFieldPayload
   updateFileInfo(id: ID!, info: FileInfoInput!): UploadFile!
   updateHelp(input: updateHelpInput): updateHelpPayload
+  updateHotbed(input: updateHotbedInput): updateHotbedPayload
   updatePlant(input: updatePlantInput): updatePlantPayload
   "Update an existing role"
   updateRole(input: updateRoleInput): updateRolePayload
+  updateSeedbed(input: updateSeedbedInput): updateSeedbedPayload
+  updateTool(input: updateToolInput): updateToolPayload
+  updateTractor(input: updateTractorInput): updateTractorPayload
   "Update an existing user"
   updateUser(input: updateUserInput): updateUserPayload
+  updateWinter(input: updateWinterInput): updateWinterPayload
   upload(field: String, file: Upload!, ref: String, refId: ID, source: String): UploadFile!
 }
 
@@ -197,15 +412,19 @@ type Plant {
   _id: ID!
   amount: Int
   available: Boolean
+  cancellations(limit: Int, sort: String, start: Int, where: JSON): [Cancellation]
   createdAt: DateTime!
-  fields(limit: Int, sort: String, start: Int, where: JSON): [Field]
+  hotbeds(limit: Int, sort: String, start: Int, where: JSON): [Hotbed]
   id: ID!
   image: UploadFile
   name: String
+  new: Boolean
   price: Float
   published_at: DateTime
+  seedbeds(limit: Int, sort: String, start: Int, where: JSON): [Seedbed]
   type: String
   updatedAt: DateTime!
+  winters(limit: Int, sort: String, start: Int, where: JSON): [Winter]
 }
 
 type PlantAggregator {
@@ -273,6 +492,11 @@ type PlantConnectionName {
   key: String
 }
 
+type PlantConnectionNew {
+  connection: PlantConnection
+  key: Boolean
+}
+
 type PlantConnectionPrice {
   connection: PlantConnection
   key: Float
@@ -306,6 +530,7 @@ type PlantGroupBy {
   id: [PlantConnectionId]
   image: [PlantConnectionImage]
   name: [PlantConnectionName]
+  new: [PlantConnectionNew]
   price: [PlantConnectionPrice]
   published_at: [PlantConnectionPublished_at]
   type: [PlantConnectionType]
@@ -314,12 +539,18 @@ type PlantGroupBy {
 
 type Query {
   about(publicationState: PublicationState): About
+  cancellation(id: ID!, publicationState: PublicationState): Cancellation
+  cancellations(limit: Int, publicationState: PublicationState, sort: String, start: Int, where: JSON): [Cancellation]
+  cancellationsConnection(limit: Int, sort: String, start: Int, where: JSON): CancellationConnection
   field(id: ID!, publicationState: PublicationState): Field
   fields(limit: Int, publicationState: PublicationState, sort: String, start: Int, where: JSON): [Field]
   fieldsConnection(limit: Int, sort: String, start: Int, where: JSON): FieldConnection
   files(limit: Int, publicationState: PublicationState, sort: String, start: Int, where: JSON): [UploadFile]
   filesConnection(limit: Int, sort: String, start: Int, where: JSON): UploadFileConnection
   help(publicationState: PublicationState): Help
+  hotbed(id: ID!, publicationState: PublicationState): Hotbed
+  hotbeds(limit: Int, publicationState: PublicationState, sort: String, start: Int, where: JSON): [Hotbed]
+  hotbedsConnection(limit: Int, sort: String, start: Int, where: JSON): HotbedConnection
   me: UsersPermissionsMe
   plant(id: ID!, publicationState: PublicationState): Plant
   plants(limit: Int, publicationState: PublicationState, sort: String, start: Int, where: JSON): [Plant]
@@ -328,9 +559,376 @@ type Query {
   "Retrieve all the existing roles. You can't apply filters on this query."
   roles(limit: Int, publicationState: PublicationState, sort: String, start: Int, where: JSON): [UsersPermissionsRole]
   rolesConnection(limit: Int, sort: String, start: Int, where: JSON): UsersPermissionsRoleConnection
+  seedbed(id: ID!, publicationState: PublicationState): Seedbed
+  seedbeds(limit: Int, publicationState: PublicationState, sort: String, start: Int, where: JSON): [Seedbed]
+  seedbedsConnection(limit: Int, sort: String, start: Int, where: JSON): SeedbedConnection
+  tool(id: ID!, publicationState: PublicationState): Tool
+  tools(limit: Int, publicationState: PublicationState, sort: String, start: Int, where: JSON): [Tool]
+  toolsConnection(limit: Int, sort: String, start: Int, where: JSON): ToolConnection
+  tractor(id: ID!, publicationState: PublicationState): Tractor
+  tractors(limit: Int, publicationState: PublicationState, sort: String, start: Int, where: JSON): [Tractor]
+  tractorsConnection(limit: Int, sort: String, start: Int, where: JSON): TractorConnection
   user(id: ID!, publicationState: PublicationState): UsersPermissionsUser
   users(limit: Int, publicationState: PublicationState, sort: String, start: Int, where: JSON): [UsersPermissionsUser]
   usersConnection(limit: Int, sort: String, start: Int, where: JSON): UsersPermissionsUserConnection
+  winter(id: ID!, publicationState: PublicationState): Winter
+  winters(limit: Int, publicationState: PublicationState, sort: String, start: Int, where: JSON): [Winter]
+  wintersConnection(limit: Int, sort: String, start: Int, where: JSON): WinterConnection
+}
+
+type Seedbed {
+  _id: ID!
+  createdAt: DateTime!
+  description: String
+  field: Field
+  height: Float
+  id: ID!
+  image: UploadFile
+  name: String
+  number: Int
+  plants(limit: Int, sort: String, start: Int, where: JSON): [Plant]
+  published_at: DateTime
+  type: String
+  updatedAt: DateTime!
+  width: Float
+}
+
+type SeedbedAggregator {
+  avg: SeedbedAggregatorAvg
+  count: Int
+  max: SeedbedAggregatorMax
+  min: SeedbedAggregatorMin
+  sum: SeedbedAggregatorSum
+  totalCount: Int
+}
+
+type SeedbedAggregatorAvg {
+  height: Float
+  number: Float
+  width: Float
+}
+
+type SeedbedAggregatorMax {
+  height: Float
+  number: Float
+  width: Float
+}
+
+type SeedbedAggregatorMin {
+  height: Float
+  number: Float
+  width: Float
+}
+
+type SeedbedAggregatorSum {
+  height: Float
+  number: Float
+  width: Float
+}
+
+type SeedbedConnection {
+  aggregate: SeedbedAggregator
+  groupBy: SeedbedGroupBy
+  values: [Seedbed]
+}
+
+type SeedbedConnectionCreatedAt {
+  connection: SeedbedConnection
+  key: DateTime
+}
+
+type SeedbedConnectionDescription {
+  connection: SeedbedConnection
+  key: String
+}
+
+type SeedbedConnectionField {
+  connection: SeedbedConnection
+  key: ID
+}
+
+type SeedbedConnectionHeight {
+  connection: SeedbedConnection
+  key: Float
+}
+
+type SeedbedConnectionId {
+  connection: SeedbedConnection
+  key: ID
+}
+
+type SeedbedConnectionImage {
+  connection: SeedbedConnection
+  key: ID
+}
+
+type SeedbedConnectionName {
+  connection: SeedbedConnection
+  key: String
+}
+
+type SeedbedConnectionNumber {
+  connection: SeedbedConnection
+  key: Int
+}
+
+type SeedbedConnectionPublished_at {
+  connection: SeedbedConnection
+  key: DateTime
+}
+
+type SeedbedConnectionType {
+  connection: SeedbedConnection
+  key: String
+}
+
+type SeedbedConnectionUpdatedAt {
+  connection: SeedbedConnection
+  key: DateTime
+}
+
+type SeedbedConnectionWidth {
+  connection: SeedbedConnection
+  key: Float
+}
+
+type SeedbedConnection_id {
+  connection: SeedbedConnection
+  key: ID
+}
+
+type SeedbedGroupBy {
+  _id: [SeedbedConnection_id]
+  createdAt: [SeedbedConnectionCreatedAt]
+  description: [SeedbedConnectionDescription]
+  field: [SeedbedConnectionField]
+  height: [SeedbedConnectionHeight]
+  id: [SeedbedConnectionId]
+  image: [SeedbedConnectionImage]
+  name: [SeedbedConnectionName]
+  number: [SeedbedConnectionNumber]
+  published_at: [SeedbedConnectionPublished_at]
+  type: [SeedbedConnectionType]
+  updatedAt: [SeedbedConnectionUpdatedAt]
+  width: [SeedbedConnectionWidth]
+}
+
+type Tool {
+  _id: ID!
+  amount: Int
+  createdAt: DateTime!
+  description: String
+  id: ID!
+  image: UploadFile
+  name: String
+  published_at: DateTime
+  type: String
+  updatedAt: DateTime!
+}
+
+type ToolAggregator {
+  avg: ToolAggregatorAvg
+  count: Int
+  max: ToolAggregatorMax
+  min: ToolAggregatorMin
+  sum: ToolAggregatorSum
+  totalCount: Int
+}
+
+type ToolAggregatorAvg {
+  amount: Float
+}
+
+type ToolAggregatorMax {
+  amount: Float
+}
+
+type ToolAggregatorMin {
+  amount: Float
+}
+
+type ToolAggregatorSum {
+  amount: Float
+}
+
+type ToolConnection {
+  aggregate: ToolAggregator
+  groupBy: ToolGroupBy
+  values: [Tool]
+}
+
+type ToolConnectionAmount {
+  connection: ToolConnection
+  key: Int
+}
+
+type ToolConnectionCreatedAt {
+  connection: ToolConnection
+  key: DateTime
+}
+
+type ToolConnectionDescription {
+  connection: ToolConnection
+  key: String
+}
+
+type ToolConnectionId {
+  connection: ToolConnection
+  key: ID
+}
+
+type ToolConnectionImage {
+  connection: ToolConnection
+  key: ID
+}
+
+type ToolConnectionName {
+  connection: ToolConnection
+  key: String
+}
+
+type ToolConnectionPublished_at {
+  connection: ToolConnection
+  key: DateTime
+}
+
+type ToolConnectionType {
+  connection: ToolConnection
+  key: String
+}
+
+type ToolConnectionUpdatedAt {
+  connection: ToolConnection
+  key: DateTime
+}
+
+type ToolConnection_id {
+  connection: ToolConnection
+  key: ID
+}
+
+type ToolGroupBy {
+  _id: [ToolConnection_id]
+  amount: [ToolConnectionAmount]
+  createdAt: [ToolConnectionCreatedAt]
+  description: [ToolConnectionDescription]
+  id: [ToolConnectionId]
+  image: [ToolConnectionImage]
+  name: [ToolConnectionName]
+  published_at: [ToolConnectionPublished_at]
+  type: [ToolConnectionType]
+  updatedAt: [ToolConnectionUpdatedAt]
+}
+
+type Tractor {
+  _id: ID!
+  amount: Int
+  createdAt: DateTime!
+  description: String
+  horsepowers: Int
+  id: ID!
+  image: UploadFile
+  name: String
+  published_at: DateTime
+  updatedAt: DateTime!
+}
+
+type TractorAggregator {
+  avg: TractorAggregatorAvg
+  count: Int
+  max: TractorAggregatorMax
+  min: TractorAggregatorMin
+  sum: TractorAggregatorSum
+  totalCount: Int
+}
+
+type TractorAggregatorAvg {
+  amount: Float
+  horsepowers: Float
+}
+
+type TractorAggregatorMax {
+  amount: Float
+  horsepowers: Float
+}
+
+type TractorAggregatorMin {
+  amount: Float
+  horsepowers: Float
+}
+
+type TractorAggregatorSum {
+  amount: Float
+  horsepowers: Float
+}
+
+type TractorConnection {
+  aggregate: TractorAggregator
+  groupBy: TractorGroupBy
+  values: [Tractor]
+}
+
+type TractorConnectionAmount {
+  connection: TractorConnection
+  key: Int
+}
+
+type TractorConnectionCreatedAt {
+  connection: TractorConnection
+  key: DateTime
+}
+
+type TractorConnectionDescription {
+  connection: TractorConnection
+  key: String
+}
+
+type TractorConnectionHorsepowers {
+  connection: TractorConnection
+  key: Int
+}
+
+type TractorConnectionId {
+  connection: TractorConnection
+  key: ID
+}
+
+type TractorConnectionImage {
+  connection: TractorConnection
+  key: ID
+}
+
+type TractorConnectionName {
+  connection: TractorConnection
+  key: String
+}
+
+type TractorConnectionPublished_at {
+  connection: TractorConnection
+  key: DateTime
+}
+
+type TractorConnectionUpdatedAt {
+  connection: TractorConnection
+  key: DateTime
+}
+
+type TractorConnection_id {
+  connection: TractorConnection
+  key: ID
+}
+
+type TractorGroupBy {
+  _id: [TractorConnection_id]
+  amount: [TractorConnectionAmount]
+  createdAt: [TractorConnectionCreatedAt]
+  description: [TractorConnectionDescription]
+  horsepowers: [TractorConnectionHorsepowers]
+  id: [TractorConnectionId]
+  image: [TractorConnectionImage]
+  name: [TractorConnectionName]
+  published_at: [TractorConnectionPublished_at]
+  updatedAt: [TractorConnectionUpdatedAt]
 }
 
 type UploadFile {
@@ -682,8 +1280,83 @@ type UsersPermissionsUserGroupBy {
   username: [UsersPermissionsUserConnectionUsername]
 }
 
+type Winter {
+  _id: ID!
+  createdAt: DateTime!
+  date: DateTime
+  description: String
+  id: ID!
+  plants(limit: Int, sort: String, start: Int, where: JSON): [Plant]
+  published_at: DateTime
+  updatedAt: DateTime!
+}
+
+type WinterAggregator {
+  count: Int
+  totalCount: Int
+}
+
+type WinterConnection {
+  aggregate: WinterAggregator
+  groupBy: WinterGroupBy
+  values: [Winter]
+}
+
+type WinterConnectionCreatedAt {
+  connection: WinterConnection
+  key: DateTime
+}
+
+type WinterConnectionDate {
+  connection: WinterConnection
+  key: DateTime
+}
+
+type WinterConnectionDescription {
+  connection: WinterConnection
+  key: String
+}
+
+type WinterConnectionId {
+  connection: WinterConnection
+  key: ID
+}
+
+type WinterConnectionPublished_at {
+  connection: WinterConnection
+  key: DateTime
+}
+
+type WinterConnectionUpdatedAt {
+  connection: WinterConnection
+  key: DateTime
+}
+
+type WinterConnection_id {
+  connection: WinterConnection
+  key: ID
+}
+
+type WinterGroupBy {
+  _id: [WinterConnection_id]
+  createdAt: [WinterConnectionCreatedAt]
+  date: [WinterConnectionDate]
+  description: [WinterConnectionDescription]
+  id: [WinterConnectionId]
+  published_at: [WinterConnectionPublished_at]
+  updatedAt: [WinterConnectionUpdatedAt]
+}
+
+type createCancellationPayload {
+  cancellation: Cancellation
+}
+
 type createFieldPayload {
   field: Field
+}
+
+type createHotbedPayload {
+  hotbed: Hotbed
 }
 
 type createPlantPayload {
@@ -694,12 +1367,32 @@ type createRolePayload {
   role: UsersPermissionsRole
 }
 
+type createSeedbedPayload {
+  seedbed: Seedbed
+}
+
+type createToolPayload {
+  tool: Tool
+}
+
+type createTractorPayload {
+  tractor: Tractor
+}
+
 type createUserPayload {
   user: UsersPermissionsUser
 }
 
+type createWinterPayload {
+  winter: Winter
+}
+
 type deleteAboutPayload {
   about: About
+}
+
+type deleteCancellationPayload {
+  cancellation: Cancellation
 }
 
 type deleteFieldPayload {
@@ -714,6 +1407,10 @@ type deleteHelpPayload {
   help: Help
 }
 
+type deleteHotbedPayload {
+  hotbed: Hotbed
+}
+
 type deletePlantPayload {
   plant: Plant
 }
@@ -722,12 +1419,32 @@ type deleteRolePayload {
   role: UsersPermissionsRole
 }
 
+type deleteSeedbedPayload {
+  seedbed: Seedbed
+}
+
+type deleteToolPayload {
+  tool: Tool
+}
+
+type deleteTractorPayload {
+  tractor: Tractor
+}
+
 type deleteUserPayload {
   user: UsersPermissionsUser
 }
 
+type deleteWinterPayload {
+  winter: Winter
+}
+
 type updateAboutPayload {
   about: About
+}
+
+type updateCancellationPayload {
+  cancellation: Cancellation
 }
 
 type updateFieldPayload {
@@ -738,6 +1455,10 @@ type updateHelpPayload {
   help: Help
 }
 
+type updateHotbedPayload {
+  hotbed: Hotbed
+}
+
 type updatePlantPayload {
   plant: Plant
 }
@@ -746,8 +1467,32 @@ type updateRolePayload {
   role: UsersPermissionsRole
 }
 
+type updateSeedbedPayload {
+  seedbed: Seedbed
+}
+
+type updateToolPayload {
+  tool: Tool
+}
+
+type updateTractorPayload {
+  tractor: Tractor
+}
+
 type updateUserPayload {
   user: UsersPermissionsUser
+}
+
+type updateWinterPayload {
+  winter: Winter
+}
+
+enum ENUM_FIELD_STATUS {
+  cleanup
+  landing
+  preparation
+  weeding
+  wintering
 }
 
 enum PublicationState {
@@ -761,6 +1506,17 @@ input AboutInput {
   description: String
   published_at: DateTime
   title: String
+  updated_by: ID
+}
+
+input CancellationInput {
+  cause: String
+  created_by: ID
+  date: DateTime
+  image: ID
+  name: String
+  plants: [ID]
+  published_at: DateTime
   updated_by: ID
 }
 
@@ -785,8 +1541,9 @@ input FieldInput {
   created_by: ID
   image: ID
   name: String
-  plants: [ID]
   published_at: DateTime
+  seedbeds: [ID]
+  status: ENUM_FIELD_STATUS
   type: String
   updated_by: ID
 }
@@ -825,6 +1582,17 @@ input HelpInput {
   updated_by: ID
 }
 
+input HotbedInput {
+  created_by: ID
+  heigth: Float
+  name: String
+  number: Int
+  plants: [ID]
+  published_at: DateTime
+  updated_by: ID
+  width: Float
+}
+
 input InputID {
   id: ID!
 }
@@ -832,14 +1600,18 @@ input InputID {
 input PlantInput {
   amount: Int
   available: Boolean
+  cancellations: [ID]
   created_by: ID
-  fields: [ID]
+  hotbeds: [ID]
   image: ID
   name: String
+  new: Boolean
   price: Float
   published_at: DateTime
+  seedbeds: [ID]
   type: String
   updated_by: ID
+  winters: [ID]
 }
 
 input RoleInput {
@@ -850,6 +1622,43 @@ input RoleInput {
   type: String
   updated_by: ID
   users: [ID]
+}
+
+input SeedbedInput {
+  created_by: ID
+  description: String
+  field: ID
+  height: Float
+  image: ID
+  name: String
+  number: Int
+  plants: [ID]
+  published_at: DateTime
+  type: String
+  updated_by: ID
+  width: Float
+}
+
+input ToolInput {
+  amount: Int
+  created_by: ID
+  description: String
+  image: ID
+  name: String
+  published_at: DateTime
+  type: String
+  updated_by: ID
+}
+
+input TractorInput {
+  amount: Int
+  created_by: ID
+  description: String
+  horsepowers: Int
+  image: ID
+  name: String
+  published_at: DateTime
+  updated_by: ID
 }
 
 input UserInput {
@@ -878,8 +1687,25 @@ input UsersPermissionsRegisterInput {
   username: String!
 }
 
+input WinterInput {
+  created_by: ID
+  date: DateTime
+  description: String
+  plants: [ID]
+  published_at: DateTime
+  updated_by: ID
+}
+
+input createCancellationInput {
+  data: CancellationInput
+}
+
 input createFieldInput {
   data: FieldInput
+}
+
+input createHotbedInput {
+  data: HotbedInput
 }
 
 input createPlantInput {
@@ -890,8 +1716,28 @@ input createRoleInput {
   data: RoleInput
 }
 
+input createSeedbedInput {
+  data: SeedbedInput
+}
+
+input createToolInput {
+  data: ToolInput
+}
+
+input createTractorInput {
+  data: TractorInput
+}
+
 input createUserInput {
   data: UserInput
+}
+
+input createWinterInput {
+  data: WinterInput
+}
+
+input deleteCancellationInput {
+  where: InputID
 }
 
 input deleteFieldInput {
@@ -899,6 +1745,10 @@ input deleteFieldInput {
 }
 
 input deleteFileInput {
+  where: InputID
+}
+
+input deleteHotbedInput {
   where: InputID
 }
 
@@ -910,7 +1760,23 @@ input deleteRoleInput {
   where: InputID
 }
 
+input deleteSeedbedInput {
+  where: InputID
+}
+
+input deleteToolInput {
+  where: InputID
+}
+
+input deleteTractorInput {
+  where: InputID
+}
+
 input deleteUserInput {
+  where: InputID
+}
+
+input deleteWinterInput {
   where: InputID
 }
 
@@ -920,6 +1786,17 @@ input editAboutInput {
   description: String
   published_at: DateTime
   title: String
+  updated_by: ID
+}
+
+input editCancellationInput {
+  cause: String
+  created_by: ID
+  date: DateTime
+  image: ID
+  name: String
+  plants: [ID]
+  published_at: DateTime
   updated_by: ID
 }
 
@@ -947,8 +1824,9 @@ input editFieldInput {
   created_by: ID
   image: ID
   name: String
-  plants: [ID]
   published_at: DateTime
+  seedbeds: [ID]
+  status: ENUM_FIELD_STATUS
   type: String
   updated_by: ID
 }
@@ -981,17 +1859,32 @@ input editHelpInput {
   updated_by: ID
 }
 
+input editHotbedInput {
+  created_by: ID
+  heigth: Float
+  name: String
+  number: Int
+  plants: [ID]
+  published_at: DateTime
+  updated_by: ID
+  width: Float
+}
+
 input editPlantInput {
   amount: Int
   available: Boolean
+  cancellations: [ID]
   created_by: ID
-  fields: [ID]
+  hotbeds: [ID]
   image: ID
   name: String
+  new: Boolean
   price: Float
   published_at: DateTime
+  seedbeds: [ID]
   type: String
   updated_by: ID
+  winters: [ID]
 }
 
 input editRoleInput {
@@ -1002,6 +1895,43 @@ input editRoleInput {
   type: String
   updated_by: ID
   users: [ID]
+}
+
+input editSeedbedInput {
+  created_by: ID
+  description: String
+  field: ID
+  height: Float
+  image: ID
+  name: String
+  number: Int
+  plants: [ID]
+  published_at: DateTime
+  type: String
+  updated_by: ID
+  width: Float
+}
+
+input editToolInput {
+  amount: Int
+  created_by: ID
+  description: String
+  image: ID
+  name: String
+  published_at: DateTime
+  type: String
+  updated_by: ID
+}
+
+input editTractorInput {
+  amount: Int
+  created_by: ID
+  description: String
+  horsepowers: Int
+  image: ID
+  name: String
+  published_at: DateTime
+  updated_by: ID
 }
 
 input editUserInput {
@@ -1018,8 +1948,22 @@ input editUserInput {
   username: String
 }
 
+input editWinterInput {
+  created_by: ID
+  date: DateTime
+  description: String
+  plants: [ID]
+  published_at: DateTime
+  updated_by: ID
+}
+
 input updateAboutInput {
   data: editAboutInput
+}
+
+input updateCancellationInput {
+  data: editCancellationInput
+  where: InputID
 }
 
 input updateFieldInput {
@@ -1029,6 +1973,11 @@ input updateFieldInput {
 
 input updateHelpInput {
   data: editHelpInput
+}
+
+input updateHotbedInput {
+  data: editHotbedInput
+  where: InputID
 }
 
 input updatePlantInput {
@@ -1041,8 +1990,28 @@ input updateRoleInput {
   where: InputID
 }
 
+input updateSeedbedInput {
+  data: editSeedbedInput
+  where: InputID
+}
+
+input updateToolInput {
+  data: editToolInput
+  where: InputID
+}
+
+input updateTractorInput {
+  data: editTractorInput
+  where: InputID
+}
+
 input updateUserInput {
   data: editUserInput
+  where: InputID
+}
+
+input updateWinterInput {
+  data: editWinterInput
   where: InputID
 }
 

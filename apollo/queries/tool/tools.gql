@@ -1,0 +1,12 @@
+query Tools {
+  tools {
+    id
+    name
+    type
+    description
+    image {
+      url
+    }
+    amount
+  }
+}

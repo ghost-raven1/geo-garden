@@ -1,0 +1,26 @@
+query Seedbeds {
+  seedbeds {
+    id
+    name
+    description
+    image {
+      url
+    }
+    width
+    height
+    type
+    number
+    plants {
+      id
+      name
+      type
+      available
+      new
+      amount
+      price
+      image {
+        url
+      }
+    }
+  }
+}

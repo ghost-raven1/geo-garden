@@ -1,5 +1,5 @@
-query Fields {
-  fields {
+query Field($id: ID!) {
+  field(id: $id) {
     id
     area
     createdAt
