@@ -28,7 +28,7 @@
           </div>
           <div class="">
             <h3 class="">
-              {{ plant.name }} {{ plant.type }}
+              {{ plant.name }} [{{ plant.type }}]
             </h3>
             <div>
               <div
@@ -65,27 +65,29 @@
 </template>
 
 <script>
-import plantsQuery from '~/apollo/queries/plant/plants.gql';
-
 export default {
   name: 'index.vue',
   data() {
     return {
       plants: [],
       query: '',
+      error: null,
     };
-  },
-  apollo: {
-    plants: {
-      prefetch: true,
-      query: plantsQuery,
-    },
   },
   computed: {
     filteredList_plants() {
       // TODO: Переписать скрипт фильтрации
       return this.plants.filter((plant) => plant.name.toLowerCase().includes(this.query.toLowerCase()));
     },
+  },
+  async mounted() {
+    try {
+      this.plants = await this.$strapi.$plants.find();
+      // eslint-disable-next-line no-console
+      console.log(this.plants);
+    } catch (error) {
+      this.error = error;
+    }
   },
 };
 </script>

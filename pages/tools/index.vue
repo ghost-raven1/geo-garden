@@ -28,13 +28,13 @@
           </div>
           <div class="">
             <h3 class="card-plant__title">
-              {{ tool.name }} {{ tool.type }}
+              {{ tool.name }} [{{ tool.type }}]
             </h3>
             <div>
               <div
                 class="badge badge_green"
               >
-                Кол-во:{{ tool.amount }}шт.
+                Кол-во: {{ tool.amount }}шт.
               </div>
               <div class="card-plant__area" />
               <!-- TODO: Проверить работоспособность -->
@@ -46,7 +46,7 @@
                   height="800"
                   width="800"
                 >
-                <p>Грядки не найдены</p>
+                <p>Инструменты не найдены!</p>
               </div>
             </div>
           </div>
@@ -58,28 +58,30 @@
 </template>
 
 <script>
-import toolsQuery from '~/apollo/queries/tool/tools.gql';
 
 export default {
   name: 'index.vue',
-  components: {},
   data() {
     return {
-      query: '',
       tools: [],
+      query: '',
+      error: null,
     };
-  },
-  apollo: {
-    tools: {
-      prefetch: true,
-      query: toolsQuery,
-    },
   },
   computed: {
     filteredList_tools() {
       // TODO: Переписать скрипт фильтрации
       return this.tools.filter((tool) => tool.name.toLowerCase().includes(this.query.toLowerCase()));
     },
+  },
+  async mounted() {
+    try {
+      this.tools = await this.$strapi.$tools.find();
+      // eslint-disable-next-line no-console
+      console.log(this.tools);
+    } catch (error) {
+      this.error = error;
+    }
   },
 };
 </script>

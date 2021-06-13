@@ -20,8 +20,13 @@
             <div class="field-info__type">
               <span class="text__line">Тип поля:</span> {{ field.type }}
             </div>
-            <div class="field-info__status">
-              <span class="text__line">Статус поля:</span> {{ field.status }}
+            <div class="field-info__status" v-if="field.status">
+              <span class="text__line">Статус поля:</span>
+              <span v-if="field.status === 'preparation'">Подготовка</span>
+              <span v-if="field.status === 'landing'">Посадка</span>
+              <span v-if="field.status === 'weeding'">Прополка</span>
+              <span v-if="field.status === 'cleanup'">Уборка</span>
+              <span v-if="field.status === 'wintering'">Зимовка</span>
             </div>
           </div>
         </div>
@@ -67,24 +72,14 @@
 </template>
 
 <script>
-import fieldQuery from '~/apollo/queries/field/field.gql';
-
 export default {
   name: 'index.vue',
-  data() {
-    return {
-      field: Object,
-    };
+  async asyncData({ $strapi, route }) {
+    const { id } = route.params;
+    const field = await $strapi.$fields.findOne(id);
+    return { field };
   },
-  apollo: {
-    field: {
-      prefetch: true,
-      query: fieldQuery,
-      variables() {
-        return { id: this.$route.params.id };
-      },
-    },
-  },
+  methods: {},
 };
 </script>
 

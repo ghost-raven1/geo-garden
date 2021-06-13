@@ -15,22 +15,27 @@
           </div>
           <div class="text__container">
             <div class="plant-info__name">
-              <span class="text__line">Название растения:</span> {{ plant.name }}
+              <span class="text__line">Название растения:</span>
+              <span class="text__line"> {{ plant.name }}</span>
             </div>
             <div class="plant-info__type">
-              <span class="text__line">Тип растения:</span> {{ plant.type }}
+              <span class="text__line">Тип растения:</span>
+              <span class="text__line"> {{ plant.type }}</span>
             </div>
             <div class="plant-info__available">
               <span class="text__line">Есть ли на складе:</span>
-              <span v-if="plant.available">Есть</span>
-              <span v-if="!plant.available">Нет</span>
+              <span v-if="plant.available" class="text__line_green">Есть</span>
+              <span v-if="!plant.available" class="text__line_red">Нет</span>
             </div>
             <div class="plant-info__amount">
-            <span v-if="plant.available">
-              <span class="text__line">Количество растений:</span> {{ plant.amount }} шт.</span>
+              <span v-if="plant.available">
+                <span class="text__line">Количество растений:</span>
+                <span class="text__line">{{ plant.amount }} шт.</span>
+              </span>
             </div>
             <div class="plant-info__price">
-              <span class="text__line">Цена растения:</span> {{ plant.price }} руб.
+              <span class="text__line">Цена растения:</span>
+              <span class="text__line">{{ plant.price }} руб.</span>
             </div>
             <div
               v-if="plant.new"
@@ -57,22 +62,28 @@
           </div>
           <div class="text__container">
             <div class="seedbeds-info__name">
-              <span class="text__line">Название грядки:</span> {{ seedbeds.name }}
+              <span class="text__line">Название грядки:</span>
+              <span class="text__line">{{ seedbeds.name }}</span>
             </div>
             <div class="seedbeds-info__description">
-              <span class="text__line">Описание грядки:</span> {{ seedbeds.description }}
+              <span class="text__line">Описание грядки:</span>
+              <span class="text__line">{{ seedbeds.description }}</span>
             </div>
             <div class="seedbeds-info__width">
-              <span class="text__line">Ширина грядки:</span> {{ seedbeds.width }} м.
+              <span class="text__line">Ширина грядки:</span>
+              <span class="text__line">{{ seedbeds.width }} м.</span>
             </div>
             <div class="seedbeds-info__height">
-              <span class="text__line">Длина грядки:</span> {{ seedbeds.height }} м.
+              <span class="text__line">Длина грядки:</span>
+              <span class="text__line">{{ seedbeds.height }} м.</span>
             </div>
             <div class="seedbeds-info__type">
-              <span class="text__line">Тип грядки:</span> {{ seedbeds.type }}
+              <span class="text__line">Тип грядки:</span>
+              <span class="text__line">{{ seedbeds.type }}</span>
             </div>
             <div class="seedbeds-info__number">
-              <span class="text__line">Номер грядки:</span> {{ seedbeds.number }}
+              <span class="text__line">Номер грядки:</span>
+              <span class="text__line">{{ seedbeds.number }}</span>
             </div>
           </div>
         </div>
@@ -86,10 +97,12 @@
         >
           <div class="text__container">
             <div class="winters-info__date">
-              <span class="text__line">Планируемая дата зимовки:</span> {{ winter.date }}
+              <span class="text__line">Планируемая дата зимовки:</span>
+              <span class="text__line">{{ $moment( winter.date ).format('llll') }}</span>
             </div>
             <div class="winters-info__description">
-              <span class="text__line">Описание зимовки:</span> {{ winter.description }}
+              <span class="text__line">Описание зимовки:</span>
+              <span class="text__line">{{ winter.description }}</span>
             </div>
           </div>
         </div>
@@ -103,16 +116,20 @@
         >
           <div class="text__container">
             <div class="hotbeds-info__name">
-              <span class="text__line">Название на складе:</span> {{ hotbeds.name }}
+              <span class="text__line">Название на складе:</span>
+              <span class="text__line">{{ hotbeds.name }}</span>
             </div>
             <div class="hotbeds-info__number">
-              <span class="text__line">Номер на складе:</span> {{ hotbeds.number }}
+              <span class="text__line">Номер на складе:</span>
+              <span class="text__line">{{ hotbeds.number }}</span>
             </div>
             <div class="hotbeds-info__width">
-              <span class="text__line">Ширина контейнера:</span> {{ hotbeds.width }} м.
+              <span class="text__line">Ширина контейнера:</span>
+              <span class="text__line">{{ hotbeds.width }} м.</span>
             </div>
             <div class="hotbeds-info__height">
-              <span class="text__line">Длина контейнера:</span> {{ hotbeds.heigth }} м.
+              <span class="text__line">Длина контейнера:</span>
+              <span class="text__line">{{ hotbeds.heigth }} м.</span>
             </div>
           </div>
         </div>
@@ -133,10 +150,12 @@
           </div>
           <div class="text__container">
             <div class="cancellations-info__date">
-              <span class="text__line">Дата списания:</span> {{ cancellation.date }}
+              <span class="text__line">Дата списания:</span>
+              <span class="text__line">{{ $moment( cancellation.date ).format('llll') }}</span>
             </div>
             <div class="cancellations-info__cause">
-              <span class="text__line">Причина списания:</span> {{ cancellation.cause }}
+              <span class="text__line">Причина списания:</span>
+              <span class="text__line">{{ cancellation.cause }}</span>
             </div>
           </div>
         </div>
@@ -146,23 +165,12 @@
 </template>
 
 <script>
-import plantQuery from '~/apollo/queries/plant/plant.gql';
-
 export default {
   name: 'Index',
-  data() {
-    return {
-      plant: Object,
-    };
-  },
-  apollo: {
-    plant: {
-      prefetch: true,
-      query: plantQuery,
-      variables() {
-        return { id: this.$route.params.id };
-      },
-    },
+  async asyncData({ $strapi, route }) {
+    const { id } = route.params;
+    const plant = await $strapi.$plants.findOne(id);
+    return { plant };
   },
 };
 </script>
@@ -173,13 +181,30 @@ export default {
 }
 .text {
   &__line {
-    font-size: 16px;
     font-weight: 500;
+    font-size: 1.5em;
+    background: linear-gradient(135deg, #808080 20%, #808080 70%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+    &_red {
+      @extend .text__line;
+      background: linear-gradient(135deg, #DC143C 20%, #8B0000 70%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    &_green {
+      @extend .text__line;
+      background: linear-gradient(135deg, #228B22 20%, #008000 70%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
   }
   &__container {
     display: grid;
     align-items: center;
     justify-content: flex-start;
+    margin: 0 0 0 20px;
   }
 }
 .plant-info {

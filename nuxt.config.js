@@ -52,6 +52,7 @@ export default {
   // Modules for dev and build (recommended) (https://go.nuxtjs.dev/config-modules)
   buildModules: [
     '@nuxtjs/dotenv',
+    '@nuxtjs/moment',
   ],
 
   // Modules (https://go.nuxtjs.dev/config-modules)
@@ -62,41 +63,23 @@ export default {
     '@nuxtjs/auth',
     '@nuxtjs/pwa',
     'nuxt-material-design-icons',
+    '@nuxtjs/strapi',
   ],
+  strapi: {
+    entities: ['plants', 'fields', 'seedbeds', 'tools'],
+    url: 'https://geo-garden-backend.herokuapp.com',
+  },
+  moment: {
+    defaultLocale: 'ru',
+    locales: ['ru'],
+  },
   apollo: {
     clientConfigs: {
       default: {
-        /* httpEndpoint: 'https://geo-garden-backend.herokuapp.com/graphql', */
         httpEndpoint: 'http://geo-garden-backend.herokuapp.com/graphql',
       },
     },
   },
-  auth: {
-    strategies: {
-      local: {
-        endpoints: {
-          login: {
-            url: 'auth/local',
-            method: 'post',
-            propertyName: 'jwt',
-          },
-          user: {
-            url: 'users/me',
-            method: 'get',
-            propertyName: false,
-          },
-          logout: false,
-        },
-      },
-    },
-  },
-  redirect: {
-    login: '/users/signin',
-    logout: '/',
-    callback: '/users/signin',
-    home: '/',
-  },
-
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
   axios: {
     baseURL: process.env.API_AUTH_URL,
