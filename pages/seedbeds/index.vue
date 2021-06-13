@@ -28,7 +28,7 @@
           </div>
           <div class="">
             <h3 class="card-plant__title">
-              {{ seedbed.name }} {{ seedbed.type }}
+              {{ seedbed.name }} [{{ seedbed.type }}]
             </h3>
             <div>
               <span
@@ -56,7 +56,7 @@
                   height="800"
                   width="800"
                 >
-                <p>Грядки не найдены</p>
+                <p>Грядки не найдены!</p>
               </div>
             </div>
           </div>
@@ -68,28 +68,29 @@
 </template>
 
 <script>
-import seedbedsQuery from '~/apollo/queries/seedbed/seedbeds.gql';
-
 export default {
   name: 'index.vue',
-  components: {},
   data() {
     return {
-      query: '',
       seedbeds: [],
+      query: '',
+      error: null,
     };
-  },
-  apollo: {
-    seedbeds: {
-      prefetch: true,
-      query: seedbedsQuery,
-    },
   },
   computed: {
     filteredList_seedbeds() {
       // TODO: Переписать скрипт фильтрации
       return this.seedbeds.filter((seedbed) => seedbed.name.toLowerCase().includes(this.query.toLowerCase()));
     },
+  },
+  async mounted() {
+    try {
+      this.seedbeds = await this.$strapi.$seedbeds.find();
+      // eslint-disable-next-line no-console
+      console.log(this.seedbeds);
+    } catch (error) {
+      this.error = error;
+    }
   },
 };
 </script>

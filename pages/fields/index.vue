@@ -28,7 +28,7 @@
           </div>
           <div class="">
             <h3 class="card-plant__title">
-              {{ field.name }} {{ field.type }}
+              {{ field.name }} [{{ field.type }}]
             </h3>
             <div>
               <div
@@ -71,28 +71,30 @@
 </template>
 
 <script>
-import fieldsQuery from '~/apollo/queries/field/fields.gql';
 
 export default {
   name: 'index.vue',
-  components: {},
   data() {
     return {
-      query: '',
       fields: [],
+      query: '',
+      error: null,
     };
-  },
-  apollo: {
-    fields: {
-      prefetch: true,
-      query: fieldsQuery,
-    },
   },
   computed: {
     filteredList_fields() {
       // TODO: Переписать скрипт фильтрации
       return this.fields.filter((field) => field.name.toLowerCase().includes(this.query.toLowerCase()));
     },
+  },
+  async mounted() {
+    try {
+      this.fields = await this.$strapi.$fields.find();
+      // eslint-disable-next-line no-console
+      console.log(this.fields);
+    } catch (error) {
+      this.error = error;
+    }
   },
 };
 </script>

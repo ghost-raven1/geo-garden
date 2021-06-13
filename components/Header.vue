@@ -20,7 +20,7 @@
                     class="uk-margin-small-right"
                     to="/"
                   >
-                    Главная
+                    <span class="material-icons md-36">navigation</span> Главная
                   </nuxt-link>
                 </li>
                 <li class="uk-nav-divider" />
@@ -38,6 +38,22 @@
                     to="/plants"
                   >
                     <span class="material-icons md-36">place</span> Растения
+                  </nuxt-link>
+                </li>
+                <li>
+                  <nuxt-link
+                    class="uk-margin-small-right"
+                    to="/seedbeds"
+                  >
+                    <span class="material-icons md-36">place</span> Грядки
+                  </nuxt-link>
+                </li>
+                <li>
+                  <nuxt-link
+                    class="uk-margin-small-right"
+                    to="/tools"
+                  >
+                    <span class="material-icons md-36">gavel</span> Инструменты
                   </nuxt-link>
                 </li>
                 <li class="uk-nav-divider" />
@@ -77,7 +93,7 @@
                   <a
                     class="uk-margin-small-right"
                     href="http://garden-group.pro/internet-magazine"
-                  ><span class="material-icons md-36">nature_people</span> Магазин</a>
+                  ><span class="material-icons md-36">shop</span> Магазин</a>
                 </li>
                 <li>
                   <a
