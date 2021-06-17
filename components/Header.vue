@@ -146,7 +146,7 @@
                 class="navbar-brand"
                 href="/"
                 exact
-              >Geo Garden v0.4.6</a>
+              >Geo Garden v0.5.1</a>
             </li>
           </ul>
         </div>

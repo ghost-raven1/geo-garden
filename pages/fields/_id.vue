@@ -30,7 +30,7 @@
             </div>
           </div>
         </div>
-        <h2 class="seedbeds-info__title">
+        <h2 v-if="field.seedbeds.length !== 0" class="seedbeds-info__title">
           Грядки на поле
         </h2>
         <div

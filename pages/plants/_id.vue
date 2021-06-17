@@ -45,7 +45,7 @@
             </div>
           </div>
         </div>
-        <h2 class="plant-info__title">
+        <h2 v-if="plant.seedbeds.length !== 0" class="plant-info__title">
           Грядки с растением
         </h2>
         <div
@@ -87,7 +87,7 @@
             </div>
           </div>
         </div>
-        <h2 class="winters-info__title">
+        <h2 v-if="plant.winters.length !== 0" class="winters-info__title">
           Время зимовки растений
         </h2>
         <div
@@ -106,7 +106,7 @@
             </div>
           </div>
         </div>
-        <h2 class="hotbeds-info__title">
+        <h2 v-if="plant.hotbeds.length !== 0" class="hotbeds-info__title">
           Растения на складе
         </h2>
         <div
@@ -133,7 +133,7 @@
             </div>
           </div>
         </div>
-        <h2 class="cancellations-info__title">
+        <h2 v-if="plant.cancellations.length !== 0" class="cancellations-info__title">
           Списания
         </h2>
         <div

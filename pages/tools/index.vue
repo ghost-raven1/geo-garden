@@ -7,7 +7,7 @@
           v-model="query"
           class="uk-search-input"
           type="search"
-          placeholder="Поиск инструментов..."
+          placeholder="Название инструмента..."
         >
       </form>
     </div>

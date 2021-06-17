@@ -7,7 +7,7 @@
           v-model="query"
           class="uk-search-input"
           type="search"
-          placeholder="Поиск грядок по названию..."
+          placeholder="Название грядки..."
         >
       </form>
     </div>
