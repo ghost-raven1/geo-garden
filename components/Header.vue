@@ -254,10 +254,21 @@
     display: grid;
 }
 
+.navbar-brand {
+  font-weight: 700;
+  animation: flow 30s ease-in-out infinite;
+  background: linear-gradient(-60deg, #904e95, #904e95, #e73c7e, #ee7752);
+  background-size: 300%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 .site-name{
     flex-shrink: 0;
     padding-right: 150px;
 }
+
 </style>
 
 <script>
