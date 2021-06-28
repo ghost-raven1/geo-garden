@@ -12,6 +12,7 @@
       </form>
     </div>
     <div class="adaptive_container">
+      <!--      TODO: Подумать над дизайном страницы-->
       <div uk-grid>
         <!-- Карточка поля -->
         <div
@@ -21,6 +22,7 @@
         >
           <div class="">
             <img
+              v-if="seedbed.image.url"
               class="card-plant__image"
               :src="seedbed.image.url"
               :alt="seedbed.name"
@@ -28,7 +30,8 @@
           </div>
           <div class="">
             <h3 class="card-plant__title">
-              {{ seedbed.name }} [{{ seedbed.type }}]
+              <span v-if="seedbed.name">{{ seedbed.name }}</span>
+              <span v-if="seedbed.type">[{{ seedbed.type }}]</span>
             </h3>
             <div>
               <span
@@ -39,25 +42,28 @@
                   v-if="plant.available === true"
                   class="badge badge_green"
                 >
-                  {{ plant.name }},
-                  {{ plant.type }}
-                  Цена:{{ plant.price }}руб.
-                  {{ plant.new }}
-                  Кол-во:{{ plant.amount }}шт.
+                  <span v-if="plant.name">{{ plant.name }},</span>
+                  <span v-if="plant.type">{{ plant.type }}</span>
+                  <span v-if="plant.price">Цена:{{ plant.price }}руб.</span>
+                  <span v-if="plant.new">{{ plant.new }}</span>
+                  <span v-if="plant.amount">Кол-во:{{ plant.amount }}шт.</span>
                 </div>
               </span>
               <div class="card-plant__area" />
               <!-- TODO: Проверить работоспособность -->
-              <div
-                v-if="filteredList_seedbeds.length == 0"
-              >
-                <img
-                  src="https://assets-ouch.icons8.com/preview/19/52de2377-696e-4194-8c63-0a81aef60b4f.png"
-                  height="800"
-                  width="800"
+              <div v-if="!loading">
+                <div
+                  v-if="filteredList_seedbeds.length == 0"
                 >
-                <p>Грядки не найдены!</p>
+                  <img
+                    src="https://assets-ouch.icons8.com/preview/19/52de2377-696e-4194-8c63-0a81aef60b4f.png"
+                    height="800"
+                    width="800"
+                  >
+                  <p>Грядки не найдены!</p>
+                </div>
               </div>
+              <div v-if="loading">Получение данных с сервера...</div>
             </div>
           </div>
         </div>
@@ -75,6 +81,7 @@ export default {
       seedbeds: [],
       query: '',
       error: null,
+      loading: false,
     };
   },
   computed: {
@@ -85,9 +92,11 @@ export default {
   },
   async mounted() {
     try {
+      this.loading = true;
       this.seedbeds = await this.$strapi.$seedbeds.find();
       // eslint-disable-next-line no-console
       console.log(this.seedbeds);
+      this.loading = false;
     } catch (error) {
       this.error = error;
     }

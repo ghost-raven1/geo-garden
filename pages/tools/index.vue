@@ -21,6 +21,7 @@
         >
           <div class="">
             <img
+              v-if="tool.image.url"
               class="card-plant__image"
               :src="tool.image.url"
               :alt="tool.name"
@@ -28,26 +29,30 @@
           </div>
           <div class="">
             <h3 class="card-plant__title">
-              {{ tool.name }} [{{ tool.type }}]
+              <span v-if="tool.name">{{ tool.name }}</span>
+              <span v-if="tool.type">[{{ tool.type }}]</span>
             </h3>
             <div>
               <div
                 class="badge badge_green"
               >
-                Кол-во: {{ tool.amount }}шт.
+                <span v-if="tool.amount">Кол-во: {{ tool.amount }}шт.</span>
               </div>
               <div class="card-plant__area" />
               <!-- TODO: Проверить работоспособность -->
-              <div
-                v-if="!filteredList_tools"
-              >
-                <img
-                  src="https://assets-ouch.icons8.com/preview/19/52de2377-696e-4194-8c63-0a81aef60b4f.png"
-                  height="800"
-                  width="800"
+              <div v-if="!loading">
+                <div
+                  v-if="!filteredList_tools"
                 >
-                <p>Инструменты не найдены!</p>
+                  <img
+                    src="https://assets-ouch.icons8.com/preview/19/52de2377-696e-4194-8c63-0a81aef60b4f.png"
+                    height="800"
+                    width="800"
+                  >
+                  <p>Инструменты не найдены!</p>
+                </div>
               </div>
+              <div v-if="loading">Получение данных с сервера...</div>
             </div>
           </div>
         </div>
@@ -66,6 +71,7 @@ export default {
       tools: [],
       query: '',
       error: null,
+      loading: false,
     };
   },
   computed: {
@@ -76,9 +82,11 @@ export default {
   },
   async mounted() {
     try {
+      this.loading = true;
       this.tools = await this.$strapi.$tools.find();
       // eslint-disable-next-line no-console
       console.log(this.tools);
+      this.loading = false;
     } catch (error) {
       this.error = error;
     }

@@ -256,8 +256,8 @@
 
 .navbar-brand {
   font-weight: 700;
-  animation: flow 30s ease-in-out infinite;
-  background: linear-gradient(-60deg, #904e95, #904e95, #e73c7e, #ee7752);
+  animation: flow 5s ease-in-out infinite;
+  background: linear-gradient(-60deg, #57cd1b, #1fce0c, #7a9780, #08b418);
   background-size: 300%;
   -webkit-background-clip: text;
   background-clip: text;

@@ -136,8 +136,7 @@
         <!-- Фильтр по полям -->
       </div>
       <!-- Техническая карта -->
-
-      <!-- <div class="adaptive_container">
+      <div class="adaptive_container">
         <h2 class="uk-heading-small uk-heading-line uk-text-center">
           <span>Техническая карта</span>
         </h2>
@@ -152,8 +151,7 @@
           <p>Выберите мероприятие...</p>
         </div>
         <Techcard />
-      </div> -->
-
+      </div>
       <div class="adaptive_container">
         <h2 class="uk-heading-small uk-heading-line uk-text-center">
           <span>Табель полевых работ</span>

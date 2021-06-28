@@ -47,6 +47,7 @@
             tag="a">
             <div class="">
               <img
+                v-if="field.image.url"
                 class="card-plant__image"
                 :src="field.image.url"
                 :alt="field.name"
@@ -54,7 +55,8 @@
             </div>
             <div class="">
               <h3 class="card-plant__title">
-                {{ field.name }} [{{ field.type }}]
+                <span v-if="field.name">{{ field.name }}</span>
+                <span v-if="field.type">[{{ field.type }}]</span>
               </h3>
               <div>
                 <div
@@ -62,13 +64,14 @@
                   :key="n"
                   class="badge badge_green"
                 >
-                  {{ seedbed.name }} №{{ seedbed.number }},
-                  {{ seedbed.type }},
-                  Ширина:{{ seedbed.width }}м,
-                  Длина:{{ seedbed.height }}м
+                  <span v-if="seedbed.name">{{ seedbed.name }}</span>
+                  <span v-if="seedbed.number"> №{{ seedbed.number }},</span>
+                  <span v-if="seedbed.type">{{ seedbed.type }},</span>
+                  <span v-if="seedbed.width">Ширина:{{ seedbed.width }}м,</span>
+                  <span v-if="seedbed.height">Длина:{{ seedbed.height }}м</span>
                 </div>
                 <div class="card-plant__area">
-                  Площадь: {{ field.area }} м2.
+                  <span v-if="field.area">Площадь: {{ field.area }} м2.</span>
                 </div>
               </div>
             </div>
@@ -100,6 +103,7 @@
             tag="a">
             <div class="">
               <img
+                v-if="field.image.url"
                 class="card-plant__image"
                 :src="field.image.url"
                 :alt="field.name"
@@ -107,7 +111,8 @@
             </div>
             <div class="">
               <h3 class="card-plant__title">
-                {{ field.name }} [{{ field.type }}]
+                <span v-if="field.name">{{ field.name }}</span>
+                <span v-if="field.type">[{{ field.type }}]</span>
               </h3>
               <div>
                 <div
@@ -115,13 +120,14 @@
                   :key="n"
                   class="badge badge_green"
                 >
-                  {{ seedbed.name }} №{{ seedbed.number }},
-                  {{ seedbed.type }},
-                  Ширина:{{ seedbed.width }}м,
-                  Длина:{{ seedbed.height }}м
+                  <span v-if="seedbed.name">{{ seedbed.name }}</span>
+                  <span v-if="seedbed.number"> №{{ seedbed.number }},</span>
+                  <span v-if="seedbed.type">{{ seedbed.type }},</span>
+                  <span v-if="seedbed.width">Ширина:{{ seedbed.width }}м,</span>
+                  <span v-if="seedbed.height">Длина:{{ seedbed.height }}м</span>
                 </div>
                 <div class="card-plant__area">
-                  Площадь: {{ field.area }} м2.
+                  <span v-if="field.area">Площадь: {{ field.area }} м2.</span>
                 </div>
               </div>
             </div>
@@ -153,6 +159,7 @@
             tag="a">
             <div class="">
               <img
+                v-if="field.image.url"
                 class="card-plant__image"
                 :src="field.image.url"
                 :alt="field.name"
@@ -160,7 +167,8 @@
             </div>
             <div class="">
               <h3 class="card-plant__title">
-                {{ field.name }} [{{ field.type }}]
+                <span v-if="field.name">{{ field.name }}</span>
+                <span v-if="field.type">[{{ field.type }}]</span>
               </h3>
               <div>
                 <div
@@ -168,28 +176,32 @@
                   :key="n"
                   class="badge badge_green"
                 >
-                  {{ seedbed.name }} №{{ seedbed.number }},
-                  {{ seedbed.type }},
-                  Ширина:{{ seedbed.width }}м,
-                  Длина:{{ seedbed.height }}м
+                  <span v-if="seedbed.name">{{ seedbed.name }}</span>
+                  <span v-if="seedbed.number"> №{{ seedbed.number }},</span>
+                  <span v-if="seedbed.type">{{ seedbed.type }},</span>
+                  <span v-if="seedbed.width">Ширина:{{ seedbed.width }}м,</span>
+                  <span v-if="seedbed.height">Длина:{{ seedbed.height }}м</span>
                 </div>
                 <div class="card-plant__area">
-                  Площадь: {{ field.area }} м2.
+                  <span v-if="field.area">Площадь: {{ field.area }} м2.</span>
                 </div>
               </div>
             </div>
           </router-link>
         </div>
-        <div
-          v-if="!filteredListName_fields.length"
-        >
-          <img
-            src="https://assets-ouch.icons8.com/preview/19/52de2377-696e-4194-8c63-0a81aef60b4f.png"
-            height="800"
-            width="800"
+        <div v-if="!loading">
+          <div
+            v-if="!filteredListName_fields.length"
           >
-          <p>Поля не найдены!</p>
+            <img
+              src="https://assets-ouch.icons8.com/preview/19/52de2377-696e-4194-8c63-0a81aef60b4f.png"
+              height="800"
+              width="800"
+            >
+            <p>Поля не найдены!</p>
+          </div>
         </div>
+        <div v-if="loading">Получение данных с сервера...</div>
         <!-- Конец карточки поля -->
       </div>
     </div>
@@ -207,6 +219,7 @@ export default {
       queryName: '',
       queryType: '',
       error: null,
+      loading: false,
     };
   },
   computed: {
@@ -219,9 +232,11 @@ export default {
   },
   async mounted() {
     try {
+      this.loading = true;
       this.fields = await this.$strapi.$fields.find();
       // eslint-disable-next-line no-console
       console.log(this.fields);
+      this.loading = false;
     } catch (error) {
       this.error = error;
     }

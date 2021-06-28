@@ -65,6 +65,7 @@
               <span class="text__line">Номер грядки:</span> {{ seedbeds.number }}
             </div>
           </div>
+          <div v-if="loading"></div>
         </div>
       </div>
     </div>
@@ -78,6 +79,11 @@ export default {
     const { id } = route.params;
     const field = await $strapi.$fields.findOne(id);
     return { field };
+  },
+  data() {
+    return {
+      loading: false,
+    };
   },
   methods: {},
 };
@@ -103,9 +109,9 @@ export default {
   grid-template-columns: 1fr 2fr;
   border-radius: 6px;
   margin-bottom: 20px;
-  -webkit-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
-  -moz-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
-  box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+  -webkit-box-shadow: 0 5px 10px 2px rgba(34, 60, 80, 0.2);
+  -moz-box-shadow: 0 5px 10px 2px rgba(34, 60, 80, 0.2);
+  box-shadow: 0 5px 10px 2px rgba(34, 60, 80, 0.2);
   &__title {}
   &__image {
     width: 100%;
@@ -119,9 +125,9 @@ export default {
   grid-template-columns: 1fr 2fr;
   border-radius: 6px;
   margin-bottom: 20px;
-  -webkit-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
-  -moz-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
-  box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+  -webkit-box-shadow: 0 5px 10px 2px rgba(34, 60, 80, 0.2);
+  -moz-box-shadow: 0 5px 10px 2px rgba(34, 60, 80, 0.2);
+  box-shadow: 0 5px 10px 2px rgba(34, 60, 80, 0.2);
   &__name {}
   &__description {}
   &__width {}

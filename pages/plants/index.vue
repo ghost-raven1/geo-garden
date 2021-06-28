@@ -47,21 +47,24 @@
             tag="a">
             <div class="">
               <img
+                v-if="plant.image.url"
                 class="card-plant__image"
                 :src="plant.image.url"
                 :alt="plant.name"
               >
+              <!--              TODO: Добавить заглушку-->
             </div>
             <div class="">
               <h3 class="plant__title">
-                {{ plant.name }} [{{ plant.type }}]
+                <span v-if="plant.name">{{ plant.name }}</span>
+                <span v-if="plant.type">[{{ plant.type }}]</span>
               </h3>
               <div>
                 <div
                   class="badge badge_green"
                 >
-                  Цена:{{ plant.price }}руб.
-                  Кол-во:{{ plant.amount }}шт.
+                  <span v-if="plant.price">Цена:{{ plant.price }}руб.</span>
+                  <span v-if="plant.amount">Кол-во:{{ plant.amount }}шт.</span>
                 </div>
               </div>
             </div>
@@ -105,6 +108,7 @@
             tag="a">
             <div class="">
               <img
+                v-if="plant.image.url"
                 class="card-plant__image"
                 :src="plant.image.url"
                 :alt="plant.name"
@@ -112,14 +116,15 @@
             </div>
             <div class="">
               <h3 class="plant__title">
-                {{ plant.name }} [{{ plant.type }}]
+                <span v-if="plant.name">{{ plant.name }}</span>
+                <span v-if="plant.type">[{{ plant.type }}]</span>
               </h3>
               <div>
                 <div
                   class="badge badge_green"
                 >
-                  Цена:{{ plant.price }}руб.
-                  Кол-во:{{ plant.amount }}шт.
+                  <span v-if="plant.price">Цена:{{ plant.price }}руб.</span>
+                  <span v-if="plant.amount">Кол-во:{{ plant.amount }}шт.</span>
                 </div>
               </div>
             </div>
@@ -163,6 +168,7 @@
             tag="a">
             <div class="">
               <img
+                v-if="plant.image.url"
                 class="card-plant__image"
                 :src="plant.image.url"
                 :alt="plant.name"
@@ -170,41 +176,45 @@
             </div>
             <div class="">
               <h3 class="plant__title">
-                {{ plant.name }} [{{ plant.type }}]
+                <span v-if="plant.name">{{ plant.name }}</span>
+                <span v-if="plant.type">[{{ plant.type }}]</span>
               </h3>
               <div>
                 <div
                   class="badge badge_green"
                 >
-                  Цена:{{ plant.price }}руб.
-                  Кол-во:{{ plant.amount }}шт.
+                  <span v-if="plant.price">Цена:{{ plant.price }}руб.</span>
+                  <span v-if="plant.amount">Кол-во:{{ plant.amount }}шт.</span>
                 </div>
               </div>
             </div>
           </router-link>
         </div>
-        <div
-          v-if="!filteredListName_plants.length"
-          class="adaptive_container"
-        >
-          <img
-            src="https://assets-ouch.icons8.com/preview/19/52de2377-696e-4194-8c63-0a81aef60b4f.png"
-            height="800"
-            width="800"
+        <div v-if="!loading">
+          <div
+            v-if="!filteredListName_plants.length"
+            class="adaptive_container"
           >
-          <p>Растения не найдены</p>
-        </div>
-        <div
-          v-if="!filteredListType_plants.length"
-          class="adaptive_container"
-        >
-          <img
-            src="https://assets-ouch.icons8.com/preview/19/52de2377-696e-4194-8c63-0a81aef60b4f.png"
-            height="800"
-            width="800"
+            <img
+              src="https://assets-ouch.icons8.com/preview/19/52de2377-696e-4194-8c63-0a81aef60b4f.png"
+              height="800"
+              width="800"
+            >
+            <p>Растения не найдены</p>
+          </div>
+          <div
+            v-if="!filteredListType_plants.length"
+            class="adaptive_container"
           >
-          <p>Растения не найдены</p>
+            <img
+              src="https://assets-ouch.icons8.com/preview/19/52de2377-696e-4194-8c63-0a81aef60b4f.png"
+              height="800"
+              width="800"
+            >
+            <p>Растения не найдены</p>
+          </div>
         </div>
+        <div v-if="loading">Получение данных с сервера...</div>
         <!-- Конец карточки растений -->
       </div>
     </div>
@@ -220,6 +230,7 @@ export default {
       queryName: '',
       queryType: '',
       error: null,
+      loading: false,
     };
   },
   computed: {
@@ -232,9 +243,11 @@ export default {
   },
   async mounted() {
     try {
+      this.loading = true;
       this.plants = await this.$strapi.$plants.find();
       // eslint-disable-next-line no-console
       console.log(this.plants);
+      this.loading = false;
     } catch (error) {
       this.error = error;
     }
