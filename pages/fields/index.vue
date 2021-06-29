@@ -23,173 +23,63 @@
         <button
           class="tab__search"
           :class="{tab__search_active: searchType === 1}"
-          @click="searchType = 1">
+          @change="searchType = 1"
+        >
           По названию
         </button>
         <button
           class="tab__search"
           :class="{tab__search_active: searchType === 2}"
-          @click="searchType = 2">
+          @change="searchType = 2"
+        >
           По типу
+        </button>
+        <button
+          class="tab__search"
+          :class="{tab__search_active: searchType === ''}"
+          @click="searchType = ''"
+        >
+          Все
         </button>
       </div>
     </div>
-    <div v-if="queryName" class="adaptive_container">
-      <div uk-grid>
-        <!-- Карточка поля -->
-        <div
-          v-for="(field, i) in filteredListName_fields"
-          :key="i"
-          class="card-plant"
-        >
-          <router-link
-            :to="{ name: 'fields-id', params: { id: field.id }}"
-            tag="a">
-            <div class="">
-              <img
-                v-if="field.image.url"
-                class="card-plant__image"
-                :src="field.image.url"
-                :alt="field.name"
-              >
-            </div>
-            <div class="">
-              <h3 class="card-plant__title">
-                <span v-if="field.name">{{ field.name }}</span>
-                <span v-if="field.type">[{{ field.type }}]</span>
-              </h3>
-              <div>
-                <div
-                  v-for="(seedbed, n) in field.seedbeds"
-                  :key="n"
-                  class="badge badge_green"
-                >
-                  <span v-if="seedbed.name">{{ seedbed.name }}</span>
-                  <span v-if="seedbed.number"> №{{ seedbed.number }},</span>
-                  <span v-if="seedbed.type">{{ seedbed.type }},</span>
-                  <span v-if="seedbed.width">Ширина:{{ seedbed.width }}м,</span>
-                  <span v-if="seedbed.height">Длина:{{ seedbed.height }}м</span>
-                </div>
-                <div class="card-plant__area">
-                  <span v-if="field.area">Площадь: {{ field.area }} м2.</span>
-                </div>
-              </div>
-            </div>
-          </router-link>
-        </div>
-        <div
-          v-if="!filteredListName_fields.length"
-        >
-          <img
-            src="https://assets-ouch.icons8.com/preview/19/52de2377-696e-4194-8c63-0a81aef60b4f.png"
-            height="800"
-            width="800"
+    <div v-if="searchType === 1">
+      <div
+        v-if="queryName"
+        class="adaptive_container"
+      >
+        <div uk-grid>
+          <!-- Карточка поля -->
+          <div
+            v-for="(field, i) in filteredListName_fields"
+            :key="i"
+            class="card-plant"
           >
-          <p>Поля не найдены!</p>
-        </div>
-        <!-- Конец карточки поля -->
-      </div>
-    </div>
-    <div v-if="queryType" class="adaptive_container">
-      <div uk-grid>
-        <!-- Карточка поля -->
-        <div
-          v-for="(field, i) in filteredListType_fields"
-          :key="i"
-          class="card-plant"
-        >
-          <router-link
-            :to="{ name: 'fields-id', params: { id: field.id }}"
-            tag="a">
-            <div class="">
-              <img
-                v-if="field.image.url"
-                class="card-plant__image"
-                :src="field.image.url"
-                :alt="field.name"
-              >
-            </div>
-            <div class="">
-              <h3 class="card-plant__title">
-                <span v-if="field.name">{{ field.name }}</span>
-                <span v-if="field.type">[{{ field.type }}]</span>
-              </h3>
-              <div>
-                <div
-                  v-for="(seedbed, n) in field.seedbeds"
-                  :key="n"
-                  class="badge badge_green"
+            <router-link
+              :to="{ name: 'fields-id', params: { id: field.id }}"
+              tag="a"
+            >
+              <div class="">
+                <img
+                  v-if="field.image.url"
+                  class="card-plant__image"
+                  :src="field.image.url"
+                  :alt="field.name"
                 >
-                  <span v-if="seedbed.name">{{ seedbed.name }}</span>
-                  <span v-if="seedbed.number"> №{{ seedbed.number }},</span>
-                  <span v-if="seedbed.type">{{ seedbed.type }},</span>
-                  <span v-if="seedbed.width">Ширина:{{ seedbed.width }}м,</span>
-                  <span v-if="seedbed.height">Длина:{{ seedbed.height }}м</span>
-                </div>
-                <div class="card-plant__area">
-                  <span v-if="field.area">Площадь: {{ field.area }} м2.</span>
+              </div>
+              <div class="">
+                <h3 class="card-plant__title">
+                  <span v-if="field.name">{{ field.name }}</span>
+                  <span v-if="field.type">[{{ field.type }}]</span>
+                </h3>
+                <div>
+                  <div class="card-plant__area">
+                    <span v-if="field.area">Площадь: {{ field.area }} м2.</span>
+                  </div>
                 </div>
               </div>
-            </div>
-          </router-link>
-        </div>
-        <div
-          v-if="!filteredListType_fields.length"
-        >
-          <img
-            src="https://assets-ouch.icons8.com/preview/19/52de2377-696e-4194-8c63-0a81aef60b4f.png"
-            height="800"
-            width="800"
-          >
-          <p>Поля не найдены!</p>
-        </div>
-        <!-- Конец карточки поля -->
-      </div>
-    </div>
-    <div v-if="fields" class="adaptive_container">
-      <div uk-grid>
-        <!-- Карточка поля -->
-        <div
-          v-for="(field, i) in filteredListName_fields"
-          :key="i"
-          class="card-plant"
-        >
-          <router-link
-            :to="{ name: 'fields-id', params: { id: field.id }}"
-            tag="a">
-            <div class="">
-              <img
-                v-if="field.image.url"
-                class="card-plant__image"
-                :src="field.image.url"
-                :alt="field.name"
-              >
-            </div>
-            <div class="">
-              <h3 class="card-plant__title">
-                <span v-if="field.name">{{ field.name }}</span>
-                <span v-if="field.type">[{{ field.type }}]</span>
-              </h3>
-              <div>
-                <div
-                  v-for="(seedbed, n) in field.seedbeds"
-                  :key="n"
-                  class="badge badge_green"
-                >
-                  <span v-if="seedbed.name">{{ seedbed.name }}</span>
-                  <span v-if="seedbed.number"> №{{ seedbed.number }},</span>
-                  <span v-if="seedbed.type">{{ seedbed.type }},</span>
-                  <span v-if="seedbed.width">Ширина:{{ seedbed.width }}м,</span>
-                  <span v-if="seedbed.height">Длина:{{ seedbed.height }}м</span>
-                </div>
-                <div class="card-plant__area">
-                  <span v-if="field.area">Площадь: {{ field.area }} м2.</span>
-                </div>
-              </div>
-            </div>
-          </router-link>
-        </div>
-        <div v-if="!loading">
+            </router-link>
+          </div>
           <div
             v-if="!filteredListName_fields.length"
           >
@@ -200,10 +90,113 @@
             >
             <p>Поля не найдены!</p>
           </div>
+          <!-- Конец карточки поля -->
         </div>
-        <div v-if="loading">Получение данных с сервера...</div>
-        <!-- Конец карточки поля -->
       </div>
+    </div>
+    <div v-else-if="searchType === 2">
+      <div
+        v-if="queryType"
+        class="adaptive_container"
+      >
+        <div uk-grid>
+          <!-- Карточка поля -->
+          <div
+            v-for="(field, i) in filteredListType_fields"
+            :key="i"
+            class="card-plant"
+          >
+            <router-link
+              :to="{ name: 'fields-id', params: { id: field.id }}"
+              tag="a"
+            >
+              <div class="">
+                <img
+                  v-if="field.image.url"
+                  class="card-plant__image"
+                  :src="field.image.url"
+                  :alt="field.name"
+                >
+              </div>
+              <div class="">
+                <h3 class="card-plant__title">
+                  <span v-if="field.name">{{ field.name }}</span>
+                  <span v-if="field.type">[{{ field.type }}]</span>
+                </h3>
+                <div>
+                  <div class="card-plant__area">
+                    <span v-if="field.area">Площадь: {{ field.area }} м2.</span>
+                  </div>
+                </div>
+              </div>
+            </router-link>
+          </div>
+          <div
+            v-if="!filteredListType_fields.length"
+          >
+            <img
+              src="https://assets-ouch.icons8.com/preview/19/52de2377-696e-4194-8c63-0a81aef60b4f.png"
+              height="800"
+              width="800"
+            >
+            <p>Поля не найдены!</p>
+          </div>
+          <!-- Конец карточки поля -->
+        </div>
+      </div>
+    </div>
+    <div v-else>
+      <div class="adaptive_container">
+        <div uk-grid>
+          <!-- Карточка поля -->
+          <div
+            v-for="(field, i) in filteredListName_fields"
+            :key="i"
+            class="card-plant"
+          >
+            <router-link
+              :to="{ name: 'fields-id', params: { id: field.id }}"
+              tag="a"
+            >
+              <div class="">
+                <img
+                  v-if="field.image.url"
+                  class="card-plant__image"
+                  :src="field.image.url"
+                  :alt="field.name"
+                >
+              </div>
+              <div class="">
+                <h3 class="card-plant__title">
+                  <span v-if="field.name">{{ field.name }}</span>
+                  <span v-if="field.type">[{{ field.type }}]</span>
+                </h3>
+                <div>
+                  <div class="card-plant__area">
+                    <span v-if="field.area">Площадь: {{ field.area }} м2.</span>
+                  </div>
+                </div>
+              </div>
+            </router-link>
+          </div>
+          <div v-if="!loading">
+            <div
+              v-if="!filteredListName_fields.length"
+            >
+              <img
+                src="https://assets-ouch.icons8.com/preview/19/52de2377-696e-4194-8c63-0a81aef60b4f.png"
+                height="800"
+                width="800"
+              >
+              <p>Поля не найдены!</p>
+            </div>
+          </div>
+        <!-- Конец карточки поля -->
+        </div>
+      </div>
+    </div>
+    <div v-if="loading">
+      Получение данных с сервера...
     </div>
   </div>
 </template>
@@ -214,7 +207,8 @@ export default {
   name: 'index.vue',
   data() {
     return {
-      searchType: '',
+      hide: false,
+      searchType: '3',
       fields: [],
       queryName: '',
       queryType: '',
@@ -244,6 +238,10 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
+
+.hide {
+  display: none;
+}
 .search {
   &-panel {
     &__btns {

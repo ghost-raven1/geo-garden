@@ -23,174 +23,67 @@
         <button
           class="tab__search"
           :class="{tab__search_active: searchType === 1}"
-          @click="searchType = 1">
+          @click="searchType = 1"
+        >
           По названию
         </button>
         <button
           class="tab__search"
           :class="{tab__search_active: searchType === 2}"
-          @click="searchType = 2">
+          @click="searchType = 2"
+        >
           По типу
+        </button>
+        <button
+          class="tab__search"
+          :class="{tab__search_active: searchType === ''}"
+          @click="searchType = ''"
+        >
+          Все
         </button>
       </div>
     </div>
-    <div v-if="queryName" class="adaptive_container">
-      <div uk-grid>
-        <!-- Карточка растения -->
-        <div
-          v-for="(plant, i) in filteredListName_plants"
-          :key="i"
-          class="card-plant"
-        >
-          <router-link
-            :to="{ name: 'plants-id', params: { id: plant.id }}"
-            tag="a">
-            <div class="">
-              <img
-                v-if="plant.image.url"
-                class="card-plant__image"
-                :src="plant.image.url"
-                :alt="plant.name"
-              >
-              <!--              TODO: Добавить заглушку-->
-            </div>
-            <div class="">
-              <h3 class="plant__title">
-                <span v-if="plant.name">{{ plant.name }}</span>
-                <span v-if="plant.type">[{{ plant.type }}]</span>
-              </h3>
-              <div>
-                <div
-                  class="badge badge_green"
+    <div v-if="searchType === 1">
+      <div
+        v-if="queryName"
+        class="adaptive_container"
+      >
+        <div uk-grid>
+          <!-- Карточка растения -->
+          <div
+            v-for="(plant, i) in filteredListName_plants"
+            :key="i"
+            class="card-plant"
+          >
+            <router-link
+              :to="{ name: 'plants-id', params: { id: plant.id }}"
+              tag="a"
+            >
+              <div class="">
+                <img
+                  v-if="plant.image.url"
+                  class="card-plant__image"
+                  :src="plant.image.url"
+                  :alt="plant.name"
                 >
-                  <span v-if="plant.price">Цена:{{ plant.price }}руб.</span>
-                  <span v-if="plant.amount">Кол-во:{{ plant.amount }}шт.</span>
+                <!--              TODO: Добавить заглушку-->
+              </div>
+              <div class="">
+                <h3 class="plant__title">
+                  <span v-if="plant.name">{{ plant.name }}</span>
+                  <span v-if="plant.type">[{{ plant.type }}]</span>
+                </h3>
+                <div>
+                  <div
+                    class="badge badge_green"
+                  >
+                    <span v-if="plant.price">Цена:{{ plant.price }}руб.</span>
+                    <span v-if="plant.amount">Кол-во:{{ plant.amount }}шт.</span>
+                  </div>
                 </div>
               </div>
-            </div>
-          </router-link>
-        </div>
-        <div
-          v-if="!filteredListName_plants.length"
-          class="adaptive_container"
-        >
-          <img
-            src="https://assets-ouch.icons8.com/preview/19/52de2377-696e-4194-8c63-0a81aef60b4f.png"
-            height="800"
-            width="800"
-          >
-          <p>Растения не найдены</p>
-        </div>
-        <div
-          v-if="!filteredListType_plants.length"
-          class="adaptive_container"
-        >
-          <img
-            src="https://assets-ouch.icons8.com/preview/19/52de2377-696e-4194-8c63-0a81aef60b4f.png"
-            height="800"
-            width="800"
-          >
-          <p>Растения не найдены</p>
-        </div>
-        <!-- Конец карточки растений -->
-      </div>
-    </div>
-    <div v-if="queryType" class="adaptive_container">
-      <div uk-grid>
-        <!-- Карточка растения -->
-        <div
-          v-for="(plant, i) in filteredListType_plants"
-          :key="i"
-          class="card-plant"
-        >
-          <router-link
-            :to="{ name: 'plants-id', params: { id: plant.id }}"
-            tag="a">
-            <div class="">
-              <img
-                v-if="plant.image.url"
-                class="card-plant__image"
-                :src="plant.image.url"
-                :alt="plant.name"
-              >
-            </div>
-            <div class="">
-              <h3 class="plant__title">
-                <span v-if="plant.name">{{ plant.name }}</span>
-                <span v-if="plant.type">[{{ plant.type }}]</span>
-              </h3>
-              <div>
-                <div
-                  class="badge badge_green"
-                >
-                  <span v-if="plant.price">Цена:{{ plant.price }}руб.</span>
-                  <span v-if="plant.amount">Кол-во:{{ plant.amount }}шт.</span>
-                </div>
-              </div>
-            </div>
-          </router-link>
-        </div>
-        <div
-          v-if="!filteredListName_plants.length"
-          class="adaptive_container"
-        >
-          <img
-            src="https://assets-ouch.icons8.com/preview/19/52de2377-696e-4194-8c63-0a81aef60b4f.png"
-            height="800"
-            width="800"
-          >
-          <p>Растения не найдены</p>
-        </div>
-        <div
-          v-if="!filteredListType_plants.length"
-          class="adaptive_container"
-        >
-          <img
-            src="https://assets-ouch.icons8.com/preview/19/52de2377-696e-4194-8c63-0a81aef60b4f.png"
-            height="800"
-            width="800"
-          >
-          <p>Растения не найдены</p>
-        </div>
-        <!-- Конец карточки растений -->
-      </div>
-    </div>
-    <div v-if="plants" class="adaptive_container">
-      <div uk-grid>
-        <!-- Карточка растения -->
-        <div
-          v-for="(plant, i) in filteredListName_plants"
-          :key="i"
-          class="card-plant"
-        >
-          <router-link
-            :to="{ name: 'plants-id', params: { id: plant.id }}"
-            tag="a">
-            <div class="">
-              <img
-                v-if="plant.image.url"
-                class="card-plant__image"
-                :src="plant.image.url"
-                :alt="plant.name"
-              >
-            </div>
-            <div class="">
-              <h3 class="plant__title">
-                <span v-if="plant.name">{{ plant.name }}</span>
-                <span v-if="plant.type">[{{ plant.type }}]</span>
-              </h3>
-              <div>
-                <div
-                  class="badge badge_green"
-                >
-                  <span v-if="plant.price">Цена:{{ plant.price }}руб.</span>
-                  <span v-if="plant.amount">Кол-во:{{ plant.amount }}шт.</span>
-                </div>
-              </div>
-            </div>
-          </router-link>
-        </div>
-        <div v-if="!loading">
+            </router-link>
+          </div>
           <div
             v-if="!filteredListName_plants.length"
             class="adaptive_container"
@@ -213,10 +106,144 @@
             >
             <p>Растения не найдены</p>
           </div>
+          <!-- Конец карточки растений -->
         </div>
-        <div v-if="loading">Получение данных с сервера...</div>
-        <!-- Конец карточки растений -->
       </div>
+    </div>
+    <div v-else-if="searchType === 2">
+      <div
+        v-if="queryType"
+        class="adaptive_container"
+      >
+        <div uk-grid>
+          <!-- Карточка растения -->
+          <div
+            v-for="(plant, i) in filteredListType_plants"
+            :key="i"
+            class="card-plant"
+          >
+            <router-link
+              :to="{ name: 'plants-id', params: { id: plant.id }}"
+              tag="a"
+            >
+              <div class="">
+                <img
+                  v-if="plant.image.url"
+                  class="card-plant__image"
+                  :src="plant.image.url"
+                  :alt="plant.name"
+                >
+              </div>
+              <div class="">
+                <h3 class="plant__title">
+                  <span v-if="plant.name">{{ plant.name }}</span>
+                  <span v-if="plant.type">[{{ plant.type }}]</span>
+                </h3>
+                <div>
+                  <div
+                    class="badge badge_green"
+                  >
+                    <span v-if="plant.price">Цена:{{ plant.price }}руб.</span>
+                    <span v-if="plant.amount">Кол-во:{{ plant.amount }}шт.</span>
+                  </div>
+                </div>
+              </div>
+            </router-link>
+          </div>
+          <div
+            v-if="!filteredListName_plants.length"
+            class="adaptive_container"
+          >
+            <img
+              src="https://assets-ouch.icons8.com/preview/19/52de2377-696e-4194-8c63-0a81aef60b4f.png"
+              height="800"
+              width="800"
+            >
+            <p>Растения не найдены</p>
+          </div>
+          <div
+            v-if="!filteredListType_plants.length"
+            class="adaptive_container"
+          >
+            <img
+              src="https://assets-ouch.icons8.com/preview/19/52de2377-696e-4194-8c63-0a81aef60b4f.png"
+              height="800"
+              width="800"
+            >
+            <p>Растения не найдены</p>
+          </div>
+          <!-- Конец карточки растений -->
+        </div>
+      </div>
+    </div>
+    <div v-else>
+      <div
+        class="adaptive_container">
+        <div uk-grid>
+          <!-- Карточка растения -->
+          <div
+            v-for="(plant, i) in filteredListName_plants"
+            :key="i"
+            class="card-plant"
+          >
+            <router-link
+              :to="{ name: 'plants-id', params: { id: plant.id }}"
+              tag="a"
+            >
+              <div class="">
+                <img
+                  v-if="plant.image.url"
+                  class="card-plant__image"
+                  :src="plant.image.url"
+                  :alt="plant.name"
+                >
+              </div>
+              <div class="">
+                <h3 class="plant__title">
+                  <span v-if="plant.name">{{ plant.name }}</span>
+                  <span v-if="plant.type">[{{ plant.type }}]</span>
+                </h3>
+                <div>
+                  <div
+                    class="badge badge_green"
+                  >
+                    <span v-if="plant.price">Цена:{{ plant.price }}руб.</span>
+                    <span v-if="plant.amount">Кол-во:{{ plant.amount }}шт.</span>
+                  </div>
+                </div>
+              </div>
+            </router-link>
+          </div>
+          <div v-if="!loading">
+            <div
+              v-if="!filteredListName_plants.length"
+              class="adaptive_container"
+            >
+              <img
+                src="https://assets-ouch.icons8.com/preview/19/52de2377-696e-4194-8c63-0a81aef60b4f.png"
+                height="800"
+                width="800"
+              >
+              <p>Растения не найдены</p>
+            </div>
+            <div
+              v-if="!filteredListType_plants.length"
+              class="adaptive_container"
+            >
+              <img
+                src="https://assets-ouch.icons8.com/preview/19/52de2377-696e-4194-8c63-0a81aef60b4f.png"
+                height="800"
+                width="800"
+              >
+              <p>Растения не найдены</p>
+            </div>
+          </div>
+          <!-- Конец карточки растений -->
+        </div>
+      </div>
+    </div>
+    <div v-if="loading">
+      Получение данных с сервера...
     </div>
   </div>
 </template>
@@ -225,7 +252,8 @@ export default {
   name: 'index.vue',
   data() {
     return {
-      searchType: '',
+      hide: false,
+      searchType: '3',
       plants: [],
       queryName: '',
       queryType: '',
@@ -255,6 +283,9 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
+.hide {
+  display: none;
+}
 .search {
   &-panel {
     &__btns {

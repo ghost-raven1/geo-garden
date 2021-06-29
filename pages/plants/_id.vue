@@ -209,12 +209,12 @@ export default {
 }
 .plant-info {
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 1fr 4fr;
   border-radius: 6px;
   margin-bottom: 20px;
-  -webkit-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
-  -moz-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
-  box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+  -webkit-box-shadow: 0 5px 10px 2px rgba(34, 60, 80, 0.2);
+  -moz-box-shadow: 0 5px 10px 2px rgba(34, 60, 80, 0.2);
+  box-shadow: 0 5px 10px 2px rgba(34, 60, 80, 0.2);
   &__title {}
   &__name {}
   &__type {}
@@ -231,7 +231,7 @@ export default {
 }
 .seedbeds-info {
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 1fr 4fr;
   border-radius: 6px;
   margin-bottom: 20px;
   -webkit-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);

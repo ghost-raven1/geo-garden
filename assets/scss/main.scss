@@ -3,11 +3,14 @@
 @import './cards.scss';
 @import './animations.scss';
 
+a, .uk-link {
+  text-decoration: none;
+}
+
 .main {
   max-width: 1180px;
   width: 100%;
-  display: flex;
-  flex-direction: column;
+  display: contents;
 }
 
 .b1, .b2, .b3 {
